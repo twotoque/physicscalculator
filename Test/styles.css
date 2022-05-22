@@ -1,0 +1,49 @@
+body {
+    font-family: 'Roboto', sans-serif !important;
+}
+
+h1{
+    font-size:28px !important;
+    font-weight: 900 !important;
+}
+
+.container-body{
+    padding-left: 0 !important;
+    padding-bottom: 10px;
+}
+
+.container-parent{
+    padding-left: 0 !important;
+    background-color:#E24C4C;
+}
+.container-daughter{
+    padding-left: 0 !important;
+    background-color:#B24CE2;
+    
+}
+.container-helium{
+    padding-left: 0 !important;
+    background-color:#4CD9E2;
+}
+.padding{
+    padding-bottom: 5px;
+}
+
+.Helium{
+    padding-top: 13px;
+    padding-left: 2px;
+}
+
+
+.HeliumFlex{
+    padding-top: 5px;
+}
+
+.flex-grow {
+    flex: 0.3;
+}
+
+.img-logo {
+    height: 75px !important;
+    width: auto !important;
+}
