@@ -1,0 +1,21 @@
+{
+    "name": "Physics Radioactive Decay Calculator",
+    "version": "1.0.0",
+    "description": "Calculates Alpha, Beta-Postive, Beta-Negative, and Electron Capture",
+    "manifest_version": 3,
+    "author": "Derek Song",
+    "action":{
+        "default_popup": "index.html",
+        "default_title": "Physics Radioactive Decay Calculator"
+    },
+    "permissions": ["contextMenus"],
+    "icons": {
+      "16": "icon-tiny.png",
+      "48": "icon-small.png",
+      "128": "icon-large.png"
+    },
+    "background":
+    {
+    "service_worker": "background.js"
+    }
+}

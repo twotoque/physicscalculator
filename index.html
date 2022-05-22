@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Physics Radioactive Decay Calculator</title> 
+    <meta charset="utf-8">
+    <link rel="icon" href="favicon-01-01.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+          $("#BetaPositive").hide();
+          $("#BetaNegative").hide();
+          $("#ElectronCapture").hide();
+          $("#Alphabtn").click(function(){
+            $("#BetaPositive").hide();
+            $("#Alpha").show();
+            $("#BetaNegative").hide();
+            $("#ElectronCapture").hide();
+          });
+          $("#BetaPositivebtn").click(function(){
+            $("#BetaPositive").show();
+            $("#Alpha").hide();
+            $("#BetaNegative").hide();
+            $("#ElectronCapture").hide();
+          });
+          $("#BetaNegativebtn").click(function(){
+            $("#BetaNegative").show();
+            $("#Alpha").hide();
+            $("#BetaPositive").hide();
+            $("#ElectronCapture").hide();
+          });
+          $("#ElectronCapturebtn").click(function(){
+            $("#BetaNegative").hide();
+            $("#Alpha").hide();
+            $("#BetaPositive").hide();
+            $("#ElectronCapture").show();
+          });
+        });
+    </script>
+</head>
+<body>
+<div class="container mt-3" style="width: 100%;">
+    <div class="d-flex flex-column">
+        <h1><img class="img-logo p-2" src="CalcLogo.svg"> <b>Physics Radioactive Decay Calculator</b></h1>
+        
+   
+    </div>
+    <div class="container container-body">
+        <button type="button" id= "Alphabtn" class="btn btn-primary btn-alpha">Alpha</button>
+        <button type="button" id= "BetaPositivebtn" class="btn btn-primary">Beta-Positive</button>
+        <button type="button" id= "BetaNegativebtn"  class="btn btn-primary">Beta-Negative</button>
+        <button type="button" id= "ElectronCapturebtn" class="btn btn-primary">Electron Capture</button>
+    </div>
+
+    <!--Alpha-->
+    <div id="Alpha" class="container container-body">
+        <div class="d-flex flex-row">
+            <div class="container container-parent p-2">
+                <div class="d-flex flex-row justify-content-center">
+                    <div class="d-flex flex-column">
+                        <input type="text" class="form-control1 textboxp" id="AlphaAtomicMassIN" aria-label="Alpha-AtomicMassIN"  onkeyup="AlphaAtomicMass(this.value);" aria-describedby="basic-addon2">
+                        <div class="padding"></div>
+                        <input type="text" class="form-control1"id="AlphaAtomicNumberIN" onkeyup="AlphaAtomicNumber(this.value);" aria-describedby="AlphaAtomicNumberIN">
+                    </div>
+                    <input type="text" class="form-control1"id="Alpha-AtomicSymbolIN" onkeyup="AlphaAtomicSymbol(this.value);" aria-describedby="AlphaAtomicSymbolIN">
+                </div>
+                <div class="p-2"></div>
+                <div class="container text-center">
+                    <b>Parent Particle</b>
+                    <br>
+                    <span id="AtomicNameParent"></span> <span id="AtomicMassNumParent"></span> 
+                    <div class="d-flex flex-column">
+                        <div class="d-flex justify-content-between">
+                            <p class="mb-auto">Group:</p> <span id="AtomicGroupNumParent"></span> 
+                        </div>
+                        <div class="d-flex justify-content-between">
+                        <p class="mb-auto">Period:</p> <span id="AtomicPeriodNumParent"></span> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container flex-grow p-2 d-flex align-items-center">
+                <h1>➜</h1>    
+            </div>
+            <div class="container container-daughter p-2">
+                <div class="d-flex flex-row justify-content-center">
+                    <div class="d-flex flex-column">
+                        <input type="text" id = "AlphaAtomicMassOUT" class="form-control1 textboxp" onkeyup="AlphaAtomicMassRev(this.value);"></input>
+                        <div class="padding"></div>
+                        <input type="text" id = "AlphaAtomicNumberOUT" class="form-control1 textboxp" onkeyup="AlphaAtomicNumberRev(this.value);" aria-label="Isotope number" aria-describedby="basic-addon2"></input>
+                    </div>
+                    <input type="text" id="AlphaShortFormOUT" class="form-control1" aria-label="Isotope number" aria-describedby="basic-addon2">
+                </div>
+                <div class="p-2"></div>
+                <div class="container text-center">
+                    <b>Daughter Particle</b><br>
+                    <span id="AtomicNameDaughter"></span> <span id="AtomicMassNumDaughter"></span> 
+                    <div class="d-flex flex-column">
+                        <div class="d-flex justify-content-between">
+                            <p class="mb-auto">Group:</p> <span id="AtomicGroupNum"></span> 
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <p class="mb-auto">Period:</p> <span id="AtomicPeriodNum"></span> 
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            <div class="container flex-grow p-2 d-flex align-items-center">
+                <h1>+</h1>    
+            </div>
+            <div class="container p-2 container-helium align-items-center ">
+                <div class="d-flex flex-row align-items-center HeliumFlex justify-content-center">
+                    <div class="d-flex flex-column">
+                        <p class="HeliumNumber"><b>4</b></p>
+                        <div class="padding"></div>
+                        <p class="HeliumNumber"><b>2</b></p>
+                    </div>
+                    <h1 class="Helium">He</p>
+                </div>
+                <div class="container text-center">
+                    <b>Alpha Particle</b>
+                    <p class="pb-0">Helium 4</p>
+                </div>
+                <div class="d-flex p-3 pb-0 pt-0 flex-column">
+                    <div class="d-flex justify-content-between">
+                        <p class="mb-auto">Group:</p> <span>18</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                    <p class="mb-auto">Period:</p> <span>1</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="p-2"></div>
+        <h4>Alpha Decay</h4>
+        <img class="float-left" src="AlphaDecayTutorial.svg"></img>
+    </div>
+
+
+
+    
+    <!--Beta Positve-->
+    <div id="BetaPositive" class="container container-body">
+        <div class="d-flex flex-row">
+            <div class="container container-parent-bp p-2">
+                <div class="d-flex flex-row justify-content-center">
+                    <div class="d-flex flex-column">
+                        <input type="text" class="form-control1 textboxp" id="BetaPosAtomicMassIN" aria-label="BetaPosAtomicMassIN"  onkeyup="BetaPosAtomicMass(this.value);" aria-describedby="basic-addon2">
+                        <div class="padding"></div>
+                        <input type="text" class="form-control1"id="BetaPosAtomicNumberIN" onkeyup="BetaPosAtomicNumber(this.value);" aria-describedby="BetaPosAtomicNumberIN">
+                    </div>
+                    <input type="text" class="form-control1"id="BetaPosAtomicSymbolIN" onkeyup="BetaPosaAtomicSymbol(this.value);" aria-describedby="AlphaAtomicSymbolIN">
+                </div>
+                <div class="p-2"></div>
+                <div class="container text-center">
+                    <b>Parent Particle</b>
+                    <br>
+                    <span id="BetaPosAtomicNameParent"></span> <span id="BetaPosAtomicMassNumParent"></span> 
+                    <div class="d-flex flex-column">
+                        <div class="d-flex justify-content-between">
+                            <p class="mb-auto">Group:</p> <span id="BetaPosAtomicGroupNumParent"></span> 
+                        </div>
+                        <div class="d-flex justify-content-between">
+                        <p class="mb-auto">Period:</p> <span id="BetaPosAtomicPeriodNumParent"></span> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container flex-grow p-2 d-flex align-items-center">
+                <h1>➜</h1>    
+            </div>
+            <div class="container container-daughter p-2">
+                <div class="d-flex flex-row justify-content-center">
+                    <div class="d-flex flex-column">
+                        <input type="text" id = "BetaPosAtomicMassOUT" class="form-control1 textboxp" onkeyup="BetaPosAtomicMassRev(this.value);"></input>
+                        <div class="padding"></div>
+                        <input type="text" id = "BetaPosAtomicNumberOUT" class="form-control1 textboxp" onkeyup="BetaPosAtomicNumberRev(this.value);" aria-label="Isotope number" aria-describedby="basic-addon2"></input>
+                    </div>
+                    <input type="text" id="BetaPosShortFormOUT" class="form-control1" aria-label="Isotope number" aria-describedby="basic-addon2">
+                </div>
+                <div class="p-2"></div>
+                <div class="container text-center">
+                    <b>Daughter Particle</b><br>
+                    <span id="BetaPosAtomicNameDaughter"></span> <span id="BetaPosAtomicMassNumDaughter"></span> 
+                    <div class="d-flex flex-column">
+                        <div class="d-flex justify-content-between">
+                            <p class="mb-auto">Group:</p> <span id="BetaPosAtomicGroupNum"></span> 
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <p class="mb-auto">Period:</p> <span id="BetaPosAtomicPeriodNum"></span> 
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            <div class="container flex-grow p-2 d-flex align-items-center">
+                <h1>+</h1>    
+            </div>
+            <div class="container p-2 container-electron align-items-center ">
+                <div class="d-flex flex-row align-items-center HeliumFlex justify-content-center">
+                    <div class="d-flex flex-column">
+                        <p class="HeliumNumber"><b>0</b></p>
+                        <div class="padding"></div>
+                        <p class="HeliumNumber"><b>+1</b></p>
+                    </div>
+                    <h1 class="Helium">e</p>
+                </div>
+                <div class="container text-center">
+                    <b>Electron</b>
+                </div>
+            </div>
+        </div>
+        <div class="p-2"></div>
+        <h4>Beta-Positive Decay</h4>
+        <img class="float-left" src="BetaPositiveDecay.svg"></img>
+    </div>
+
+
+
+    <!--Beta Negative-->
+    <div id="BetaNegative" class="container container-body">
+        <div class="d-flex flex-row">
+            <div class="container container-parent-bp p-2">
+                <div class="d-flex flex-row justify-content-center">
+                    <div class="d-flex flex-column">
+                        <input type="text" class="form-control1 textboxp" id="BetaNegAtomicMassIN" aria-label="BetaNegAtomicMassIN"  onkeyup="BetaNegAtomicMass(this.value);" aria-describedby="basic-addon2">
+                        <div class="padding"></div>
+                        <input type="text" class="form-control1"id="BetaNegAtomicNumberIN" onkeyup="BetaNegAtomicNumber(this.value);" aria-describedby="BetaNegAtomicNumberIN">
+                    </div>
+                    <input type="text" class="form-control1"id="BetaNegAtomicSymbolIN" onkeyup="BetaNegaAtomicSymbol(this.value);" aria-describedby="AlphaAtomicSymbolIN">
+                </div>
+                <div class="p-2"></div>
+                <div class="container text-center">
+                    <b>Parent Particle</b>
+                    <br>
+                    <span id="BetaNegAtomicNameParent"></span> <span id="BetaNegAtomicMassNumParent"></span> 
+                    <div class="d-flex flex-column">
+                        <div class="d-flex justify-content-between">
+                            <p class="mb-auto">Group:</p> <span id="BetaNegAtomicGroupNumParent"></span> 
+                        </div>
+                        <div class="d-flex justify-content-between">
+                        <p class="mb-auto">Period:</p> <span id="BetaNegAtomicPeriodNumParent"></span> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container flex-grow p-2 d-flex align-items-center">
+                <h1>➜</h1>    
+            </div>
+            <div class="container container-daughter p-2">
+                <div class="d-flex flex-row justify-content-center">
+                    <div class="d-flex flex-column">
+                        <input type="text" id = "BetaNegAtomicMassOUT" class="form-control1 textboxp" onkeyup="BetaNegAtomicMassRev(this.value);"></input>
+                        <div class="padding"></div>
+                        <input type="text" id = "BetaNegAtomicNumberOUT" class="form-control1 textboxp" onkeyup="BetaNegAtomicNumberRev(this.value);" aria-label="Isotope number" aria-describedby="basic-addon2"></input>
+                    </div>
+                    <input type="text" id="BetaNegShortFormOUT" class="form-control1" aria-label="Isotope number" aria-describedby="basic-addon2">
+                </div>
+                <div class="p-2"></div>
+                <div class="container text-center">
+                    <b>Daughter Particle</b><br>
+                    <span id="BetaNegAtomicNameDaughter"></span> <span id="BetaNegAtomicMassNumDaughter"></span> 
+                    <div class="d-flex flex-column">
+                        <div class="d-flex justify-content-between">
+                            <p class="mb-auto">Group:</p> <span id="BetaNegAtomicGroupNum"></span> 
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <p class="mb-auto">Period:</p> <span id="BetaNegAtomicPeriodNum"></span> 
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            <div class="container flex-grow p-2 d-flex align-items-center">
+                <h1>+</h1>    
+            </div>
+            <div class="container p-2 container-electron align-items-center ">
+                <div class="d-flex flex-row align-items-center HeliumFlex justify-content-center">
+                    <div class="d-flex flex-column">
+                        <p class="HeliumNumber"><b>0</b></p>
+                        <div class="padding"></div>
+                        <p class="HeliumNumber"><b>-1</b></p>
+                    </div>
+                    <h1 class="Helium">e</p>
+                </div>
+                <div class="container text-center">
+                    <b>Electron</b>
+                </div>
+            </div>
+        </div>
+        <div class="p-2"></div>
+        <h4>Beta-Negative Decay</h4>
+        <img class="float-left" src="BetaDecay.svg"></img>
+    </div>
+
+
+    <!--Electron Capture-->
+    <div id="ElectronCapture" class="container container-body">
+        <div class="d-flex flex-row">
+            <div class="container container-parent-bp p-2">
+                <div class="d-flex flex-row justify-content-center">
+                    <div class="d-flex flex-column">
+                        <input type="text" class="form-control1 textboxp" id="ElectronAtomicMassIN" aria-label="BetaNegAtomicMassIN"  onkeyup="ElectronAtomicMass(this.value);" aria-describedby="basic-addon2">
+                        <div class="padding"></div>
+                        <input type="text" class="form-control1"id="ElectronAtomicNumberIN" onkeyup="ElectronAtomicNumber(this.value);" aria-describedby="BetaNegAtomicNumberIN">
+                    </div>
+                    <input type="text" class="form-control1"id="ElectronAtomicSymbolIN" onkeyup="ElectronAtomicSymbol(this.value);" aria-describedby="AlphaAtomicSymbolIN">
+                </div>
+                <div class="p-2"></div>
+                <div class="container text-center">
+                    <b>Parent Particle</b>
+                    <br>
+                    <span id="ElectronAtomicNameParent"></span> <span id="ElectronAtomicMassNumParent"></span> 
+                    <div class="d-flex flex-column">
+                        <div class="d-flex justify-content-between">
+                            <p class="mb-auto">Group:</p> <span id="ElectronAtomicGroupNumParent"></span> 
+                        </div>
+                        <div class="d-flex justify-content-between">
+                        <p class="mb-auto">Period:</p> <span id="ElectronAtomicPeriodNumParent"></span> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container flex-grow p-2 d-flex align-items-center">
+                <h1>+</h1>    
+            </div>
+            <div class="container p-2 container-electron align-items-center ">
+                <div class="d-flex flex-row align-items-center HeliumFlex justify-content-center">
+                    <div class="d-flex flex-column">
+                        <p class="HeliumNumber"><b>0</b></p>
+                        <div class="padding"></div>
+                        <p class="HeliumNumber"><b>-1</b></p>
+                    </div>
+                    <h1 class="Helium">e</p>
+                </div>
+                <div class="container text-center">
+                    <b>Electron</b>
+                </div>
+            </div>
+            <div class="container flex-grow p-2 d-flex align-items-center">
+                <h1>➜</h1>    
+            </div>
+            <div class="container container-daughter p-2">
+                <div class="d-flex flex-row justify-content-center">
+                    <div class="d-flex flex-column">
+                        <input type="text" id = "ElectronAtomicMassOUT" class="form-control1 textboxp" onkeyup="ElectronAtomicMassRev(this.value);"></input>
+                        <div class="padding"></div>
+                        <input type="text" id = "ElectronAtomicNumberOUT" class="form-control1 textboxp" onkeyup="ElectronAtomicNumberRev(this.value);" aria-label="Isotope number" aria-describedby="basic-addon2"></input>
+                    </div>
+                    <input type="text" id="ElectronShortFormOUT" class="form-control1" aria-label="Isotope number" aria-describedby="basic-addon2">
+                </div>
+                <div class="p-2"></div>
+                <div class="container text-center">
+                    <b>Daughter Particle</b><br>
+                    <span id="ElectronAtomicNameDaughter"></span> <span id="ElectronAtomicMassNumDaughter"></span> 
+                    <div class="d-flex flex-column">
+                        <div class="d-flex justify-content-between">
+                            <p class="mb-auto">Group:</p> <span id="ElectronAtomicGroupNum"></span> 
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <p class="mb-auto">Period:</p> <span id="ElectronAtomicPeriodNum"></span> 
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+        <div class="p-2"></div>
+        <h4>Electron Capture</h4>
+        <img class="float-left" src="Electron.svg"></img>
+    </div>
+
+
+
+    <div class="container container-body">
+        <p class="pt-3"><b>FYI: </b>Elements with atomic number between 58-71 & 90-103 do not have a group. Moreover, some periodic tables may list 
+            <ul> 
+                <li>Roentgenium (atomic no. 111) as Unununium (uuu)</li>
+                <li>Copernicium (atomic no. 112) as Unubium (uub)</li>
+                <li>Nihonium (atomic no. 113) as Unutrium (uut)</li>
+                <li>Flerovium (atomic no. 114) as Ununquadium (uuq)</li>
+                <li>Omit elements with atomic numbers 115-119</li>
+            </ul>
+            <p>Created by <a href="https://twotoque.com/">Derek Song</a> for <a href="https://gryphhacks-2022.devpost.com/">GryphHacks 2022 (University of Guelph's Hackathon)</a>. Preview beta.</p>
+            </p>
+        </div>
+    </div>
+</div>
+<script src="background.js"></script>
+<!-- <script defer src="https://pyscript.net/alpha/pyscript.js"></script> -->
+</body>
+</html>
