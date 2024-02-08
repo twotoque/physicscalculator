@@ -849,7 +849,75 @@ const AtomicSymbol = [
         period: 0,
     }
 ];
-console.log("loaded");
+
+document.getElementById('Alphabtn').addEventListener('click', function() {
+    // Button variable 
+    var Alphabtn = document.getElementById('Alphabtn');
+
+    // Variables for elements
+    var BetaPositive = document.getElementById('BetaPositive');
+    var Alpha = document.getElementById('Alpha');
+    var BetaNegative = document.getElementById('BetaNegative');
+    var ElectronCapture = document.getElementById('ElectronCapture');
+    
+    // Hides/show approprate elements
+    BetaPositive.style.display = 'none';
+    Alpha.style.display = 'block';
+    BetaNegative.style.display = 'none';
+    ElectronCapture.style.display = 'none';
+},
+
+document.getElementById('BetaPositivebtn').addEventListener('click', function() {
+    // Button variable 
+    var BetaPositivebtn = document.getElementById('BetaPositivebtn');
+
+    // Variables for elements
+    var BetaPositive = document.getElementById('BetaPositive');
+    var Alpha = document.getElementById('Alpha');
+    var BetaNegative = document.getElementById('BetaNegative');
+    var ElectronCapture = document.getElementById('ElectronCapture');
+    
+    // Hides/show approprate elements
+    BetaPositive.style.display = 'block';
+    Alpha.style.display = 'none';
+    BetaNegative.style.display = 'none';
+    ElectronCapture.style.display = 'none';
+}));
+
+document.getElementById('BetaNegativebtn').addEventListener('click', function() {
+    // Button variable 
+    var BetaNegativebtn = document.getElementById('BetaNegativebtn');
+
+    // Variables for elements
+    var BetaPositive = document.getElementById('BetaPositive');
+    var Alpha = document.getElementById('Alpha');
+    var BetaNegative = document.getElementById('BetaNegative');
+    var ElectronCapture = document.getElementById('ElectronCapture');
+    
+    // Hides/show approprate elements
+    BetaPositive.style.display = 'none';
+    Alpha.style.display = 'none';
+    BetaNegative.style.display = 'block';
+    ElectronCapture.style.display = 'none';
+});
+
+document.getElementById('ElectronCapturebtn').addEventListener('click', function() {
+    // Button variable 
+    var ElectronCapturebtn = document.getElementById('ElectronCapturebtn');
+
+    // Variables for elements
+    var BetaPositive = document.getElementById('BetaPositive');
+    var Alpha = document.getElementById('Alpha');
+    var BetaNegative = document.getElementById('BetaNegative');
+    var ElectronCapture = document.getElementById('ElectronCapture');
+    
+    // Hides/show approprate elements
+    BetaPositive.style.display = 'none';
+    Alpha.style.display = 'none';
+    BetaNegative.style.display = 'none';
+    ElectronCapture.style.display = 'block';
+});
+
 function AlphaAtomicMass(value){
     var aam, aamB, aamC;
     aamB = +value - 1 + 1;
