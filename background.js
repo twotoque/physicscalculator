@@ -933,6 +933,10 @@ function AlphaAtomicMass(value){
     console.log("AAMOUTD");
 }
 
+document.getElementById("AlphaAtomicMassIN").addEventListener("input", function() {
+    AlphaAtomicMass(this.value);
+});
+
 function BetaNegAtomicMass(value){
     var BPaam, BPaamB, BPaamC;
     BPaamB = +value - 1 + 1;
@@ -1009,6 +1013,11 @@ function AlphaAtomicNumber(value){
     document.getElementById("AtomicPeriodNum").innerHTML = AtomicPeriodNum; 
     console.log("AANOUTRD");
 }
+
+document.getElementById("AlphaAtomicNumberIN").addEventListener("input", function() {
+    AlphaAtomicNumber(this.value);
+});
+
 
 function BetaNegAtomicNumber(value){
     var BPaanB, BPaan;

@@ -23,16 +23,30 @@
         <button type="button" id= "BetaNegativebtn"  class="btn btn-primary">Beta-Negative</button>
         <button type="button" id= "ElectronCapturebtn" class="btn btn-primary">Electron Capture</button>
     </div>
-
+    <!--Atomic Search-->
+    <div id="Alpha" class="container container-body">
+        <div class="d-flex flex-row">
+            <div class="container container-parent p-2">
+                <div class="d-flex flex-row justify-content-center">
+                    <div class="d-flex flex-column">
+                        <input type="text" class="form-control1 textboxp" id="AlphaAtomicMassIN" aria-label="Alpha-AtomicMassIN"  aria-describedby="basic-addon2">
+                        <div class="padding"></div>
+                        <input type="text" class="form-control1"id="AlphaAtomicNumberIN" aria-describedby="AlphaAtomicNumberIN">
+                    </div>
+                    <input type="text" class="form-control1"id="Alpha-AtomicSymbolIN" onkeyup="AlphaAtomicSymbol(this.value);" aria-describedby="AlphaAtomicSymbolIN">
+                </div>
+            </div>
+        </div>
+    </div>
     <!--Alpha-->
     <div id="Alpha" class="container container-body">
         <div class="d-flex flex-row">
             <div class="container container-parent p-2">
                 <div class="d-flex flex-row justify-content-center">
                     <div class="d-flex flex-column">
-                        <input type="text" class="form-control1 textboxp" id="AlphaAtomicMassIN" aria-label="Alpha-AtomicMassIN"  onkeyup="AlphaAtomicMass(this.value);" aria-describedby="basic-addon2">
+                        <input type="text" class="form-control1 textboxp" id="AlphaAtomicMassIN" aria-label="Alpha-AtomicMassIN"  aria-describedby="basic-addon2">
                         <div class="padding"></div>
-                        <input type="text" class="form-control1"id="AlphaAtomicNumberIN" onkeyup="AlphaAtomicNumber(this.value);" aria-describedby="AlphaAtomicNumberIN">
+                        <input type="text" class="form-control1"id="AlphaAtomicNumberIN" aria-describedby="AlphaAtomicNumberIN">
                     </div>
                     <input type="text" class="form-control1"id="Alpha-AtomicSymbolIN" onkeyup="AlphaAtomicSymbol(this.value);" aria-describedby="AlphaAtomicSymbolIN">
                 </div>
