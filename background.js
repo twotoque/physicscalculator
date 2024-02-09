@@ -936,6 +936,12 @@ function AlphaAtomicMass(value){
 document.getElementById("AlphaAtomicMassIN").addEventListener("input", function() {
     AlphaAtomicMass(this.value);
 });
+document.getElementById("AlphaAtomicNumberIN").addEventListener("input", function() {
+    AlphaAtomicNumber(this.value);
+});
+document.getElementById("Alpha-AtomicSymbolIN").addEventListener("input", function() {
+    AlphaAtomicSymbol(this.value);
+});
 
 function BetaNegAtomicMass(value){
     var BPaam, BPaamB, BPaamC;
@@ -1014,8 +1020,8 @@ function AlphaAtomicNumber(value){
     console.log("AANOUTRD");
 }
 
-document.getElementById("AlphaAtomicNumberIN").addEventListener("input", function() {
-    AlphaAtomicNumber(this.value);
+document.getElementById("AlphaAtomicMassIN").addEventListener("input", function() {
+    AlphaAtomicMass(this.value);
 });
 
 
