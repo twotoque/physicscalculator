@@ -939,10 +939,12 @@ document.getElementById("AlphaAtomicMassIN").addEventListener("input", function(
 document.getElementById("AlphaAtomicNumberIN").addEventListener("input", function() {
     AlphaAtomicNumber(this.value);
 });
-document.getElementById("Alpha-AtomicSymbolIN").addEventListener("input", function() {
-    AlphaAtomicSymbol(this.value);
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("Alpha-AtomicSymbolIN").addEventListener("input", function() {
+        var value = this.value;
+        AlphaAtomicSymbol(this.value);
+    });
 });
-
 function BetaNegAtomicMass(value){
     var BPaam, BPaamB, BPaamC;
     BPaamB = +value - 1 + 1;
@@ -1234,26 +1236,23 @@ function BetaNegAtomicNumberRev(value){
 }
 
 function AlphaAtomicSymbol(value){
-    var beforeAan, annNum, aanNumB;
-    aanNumB = +value + 1 - 1;
-    document.getElementById ("AlphaShortFormOUT").value = beforeAan;
-    function aanFinder (AtomicSymbol) {
-        return AtomicSymbol.shortform === beforeAan;
-    } 
-    console.log("beforeAan " + beforeAan);
-    let aanNum = AtomicSymbol.find(aanFinder).aanConst;
-    aanNum =  aanNum - 2;
-    function aanFinder (AtomicSymbol2) {
-        return AtomicSymbol.aanConst === annNum;
-    } 
-    document.getElementById ("AlphaShortFormOUT").value = AtomicSymbol.find(aanFinder).shortform; // Find element shortform at AtomicSymbol that was selected in function aanFinder, and print in id AlphaShortFormOUT
-    let AtomicNameDaughter = AtomicSymbol.find(aanFinder).name
-    document.getElementById("AtomicNameDaughter").innerHTML = AtomicNameDaughter; 
-    let AtomicGroupNum = AtomicSymbol.find(aanFinder).group
-    document.getElementById("AtomicGroupNum").innerHTML = AtomicGroupNum; 
-    let AtomicPeriodNum = AtomicSymbol.find(aanFinder).period
-    document.getElementById("AtomicPeriodNum").innerHTML = AtomicPeriodNum; 
-}
-function aanFinder (AtomicSymbol) {
-    return AtomicSymbol.aanConst === aan;
+    function aanFinder(AtomicSymbol, value) {
+        console.log(value);
+        for (var i = 0; i < AtomicSymbol.length; i++) {
+            if (AtomicSymbol[i].shortform === value) {
+                return i; // Return the index of the found element
+            }
+        }
+        return -1; // Return -1 if no matching element is found
+    }
+    var position = aanFinder(AtomicSymbol, value); // Pass both arguments to aanFinder
+    console.log("Position:", position);
+
+    if (position !== -1) {
+        var foundItem = AtomicSymbol[position];
+        console.log("Group:", foundItem.group);
+        console.log("Period:", foundItem.period);
+    } else {
+        console.log("Item not found.");
+    }
 }
