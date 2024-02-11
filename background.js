@@ -939,11 +939,9 @@ document.getElementById("AlphaAtomicMassIN").addEventListener("input", function(
 document.getElementById("AlphaAtomicNumberIN").addEventListener("input", function() {
     AlphaAtomicNumber(this.value);
 });
-document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById("Alpha-AtomicSymbolIN").addEventListener("input", function() {
-        var value = this.value;
-        AlphaAtomicSymbol(this.value);
-    });
+document.getElementById("Alpha-AtomicSymbolIN").addEventListener("input", function() {
+    var value = this.value;
+    AlphaAtomicSymbol(this.value);
 });
 function BetaNegAtomicMass(value){
     var BPaam, BPaamB, BPaamC;
@@ -1238,7 +1236,7 @@ function BetaNegAtomicNumberRev(value){
 function AlphaAtomicSymbol(value){
     function aanFinder(AtomicSymbol, value) {
         console.log(value);
-        for (var i = 0; i < AtomicSymbol.length; i++) {
+        for (var i = 0; i < AtomicSymbol.length; i++) { // Search for item matching value at "i". If "i" == value, get its index, else add 1 to i.
             if (AtomicSymbol[i].shortform === value) {
                 return i; // Return the index of the found element
             }
