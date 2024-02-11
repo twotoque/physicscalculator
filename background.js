@@ -1244,13 +1244,12 @@ function AlphaAtomicSymbol(value){
         return -1; // Return -1 if no matching element is found
     }
     var position = aanFinder(AtomicSymbol, value); // Pass both arguments to aanFinder
-    console.log("Position:", position);
 
     if (position !== -1) {
-        var foundItem = AtomicSymbol[position];
-        console.log("Group:", foundItem.group);
-        console.log("Period:", foundItem.period);
-    } else {
-        console.log("Item not found.");
+        var originalValuePosition = AtomicSymbol[position]; // Find position of the item
+        var originalValueAanConst = originalValuePosition.aanConst; // Call aanConst, i.e. the Atomic number
+        var resultant = AtomicSymbol[position-2] // Search AtomicSymbol for an item subtracted by 2 (i.e. the effects of Alpha decay)
+        console.log("Resultant:", resultant);
+        console.log(originalValueAanConst)
     }
 }
