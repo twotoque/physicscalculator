@@ -863,7 +863,12 @@ document.getElementById("Alpha-AtomicSymbolIN").addEventListener("input", functi
 document.getElementById("AlphaShortFormOUT").addEventListener("input", function() {
     AlphaAtomicSymbolRev(this.value);
 });
-
+document.getElementById("AlphaAtomicNumberOUT").addEventListener("input", function() {
+    AlphaAtomicNumberRev(this.value);
+});
+document.getElementById("AlphaAtomicMassOUT").addEventListener("input", function() {
+    AlphaAtomicMassRev(this.value);
+});
 // Calculations
 
 document.getElementById('Alphabtn').addEventListener('click', function() {
@@ -934,20 +939,6 @@ document.getElementById('ElectronCapturebtn').addEventListener('click', function
     ElectronCapture.style.display = 'block';
 });
 
-function AlphaAtomicMass(value){
-    var aam, aamB, aamC;
-    aamB = +value - 1 + 1;
-    let AtomicMassNumParent =  aamB;
-    document.getElementById("AtomicMassNumParent").innerHTML = AtomicMassNumParent; 
-    document.getElementById ("AtomicMassNumParent").value = aamB;
-    aam =  value - 4;
-    console.log("AAMOUTC");
-    aamC = +aam - 1 + 1;
-    let AtomicMassNumDaughter =  aamC;
-    document.getElementById("AtomicMassNumDaughter").innerHTML = AtomicMassNumDaughter; 
-    document.getElementById ("AlphaAtomicMassOUT").value = aam;
-    console.log("AAMOUTD");
-}
 
 function BetaNegAtomicMass(value){
     var BPaam, BPaamB, BPaamC;
@@ -993,38 +984,6 @@ function BetaNegAtomicMassRev(value){
     document.getElementById("BetaNegAtomicMassIN").innerHTML = BetaNegAtomicMassIN; 
 }
 
-
-function AlphaAtomicNumber(value){
-    var aanB, aan;
-    aanB = +value + 1 - 1;
-    console.log(aanB);
-    document.getElementById ("Alpha-AtomicSymbolIN").value = aanB;
-    function aanFinderB (AtomicSymbol) {
-        return AtomicSymbol.aanConst === aanB;
-    }
-    document.getElementById ("Alpha-AtomicSymbolIN").value = AtomicSymbol.find(aanFinderB).shortform; 
-    let AtomicNameParent = AtomicSymbol.find(aanFinderB).name
-    document.getElementById("AtomicNameParent").innerHTML = AtomicNameParent; 
-    let AtomicGroupNumParent = AtomicSymbol.find(aanFinderB).group
-    document.getElementById("AtomicGroupNumParent").innerHTML = AtomicGroupNumParent; 
-    let AtomicPeriodNumParent = AtomicSymbol.find(aanFinderB).period
-    document.getElementById("AtomicPeriodNumParent").innerHTML = AtomicPeriodNumParent;  
-    aan =  value - 2;
-    console.log(aan);
-    document.getElementById ("AlphaAtomicNumberOUT").value = aan;
-    function aanFinder (AtomicSymbol) {
-        return AtomicSymbol.aanConst === aan;
-    } // Compare var aan to aanConst in const AtomicSymbol and select the one that matches 
-    console.log(AlphaAtomicNumber);
-    document.getElementById ("AlphaShortFormOUT").value = AtomicSymbol.find(aanFinder).shortform; // Find element shortform at AtomicSymbol that was selected in function aanFinder, and print in id AlphaShortFormOUT
-    let AtomicNameDaughter = AtomicSymbol.find(aanFinder).name
-    document.getElementById("AtomicNameDaughter").innerHTML = AtomicNameDaughter; 
-    let AtomicGroupNum = AtomicSymbol.find(aanFinder).group
-    document.getElementById("AtomicGroupNum").innerHTML = AtomicGroupNum; 
-    let AtomicPeriodNum = AtomicSymbol.find(aanFinder).period
-    document.getElementById("AtomicPeriodNum").innerHTML = AtomicPeriodNum; 
-    console.log("AANOUTRD");
-}
 
 document.getElementById("AlphaAtomicMassIN").addEventListener("input", function() {
     AlphaAtomicMass(this.value);
@@ -1239,11 +1198,19 @@ function BetaNegAtomicNumberRev(value){
     console.log("AANOUTRD");
 }
 
-function aanFinder(AtomicSymbol, value, searchVal) {
-    // Function to search through const AtomicSymbol. Use = aanFinder(AtomicSymbol, value, searchVal). AtomicSymbol = an array (const); value = the atomic element to search (str or int); searchVal = what to search (str)
-    if (searchVal === "shortform") {
+function atomicSearch(AtomicSymbol, value, searchVal) {
+    // Function to search through const AtomicSymbol. Use = aanFinder(AtomicSymbol, value, searchVal). AtomicSymbol = an array (const); value = the atomic element to search (str or int); searchVal = what to search (str). In older versions this function was "aanFinder"
+    if (searchVal === "shortform") { //Search using Atomic letters
         for (var i = 0; i < AtomicSymbol.length; i++) { // Search for item matching value at "i". If "i" == value, get its index, else add 1 to i.
             if (AtomicSymbol[i].shortform === value) {
+                return i; // Return the index of the found element
+            }
+        }
+        return -1; // Return -1 if no matching element is found
+    } 
+    if (searchVal === "aanConst") { // Search using Atomic number
+        for (var i = 0; i < AtomicSymbol.length; i++) { // Search for item matching value at "i". If "i" == value, get its index, else add 1 to i.
+            if (AtomicSymbol[i].aanConst === parseInt(value)) { // Converts str value to int
                 return i; // Return the index of the found element
             }
         }
@@ -1251,9 +1218,11 @@ function aanFinder(AtomicSymbol, value, searchVal) {
     }  
 }
 
+// Alpha decay series of functions
+
 function AlphaAtomicSymbol(value){
     // Function to calculate Alpha decay, given the input Atomic symbol of an element. Input = Alpha-AtomicSymbolIN (str)
-    var position = aanFinder(AtomicSymbol, value, "shortform"); // Pass both arguments to aanFinder
+    var position = atomicSearch(AtomicSymbol, value, "shortform"); // Pass both arguments to aanFinder
     if (position !== -1) {
         var originalValuePosition = AtomicSymbol[position]; // Find position of the item
         var resultant = AtomicSymbol[position-2] // Search AtomicSymbol for an item subtracted by 2 (i.e. the effects of Alpha decay)
@@ -1271,4 +1240,87 @@ function AlphaAtomicSymbol(value){
         document.getElementById("AtomicPeriodNum").innerHTML = resultant.period;
         
     }
+}
+
+function AlphaAtomicSymbolRev(value){
+    // Function to calculate reverse Alpha decay, given the output Atomic symbol of an element. Input = AlphaShortFormOUT (str)
+    var position = atomicSearch(AtomicSymbol, value, "shortform"); // Pass both arguments to aanFinder
+    if (position !== -1) {
+        var originalValuePosition = AtomicSymbol[position]; // Find position of the item
+        var resultant = AtomicSymbol[position+2] // Search AtomicSymbol for an item added by 2 (i.e. the reverse effects of Alpha decay)
+
+        // Output; a more concise version compared to the previous version
+        document.getElementById("AlphaAtomicNumberOUT").value = originalValuePosition.aanConst;
+        document.getElementById("AtomicNameDaughter").innerHTML = originalValuePosition.name;
+        document.getElementById("AtomicGroupNum").innerHTML = originalValuePosition.group;
+        document.getElementById("AtomicPeriodNum").innerHTML = originalValuePosition.period;
+        
+        document.getElementById("Alpha-AtomicSymbolIN").value = resultant.shortform;
+        document.getElementById("AlphaAtomicNumberIN").value = resultant.aanConst;
+        document.getElementById("AtomicNameParent").innerHTML = resultant.name;
+        document.getElementById("AtomicGroupNumParent").innerHTML = resultant.group;
+        document.getElementById("AtomicPeriodNumParent").innerHTML = resultant.period;
+        
+    }
+}
+
+function AlphaAtomicNumber(value){
+    console.log(value)
+    // Function to calculate Alpha decay, given the input Atomic number of an element. Input = AlphaAtomicNumberIN (int)
+    var position = atomicSearch(AtomicSymbol, value, "aanConst"); // Pass both arguments to aanFinder
+    if (position !== -1) {
+        var originalValuePosition = AtomicSymbol[position]; // Find position of the item
+        var resultant = AtomicSymbol[position-2] // Search AtomicSymbol for an item subtracted by 2 (i.e. the effects of Alpha decay)
+
+        // Output; a more concise version compared to the previous version
+        document.getElementById("Alpha-AtomicSymbolIN").value = originalValuePosition.shortform;
+        document.getElementById("AtomicNameParent").innerHTML = originalValuePosition.name;
+        document.getElementById("AtomicGroupNumParent").innerHTML = originalValuePosition.group;
+        document.getElementById("AtomicPeriodNumParent").innerHTML = originalValuePosition.period;
+        
+        document.getElementById("AlphaShortFormOUT").value = resultant.shortform;
+        document.getElementById("AlphaAtomicNumberOUT").value = resultant.aanConst;
+        document.getElementById("AtomicNameDaughter").innerHTML = resultant.name;
+        document.getElementById("AtomicGroupNum").innerHTML = resultant.group;
+        document.getElementById("AtomicPeriodNum").innerHTML = resultant.period;
+        
+    }
+}
+
+function AlphaAtomicNumberRev(value){
+    // Function to calculate Alpha decay, given the input Atomic number of an element. Input = AlphaAtomicNumberOUT (int)
+    var position = atomicSearch(AtomicSymbol, value, "aanConst"); // Pass both arguments to aanFinder
+    if (position !== -1) {
+        var originalValuePosition = AtomicSymbol[position]; // Find position of the item
+        var resultant = AtomicSymbol[position+2] // Search AtomicSymbol for an item subtracted by 2 (i.e. the effects of Alpha decay)
+
+        // Output; a more concise version compared to the previous version
+        document.getElementById("AlphaShortFormOUT").value = originalValuePosition.shortform;
+        document.getElementById("AtomicNameDaughter").innerHTML = originalValuePosition.name;
+        document.getElementById("AtomicGroupNum").innerHTML = originalValuePosition.group;
+        document.getElementById("AtomicPeriodNum").innerHTML = originalValuePosition.period;
+        
+        document.getElementById("Alpha-AtomicSymbolIN").value = resultant.shortform;
+        document.getElementById("AlphaAtomicNumberIN").value = resultant.aanConst;
+        console.log(resultant.aanConst)
+        document.getElementById("AtomicNameParent").innerHTML = resultant.name;
+        document.getElementById("AtomicGroupNumParent").innerHTML = resultant.group;
+        document.getElementById("AtomicPeriodNumParent").innerHTML = resultant.period;
+    }
+}
+
+function AlphaAtomicMass(value){
+    // Function to calculate mass after Alpha decay, given the input Atomic mass of an element. Input = AlphaAtomicMassIN (int)
+    document.getElementById("AtomicMassNumParent").innerHTML = value;
+
+    document.getElementById("AlphaAtomicMassOUT").value = value - 4;
+    document.getElementById("AtomicMassNumDaughter").innerHTML = value - 4;
+}
+
+function AlphaAtomicMass(value){
+    // Function to calculate inverse mass Alpha decay, given the ouput Atomic number of an element. Input = AlphaAtomicMassOUT (int)
+    document.getElementById("AlphaAtomicMassOUT").innerHTML = value;
+
+    document.getElementById("AlphaAtomicMassIN").value = value + 4;
+    document.getElementById("AtomicMassNumParent").innerHTML = value + 4;
 }
