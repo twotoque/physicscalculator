@@ -963,18 +963,6 @@ function ElectronAtomicMass(value){
     console.log("AAMOUTD");
 }
 
-function AlphaAtomicMassRev(value){
-    var aam, aamD;
-    console.log("AAMOUTRR");
-    aamD =  +value + 1 - 1;
-    aam =  +value + 4;
-    let AtomicMassNumParent =  aam;
-    document.getElementById("AtomicMassNumParent").innerHTML = AtomicMassNumParent; 
-    document.getElementById ("AtomicMassNumParent").value = aam;
-    document.getElementById ("AlphaAtomicMassIN").value = aam;
-    let AtomicMassNumDaughter =  aamD;
-    document.getElementById("AtomicMassNumDaughter").innerHTML = AtomicMassNumDaughter; 
-}
 
 
 function BetaNegAtomicMassRev(value){
@@ -984,10 +972,6 @@ function BetaNegAtomicMassRev(value){
     document.getElementById("BetaNegAtomicMassIN").innerHTML = BetaNegAtomicMassIN; 
 }
 
-
-document.getElementById("AlphaAtomicMassIN").addEventListener("input", function() {
-    AlphaAtomicMass(this.value);
-});
 
 
 function BetaNegAtomicNumber(value){
@@ -1317,10 +1301,10 @@ function AlphaAtomicMass(value){
     document.getElementById("AtomicMassNumDaughter").innerHTML = value - 4;
 }
 
-function AlphaAtomicMass(value){
+function AlphaAtomicMassRev (value){
     // Function to calculate inverse mass Alpha decay, given the ouput Atomic number of an element. Input = AlphaAtomicMassOUT (int)
-    document.getElementById("AlphaAtomicMassOUT").innerHTML = value;
+    document.getElementById("AtomicMassNumDaughter").innerHTML = value;
 
-    document.getElementById("AlphaAtomicMassIN").value = value + 4;
-    document.getElementById("AtomicMassNumParent").innerHTML = value + 4;
+    document.getElementById("AlphaAtomicMassIN").value = parseInt(value) + 4;
+    document.getElementById("AtomicMassNumParent").innerHTML = parseInt(value) + 4;
 }
