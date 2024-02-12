@@ -1239,48 +1239,24 @@ function BetaNegAtomicNumberRev(value){
     console.log("AANOUTRD");
 }
 
-function aanFinder(AtomicSymbol, value) {
-    // Function to search through const AtomicSymbol. Use = aanFinder(AtomicSymbol, value)
-    for (var i = 0; i < AtomicSymbol.length; i++) { // Search for item matching value at "i". If "i" == value, get its index, else add 1 to i.
-        if (AtomicSymbol[i].shortform === value) {
-            return i; // Return the index of the found element
+function aanFinder(AtomicSymbol, value, searchVal) {
+    // Function to search through const AtomicSymbol. Use = aanFinder(AtomicSymbol, value, searchVal). AtomicSymbol = an array (const); value = the atomic element to search (str or int); searchVal = what to search (str)
+    if (searchVal === "shortform") {
+        for (var i = 0; i < AtomicSymbol.length; i++) { // Search for item matching value at "i". If "i" == value, get its index, else add 1 to i.
+            if (AtomicSymbol[i].shortform === value) {
+                return i; // Return the index of the found element
+            }
         }
-    }
-    return -1; // Return -1 if no matching element is found
+        return -1; // Return -1 if no matching element is found
+    }  
 }
 
 function AlphaAtomicSymbol(value){
     // Function to calculate Alpha decay, given the input Atomic symbol of an element. Input = Alpha-AtomicSymbolIN (str)
-    var position = aanFinder(AtomicSymbol, value); // Pass both arguments to aanFinder
-
+    var position = aanFinder(AtomicSymbol, value, "shortform"); // Pass both arguments to aanFinder
     if (position !== -1) {
         var originalValuePosition = AtomicSymbol[position]; // Find position of the item
         var resultant = AtomicSymbol[position-2] // Search AtomicSymbol for an item subtracted by 2 (i.e. the effects of Alpha decay)
-
-        // Output; a more concise version compared to the previous version
-        document.getElementById("AlphaAtomicNumberIN").value = originalValuePosition.aanConst;
-        document.getElementById("AtomicNameParent").innerHTML = originalValuePosition.name;
-        document.getElementById("AtomicGroupNumParent").innerHTML = originalValuePosition.group;
-        document.getElementById("AtomicPeriodNumParent").innerHTML = originalValuePosition.period;
-        
-        document.getElementById("AlphaShortFormOUT").value = resultant.shortform;
-        document.getElementById("AlphaAtomicNumberOUT").value = resultant.aanConst;
-        document.getElementById("AtomicNameDaughter").innerHTML = resultant.name;
-        document.getElementById("AtomicGroupNum").innerHTML = resultant.group;
-        document.getElementById("AtomicPeriodNum").innerHTML = resultant.period;
-        
-    }
-}
-
-function AlphaAtomicSymbol(value){
-    // Function to calculate reverse Alpha decay, given the output Atomic symbol of an element. Input = AlphaShortFormOUT (str)
-    var position = aanFinder(AtomicSymbol, value); // Pass both arguments to aanFinder
-
-    if (position !== -1) {
-        var originalValuePosition = AtomicSymbol[position]; // Find position of the item
-        var resultant = AtomicSymbol[position+2] // Search AtomicSymbol for an item subtracted by 2 (i.e. the effects of Alpha decay)
-        console.log("Resultant:", resultant);
-        console.log(originalValuePosition.aanConst)
 
         // Output; a more concise version compared to the previous version
         document.getElementById("AlphaAtomicNumberIN").value = originalValuePosition.aanConst;
