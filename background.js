@@ -7,7 +7,7 @@ var aanNumB = 0;
 var aamB = 0;
 var aamC = 0;
 var aamD = 0;
-const AtomicSymbol = [ 
+const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<element>]. name: Name of element (str); shortform: Element intials (str); aanConst: Atomic number (int) ; group: Group on periodic table (int) ; period: Period on periodic table (int) 
     {
         name: "N/A",
         shortform: "N/A",
