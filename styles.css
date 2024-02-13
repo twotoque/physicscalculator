@@ -2,7 +2,9 @@ body {
     font-family: 'Roboto', sans-serif !important;
     width: 600px;
 }
-
+.btn{
+    font-size: 14.1px !important;
+}
 h1{
     font-size:28px !important;
     font-weight: 900 !important;
@@ -11,7 +13,14 @@ h8{
     font-size: 13.5px;
 }
 
+.shortheight{
+    height: 25px !important;
+}
 
+.longwidth{
+    width: 190px !important;
+    margin-bottom: 10px;
+}
 .credits{
     width: 100%;
     line-height: 0.4rem;

@@ -18,12 +18,56 @@
    
     </div>
     <div class="container container-body">
+        <button type="button" id= "AtomSearchbtn" class="btn btn-primary btn-alpha">Search</button>
         <button type="button" id= "Alphabtn" class="btn btn-primary btn-alpha">Alpha</button>
         <button type="button" id= "BetaPositivebtn" class="btn btn-primary">Beta-Positive</button>
         <button type="button" id= "BetaNegativebtn"  class="btn btn-primary">Beta-Negative</button>
         <button type="button" id= "ElectronCapturebtn" class="btn btn-primary">Electron Capture</button>
     </div>
+    <!--Atom Search-->
+    <div id="AtomSearch" class="container container-body">
+        <div class="d-flex flex-row">
+            <div class="container container-parent p-2">
+                <div class="d-flex flex-row justify-content-center">
+                    <div class="d-flex flex-column">
+                        <input type="text" class="form-control1 textboxp" id="AtomSearchAtomicMassIN" aria-label="Alpha-AtomicMassIN" aria-describedby="basic-addon2">
+                        <div class="padding"></div>
+                        <input type="text" class="form-control1"id="AtomSearchAtomicNumberIN"aria-describedby="AlphaAtomicNumberIN">
+                    </div>
+                    <input type="text" class="form-control1"id="AtomSearch-AtomicSymbolIN" aria-describedby="AlphaAtomicSymbolIN">
+                </div>
+                <div class="p-2"></div>
+                <div class="container text-center">
+                    <input type="text" class="form-control1 textboxp longwidth" id="AtomSearchAtomicNameIN" aria-label="Alpha-AtomicMassIN" aria-describedby="basic-addon2">
+                    <div class="d-flex flex-column">
+                        <div class="d-flex justify-content-between">
+                            <p class="mb-auto">Group:</p> <input type="text" class="form-control1 textboxp shortheight" id="AtomicSearchGroupNameIN" aria-label="Alpha-AtomicMassIN" aria-describedby="basic-addon2">
+                        </div>
+                        <div class="d-flex justify-content-between">
+                        <p class="mb-auto">Period:</p> <input type="text" class="form-control1 textboxp shortheight" id="AtomicSearchGroupPeriodIN" aria-label="Alpha-AtomicMassIN" aria-describedby="basic-addon2">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container flex-grow p-2 d-flex align-items-center">
+                <h1>➜</h1>    
+            </div>
+            <div class="container p-2">
+                <div class="justify-content-left">
+                    <h4><b>Enter a particle!</b></h4>
+                    <h6><b>Short form:</b></h6>
+                    <h6><b>Atomic number:</b></h6>
+                    <h6><b>Group:</b></h6>
+                    <h6><b>Period:</b></h6>
+                    <h6><b>Mass:</b></h6>
+                    
+                    <button type="button" id= "Reset" class="btn btn-danger">Reset</button>
+                </div>
+            </div>
 
+
+        </div>
+    </div>
     <!--Alpha-->
     <div id="Alpha" class="container container-body">
         <div class="d-flex flex-row">
