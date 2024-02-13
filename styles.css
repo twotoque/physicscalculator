@@ -13,8 +13,13 @@ h8{
     font-size: 13.5px;
 }
 
+.atomsearchtextbox{
+    width: 95px !important;
+}
+
 .shortheight{
     height: 25px !important;
+    width: 80px !important;
 }
 
 .longwidth{
