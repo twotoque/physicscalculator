@@ -13,6 +13,15 @@ h8{
     font-size: 13.5px;
 }
 
+.IUPAC{
+    margin-bottom: 0 !important;
+}
+
+.IUPAClower{
+    margin-top: 1px;
+    font-size: 13.5px;
+}
+
 .atomsearchtextbox{
     width: 95px !important;
 }
