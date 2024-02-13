@@ -7,6 +7,15 @@ h1{
     font-size:28px !important;
     font-weight: 900 !important;
 }
+h8{
+    font-size: 13.5px;
+}
+
+.credits{
+    width: 100%;
+    line-height: 0.4rem;
+    padding-top: 1rem;
+}
 
 .container-body{
     padding-left: 0 !important;
