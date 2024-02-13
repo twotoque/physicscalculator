@@ -34,7 +34,7 @@
                         <div class="padding"></div>
                         <input type="text" class="form-control1 atomsearchtextbox" placeholder="Atom #" id="AtomSearchAtomicNumberIN"aria-describedby="AlphaAtomicNumberIN">
                     </div>
-                    <input type="text" class="form-control1 atomsearchtextbox" placeholder="Abbv" id="AtomSearch-AtomicSymbolIN" aria-describedby="AlphaAtomicSymbolIN">
+                    <input type="text" class="form-control1 atomsearchtextbox" placeholder="Abbv" id="AtomSearchAtomicSymbolIN" aria-describedby="AlphaAtomicSymbolIN">
                 </div>
                 <div class="p-2"></div>
                 <div class="container text-center">
@@ -54,13 +54,31 @@
             </div>
             <div class="container p-2">
                 <div class="justify-content-left">
-                    <h4><b>Enter a particle!</b></h4>
-                    <h6><b>Short form:</b></h6>
-                    <h6><b>Atomic number:</b></h6>
-                    <h6 class="IUPAC"><b>Group:</b></h6>
-                    <h6 class="IUPAClower"><i><b>IUPAC group name:</b></i></h8>
-                    <h6><b>Period:</b></h6>
-                    <h6><b>Mass:</b></h6>
+                    <h4 id="AtomSearchAtomicNameOUT"><b>Enter a particle!</b></h4>
+                    <div class="d-flex flex-row">
+                        <h6><b>Short form: </b></h6> 
+                        <h6 class="AtomSearchAtomicNameOUT">Fe</h6>
+                    </div>
+                    <div class="d-flex flex-row">
+                        <h6><b>Atomic number: </b></h6> 
+                        <h6 class="AtomSearchAtomicNumberOUT">12</h6>
+                    </div>
+                    <div class="d-flex flex-row">
+                        <h6 class="IUPAC"><b>Group: </b></h6>
+                        <h6 class="IUPAC" id="AtomicSearchGroupNameOUT">12</h6>
+                    </div>
+                    <div class="d-flex flex-row">
+                        <h6 class="IUPAClower"><i><b>IUPAC group name: </b></i></h8>
+                        <h6 class="IUPAClower" id="AtomicSearchGroupNameOUTalt"><i> Titan­ium </i></h8>
+                    </div>
+                    <div class="d-flex flex-row">
+                        <h6><b>Period: </b></h6>
+                        <h6 class="AtomicSearchGroupPeriodOUT">12</h6>
+                    </div>
+                    <div class="d-flex flex-row">
+                        <h6><b>Mass: </b></h6>
+                        <h6 class="AtomSearchAtomicMassOUT">12</h6>
+                    </div>
                     
                     <button type="button" id= "Reset" class="btn btn-danger">Reset</button>
                 </div>
