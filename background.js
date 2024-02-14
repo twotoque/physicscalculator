@@ -884,10 +884,20 @@ document.getElementById("BetaPosAtomicNumberOUT").addEventListener("input", func
 document.getElementById("BetaPosAtomicMassOUT").addEventListener("input", function() {
     BetaPosAtomicMassRev(this.value);
 });
-document.getElementById("AtomSearchAtomicMassIN ").addEventListener("input", function() {
+document.getElementById("AtomSearchAtomicMassIN").addEventListener("input", function() {
     AtomSearchAtomicMass(this.value);
 });
+document.getElementById("AtomicSearchGroupNameIN").addEventListener("input", function() {
+    var value = this.value;
+    var value2 = document.getElementById("AtomicSearchGroupPeriodIN").value;
+    AtomicSearchGroupName(value, value2);
+});
 
+document.getElementById("AtomicSearchGroupPeriodIN").addEventListener("input", function() {
+    var value = document.getElementById("AtomicSearchGroupNameIN").value;
+    var value2 = this.value;
+    AtomicSearchGroupName(value, value2);
+});
 
 // Buttons & element controller
 window.onload = (event) => {
@@ -994,9 +1004,10 @@ document.getElementById('ElectronCapturebtn').addEventListener('click', function
 });
 // Calculations
 
-function atomicSearch(AtomicSymbol, value, searchVal) {
-    // Function to search through const AtomicSymbol. Use = aanFinder(AtomicSymbol, value, searchVal). AtomicSymbol = an array (const); value = the atomic element to search (str or int); searchVal = what to search (str). In older versions this function was "aanFinder"
+function atomicSearch(AtomicSymbol, value, searchVal, value2) {
+    // Function to search through const AtomicSymbol. Use = aanFinder(AtomicSymbol, value, searchVal). AtomicSymbol = an array (const); value = the atomic element to search (str or int); searchVal = what to search (str); value2 = secondary value (int or str) . In older versions this function was "aanFinder"
     if (searchVal === "shortform") { //Search using Atomic letters
+        value = value.charAt(0).toUpperCase() + value.slice(1).toLowerCase(); // Make first letter uppercase, others lowercase. Follows naming method in const AtomicSymbol
         for (var i = 0; i < AtomicSymbol.length; i++) { // Search for item matching value at "i". If "i" == value, get its index, else add 1 to i.
             if (AtomicSymbol[i].shortform === value) {
                 return i; // Return the index of the found element
@@ -1012,9 +1023,46 @@ function atomicSearch(AtomicSymbol, value, searchVal) {
         }
         return -1; // Return -1 if no matching element is found
     }  
+    if (searchVal === "atomSearch") { // Search using Atomic number
+        for (var i = 0; i < AtomicSymbol.length; i++) { // Search for item matching value at "i". If "i" == value, get its index, else add 1 to i.
+            if (AtomicSymbol[i].group === parseInt(value)  && AtomicSymbol[i].period === parseInt(value2)) { // Variable "value" represents group assignment, variable "value2" represents period.
+                return i; // Return the index of the found element
+            } else if (AtomicSymbol[i].group === value && AtomicSymbol[i].period === parseInt(value2)) { // Special coniditon if "N/A" is inputted. Does not convert value into int. 
+                return i; // Return the index of the found element
+            } 
+        }
+        return -1; // Return -1 if no matching element is found
+    }  
+    if (searchVal === "name") { // Search using Atomic number
+        value = value.charAt(0).toUpperCase() + value.slice(1).toLowerCase(); // Make first letter uppercase, others lowercase. Follows naming method in const AtomicSymbol
+        for (var i = 0; i < AtomicSymbol.length; i++) { // Search for item matching value at "i". If "i" == value, get its index, else add 1 to i.
+            if (AtomicSymbol[i].name === value) { // Converts str value to int
+                return i; // Return the index of the found element
+            }
+        }
+        return -1; // Return -1 if no matching element is found
+    }  
 }
 
+
+function groupSearch(group) {
+     // Function to assign group names given the group namer. Use = groupSearch(group). group = the group number (int).
+     // To reference, call result[0] for groupName, and result[1] for IUPACname, assuming that var result = groupSearch(group)
+    var groupName, IUPACname
+    if (group === 0) {
+        groupName = "0 or 18, noble gases"
+        IUPACname = "helium or neon group"
+        return [groupName, IUPACname];
+    }
+    else if (group === 1) {
+        groupName = "1, H and alkali metals"
+        IUPACname = "lith­ium group"
+        return [groupName, IUPACname];
+    }
+
+}
 // Alpha decay series of functions
+
 
 function AlphaAtomicSymbol(value){
     // Function to calculate Alpha decay, given the input Atomic symbol of an element. Input = Alpha-AtomicSymbolIN (str)
@@ -1124,7 +1172,28 @@ function AlphaAtomicMassRev (value){
 // Atom search
 
 function AtomSearchAtomicMass (value){
+    // Function to print mass of an Atom. Input = AtomSearchAtomicMassIN 
+    document.getElementById("AtomSearchAtomicMassOUT").innerHTML = value;
 }
+
+function AtomicSearchGroupName (value, value2){
+    // Function to print mass of an Atom. Input = AtomSearchAtomicMassIN 
+    var position = atomicSearch(AtomicSymbol, value, "atomSearch", value2); // Pass both arguments to aanFinder
+    if (position !== -1) {
+        var originalValuePosition = AtomicSymbol[position]; // Find position of the item
+        var groupName = groupSearch(originalValuePosition.group) // Find names for the groups
+
+        // Output; a more concise version compared to the previous version
+        document.getElementById("AtomSearchAtomicSymbolOUT").innerHTML = originalValuePosition.shortform;
+        document.getElementById("AtomSearchAtomicNumberOUT").innerHTML = originalValuePosition.aanConst;
+        document.getElementById("AtomSearchAtomicNameOUT").innerHTML = originalValuePosition.name;
+        document.getElementById("AtomicSearchGroupNameOUT").innerHTML = groupName[0];
+        document.getElementById("AtomicSearchGroupNameOUTalt").innerHTML = groupName[1];
+        document.getElementById("AtomicSearchGroupPeriodOUT").innerHTML = originalValuePosition.period;
+    }
+}
+
+// Beta positive
 
 function BetaPosAtomicNumber (value){
     // Function to calculate Beta Postive decay, given the input Atomic number of an element. Input = BetaPosAtomicNumberIN (int)
@@ -1173,7 +1242,7 @@ function BetaPosAtomicSymbol(value){
 
 function BetaPosAtomicSymbolRev(value){
     // Function to calculate inverse beta positive decay, given the ouptut Atomic number of an element. Input = BetaPosAtomicNumberOUT (int)
-    var position = atomicSearch(AtomicSymbol, value, "aanConst"); // Pass both arguments to aanFinder
+    var position = atomicSearch(AtomicSymbol, value, "atomSearch"); // Pass both arguments to aanFinder
     if (position !== -1) {
         var originalValuePosition = AtomicSymbol[position]; // Find position of the item
         var resultant = AtomicSymbol[position+1] // Search AtomicSymbol for an item added by 1 (i.e. the inv. effects of Beta Positive decay)
