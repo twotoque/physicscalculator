@@ -56,7 +56,16 @@ document.getElementById("AtomicSearchGroupPeriodIN").addEventListener("input", f
     var value2 = this.value;
     AtomicSearchGroupName(value, value2);
 });
+document.getElementById("AtomSearchAtomicNameIN").addEventListener("input", function() {
+    AtomicSearchAtomName(this.value);
+});
 
+document.getElementById("AtomSearchAtomicNumberIN").addEventListener("input", function() {
+    AtomicSearchAtomNumber(this.value);
+});
+document.getElementById("AtomSearchAtomicSymbolIN").addEventListener("input", function() {
+    AtomicSearchAtomShort(this.value);
+});
 // Buttons & element controller
 window.onload = (event) => {
     BetaPositive.style.display = 'none';
@@ -177,7 +186,7 @@ function atomicSearch(AtomicSymbol, value, searchVal, value2) {
         }
         return -1; // Return -1 if no matching element is found
     } 
-    if (searchVal === "aanConst") { // Search using Atomic number
+    else if (searchVal === "aanConst") { // Search using Atomic number
         for (var i = 0; i < AtomicSymbol.length; i++) { // Search for item matching value at "i". If "i" == value, get its index, else add 1 to i.
             if (AtomicSymbol[i].aanConst === parseInt(value)) { // Converts str value to int
                 return i; // Return the index of the found element
@@ -185,7 +194,7 @@ function atomicSearch(AtomicSymbol, value, searchVal, value2) {
         }
         return -1; // Return -1 if no matching element is found
     }  
-    if (searchVal === "atomSearch") { // Search using Atomic number
+    else if (searchVal === "atomSearch") { // Search using Atomic number
         if (parseInt(value) === 0){ // Converts elements with group 0 to 18. AtomicSymbol uses 18 instead of 0.
             value = 18
         }
@@ -198,10 +207,18 @@ function atomicSearch(AtomicSymbol, value, searchVal, value2) {
         }
         return -1; // Return -1 if no matching element is found
     }  
-    if (searchVal === "name") { // Search using Atomic number
+    else if (searchVal === "name") { // Search using Atomic number
         value = value.charAt(0).toUpperCase() + value.slice(1).toLowerCase(); // Make first letter uppercase, others lowercase. Follows naming method in const AtomicSymbol
         for (var i = 0; i < AtomicSymbol.length; i++) { // Search for item matching value at "i". If "i" == value, get its index, else add 1 to i.
             if (AtomicSymbol[i].name === value) { // Converts str value to int
+                return i; // Return the index of the found element
+            }
+        }
+        return -1; // Return -1 if no matching element is found
+    }  
+    else if (searchVal === "mass") { // Search using Atomic mass
+        for (var i = 0; i < AtomicSymbol.length; i++) { // Search for item matching value at "i". If "i" == value, get its index, else add 1 to i.
+            if (AtomicSymbol[i].avgMass === parseInt(value)) { // Converts str value to int
                 return i; // Return the index of the found element
             }
         }
@@ -211,11 +228,28 @@ function atomicSearch(AtomicSymbol, value, searchVal, value2) {
 
 
 function blockSearch(group, period) {
-    var block
-    if (group > 1 && group < 2 || group == 0 && period == 1){
-        block = "s, "
+    // Function to assign block name and azimuthal quantum number names given the group and period. Use = blockSearch(group, period). group = the group number (int); period = the period number (int).
+    // To reference, call result[0] for block, and result[1] for azNum, assuming that var result = blockSearch(group, period) 
+    var block, azNum
+    if (group >= 1 && group <= 2 || group == 18 && period == 1){
+        block = "s (sharp)"
+        azNum = 0
+        return [block, azNum];
+    } else if (group >= 13 && group <= 18){
+        block = "p (principal)"
+        azNum = 1
+        return [block, azNum];
+    } else if (group >= 3 && group <= 12){
+        block = "d (diffuse)"
+        azNum = 2
+        return [block, azNum];
+    } else {
+        block = "f (fundamental)"
+        azNum = 3
+        return [block, azNum];
     }
 }
+
 function groupSearch(group) {
      // Function to assign group names given the group namer. Use = groupSearch(group). group = the group number (int).
      // To reference, call result[0] for groupName, and result[1] for IUPACname, assuming that var result = groupSearch(group)
@@ -309,6 +343,11 @@ function groupSearch(group) {
     else if (group === 17) {
         groupName = "17, halo­gens"
         IUPACname = "fluor­ine group"
+        return [groupName, IUPACname];
+    }
+    else {
+        groupName = "N/A"
+        IUPACname = "N/A"
         return [groupName, IUPACname];
     }
 
@@ -425,8 +464,24 @@ function AlphaAtomicMassRev (value){
 // Atom search
 
 function AtomSearchAtomicMass (value){
-    // Function to print mass of an Atom. Input = AtomSearchAtomicMassIN 
-    document.getElementById("AtomSearchAtomicMassOUT").innerHTML = value;
+    // Function to print mass of an Atom. Input = AtomSearchAtomicMassIN  
+    var position = atomicSearch(AtomicSymbol, value, "mass"); // Pass both arguments to aanFinder
+    if (position !== -1) {
+        var originalValuePosition = AtomicSymbol[position]; // Find position of the item
+        var groupName = groupSearch(originalValuePosition.group) // Find names for the groups
+        var blockName = blockSearch(originalValuePosition.group, originalValuePosition.period) // Find names for the block
+
+        // Output; a more concise version compared to the previous version
+        document.getElementById("AtomSearchAtomicSymbolOUT").innerHTML = originalValuePosition.shortform;
+        document.getElementById("AtomSearchAtomicNumberOUT").innerHTML = originalValuePosition.aanConst;
+        document.getElementById("AtomSearchAtomicNameOUT").innerHTML = originalValuePosition.name;
+        document.getElementById("AtomicSearchGroupNameOUT").innerHTML = groupName[0];
+        document.getElementById("AtomicSearchGroupNameOUTalt").innerHTML = groupName[1];
+        document.getElementById("AtomicSearchGroupPeriodOUT").innerHTML = originalValuePosition.period;
+        document.getElementById("AtomSearchAtomicMassOUT").innerHTML = originalValuePosition.avgMass;
+        document.getElementById("AtomicBlockOUT").innerHTML = blockName[0];
+        document.getElementById("AtomicBlockOUTalt").innerHTML = blockName[1];
+    }
 }
 
 function AtomSearchReset(){
@@ -440,20 +495,23 @@ function AtomSearchReset(){
 
     document.getElementById("AtomSearchAtomicSymbolOUT").innerHTML = null;
     document.getElementById("AtomSearchAtomicNumberOUT").innerHTML = null;
-    document.getElementById("AtomSearchAtomicNameOUT").innerHTML = null;
+    document.getElementById("AtomSearchAtomicNameOUT").innerHTML = "Enter an element!";
     document.getElementById("AtomicSearchGroupNameOUT").innerHTML = null;
     document.getElementById("AtomicSearchGroupNameOUTalt").innerHTML = null;
-    document.getElementById("AtomicSearchGroupPeriodOUT").innerHTML = null;
+    document.getElementById("AtomicSearchGroupPeriodOUT").innerHTML = null; AtomicBlockOUT
     document.getElementById("AtomSearchAtomicMassOUT").innerHTML = null;
+    document.getElementById("AtomicBlockOUT").innerHTML = null;
+    document.getElementById("AtomicBlockOUTalt").innerHTML = null;
 
 }
 
 function AtomicSearchGroupName (value, value2){
-    // Function to print mass of an Atom. Input = AtomSearchAtomicMassIN 
+    // Function to print mass of an Atom. Input = AtomSearchAtomicMassIN  
     var position = atomicSearch(AtomicSymbol, value, "atomSearch", value2); // Pass both arguments to aanFinder
     if (position !== -1) {
         var originalValuePosition = AtomicSymbol[position]; // Find position of the item
         var groupName = groupSearch(originalValuePosition.group) // Find names for the groups
+        var blockName = blockSearch(originalValuePosition.group, originalValuePosition.period) // Find names for the block
 
         // Output; a more concise version compared to the previous version
         document.getElementById("AtomSearchAtomicSymbolOUT").innerHTML = originalValuePosition.shortform;
@@ -462,9 +520,73 @@ function AtomicSearchGroupName (value, value2){
         document.getElementById("AtomicSearchGroupNameOUT").innerHTML = groupName[0];
         document.getElementById("AtomicSearchGroupNameOUTalt").innerHTML = groupName[1];
         document.getElementById("AtomicSearchGroupPeriodOUT").innerHTML = originalValuePosition.period;
+        document.getElementById("AtomSearchAtomicMassOUT").innerHTML = originalValuePosition.avgMass;
+        document.getElementById("AtomicBlockOUT").innerHTML = blockName[0];
+        document.getElementById("AtomicBlockOUTalt").innerHTML = blockName[1];
     }
 }
 
+function AtomicSearchAtomName (value){
+    // Function to print mass of an Atom. Input = AtomSearchAtomicMassIN  
+    var position = atomicSearch(AtomicSymbol, value, "name"); // Pass both arguments to aanFinder
+    if (position !== -1) {
+        var originalValuePosition = AtomicSymbol[position]; // Find position of the item
+        var groupName = groupSearch(originalValuePosition.group) // Find names for the groups
+        var blockName = blockSearch(originalValuePosition.group, originalValuePosition.period) // Find names for the block
+
+        // Output; a more concise version compared to the previous version
+        document.getElementById("AtomSearchAtomicSymbolOUT").innerHTML = originalValuePosition.shortform;
+        document.getElementById("AtomSearchAtomicNumberOUT").innerHTML = originalValuePosition.aanConst;
+        document.getElementById("AtomSearchAtomicNameOUT").innerHTML = originalValuePosition.name;
+        document.getElementById("AtomicSearchGroupNameOUT").innerHTML = groupName[0];
+        document.getElementById("AtomicSearchGroupNameOUTalt").innerHTML = groupName[1];
+        document.getElementById("AtomicSearchGroupPeriodOUT").innerHTML = originalValuePosition.period;
+        document.getElementById("AtomSearchAtomicMassOUT").innerHTML = originalValuePosition.avgMass;
+        document.getElementById("AtomicBlockOUT").innerHTML = blockName[0];
+        document.getElementById("AtomicBlockOUTalt").innerHTML = blockName[1];
+    }
+}
+
+function AtomicSearchAtomNumber (value){
+    // Function to print mass of an Atom. Input = AtomSearchAtomicMassIN  
+    var position = atomicSearch(AtomicSymbol, value, "aanConst"); // Pass both arguments to aanFinder
+    if (position !== -1) {
+        var originalValuePosition = AtomicSymbol[position]; // Find position of the item
+        var groupName = groupSearch(originalValuePosition.group) // Find names for the groups
+        var blockName = blockSearch(originalValuePosition.group, originalValuePosition.period) // Find names for the block
+
+        // Output; a more concise version compared to the previous version
+        document.getElementById("AtomSearchAtomicSymbolOUT").innerHTML = originalValuePosition.shortform;
+        document.getElementById("AtomSearchAtomicNumberOUT").innerHTML = originalValuePosition.aanConst;
+        document.getElementById("AtomSearchAtomicNameOUT").innerHTML = originalValuePosition.name;
+        document.getElementById("AtomicSearchGroupNameOUT").innerHTML = groupName[0];
+        document.getElementById("AtomicSearchGroupNameOUTalt").innerHTML = groupName[1];
+        document.getElementById("AtomicSearchGroupPeriodOUT").innerHTML = originalValuePosition.period;
+        document.getElementById("AtomSearchAtomicMassOUT").innerHTML = originalValuePosition.avgMass;
+        document.getElementById("AtomicBlockOUT").innerHTML = blockName[0];
+        document.getElementById("AtomicBlockOUTalt").innerHTML = blockName[1];
+    }
+} 
+function AtomicSearchAtomShort (value){
+    // Function to print mass of an Atom. Input = AtomSearchAtomicMassIN  
+    var position = atomicSearch(AtomicSymbol, value, "shortform"); // Pass both arguments to aanFinder
+    if (position !== -1) {
+        var originalValuePosition = AtomicSymbol[position]; // Find position of the item
+        var groupName = groupSearch(originalValuePosition.group) // Find names for the groups
+        var blockName = blockSearch(originalValuePosition.group, originalValuePosition.period) // Find names for the block
+
+        // Output; a more concise version compared to the previous version
+        document.getElementById("AtomSearchAtomicSymbolOUT").innerHTML = originalValuePosition.shortform;
+        document.getElementById("AtomSearchAtomicNumberOUT").innerHTML = originalValuePosition.aanConst;
+        document.getElementById("AtomSearchAtomicNameOUT").innerHTML = originalValuePosition.name;
+        document.getElementById("AtomicSearchGroupNameOUT").innerHTML = groupName[0];
+        document.getElementById("AtomicSearchGroupNameOUTalt").innerHTML = groupName[1];
+        document.getElementById("AtomicSearchGroupPeriodOUT").innerHTML = originalValuePosition.period;
+        document.getElementById("AtomSearchAtomicMassOUT").innerHTML = originalValuePosition.avgMass;
+        document.getElementById("AtomicBlockOUT").innerHTML = blockName[0];
+        document.getElementById("AtomicBlockOUTalt").innerHTML = blockName[1];
+    }
+}
 // Beta positive
 
 function BetaPosAtomicNumber (value){
