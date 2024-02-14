@@ -16,5 +16,9 @@
   },
   "background": {
       "service_worker": "background.js"
-  }
+  }, 
+  "web_accessible_resources": [
+    "background.js",
+    "atomicData.js"
+  ]
 }
