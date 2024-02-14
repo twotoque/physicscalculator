@@ -70,6 +70,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 7, 
         group: 15,
         period: 2,
+        avgMass: 14.007,
     },
     {
         name: "Oxygen",
@@ -77,6 +78,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 8, 
         group: 16,
         period: 2,
+        avgMass: 15.999,
     },
     {
         name: "Fluorine",
@@ -84,6 +86,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 9, 
         group: 17,
         period: 2,
+        avgMass: 18.998,
     },
     {
         name: "Neon",
@@ -91,13 +94,14 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 10, 
         group: 18,
         period: 2,
-    },
-    {
+        avgMass: 20.180,
+    },    {
         name: "Sodium",
         shortform: "Na",
         aanConst: 11, 
         group: 1,
         period: 3,
+        avgMass: 22.990,
     },
     {
         name: "Magnesium",
@@ -105,20 +109,23 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 12, 
         group: 2,
         period: 3,
+        avgMass: 24.305,
     },
     {
-        name: "Aluminium", //I pronounce it the British way :sunglasses: 
+        name: "Aluminium", // I pronounce it the British way *sunglasses emoji*
         shortform: "Al",
         aanConst: 13, 
         group: 13,
         period: 3,
+        avgMass: 26.982,
     },
     {
-        name: "Sili­con",
+        name: "Silicon",
         shortform: "Si",
         aanConst: 14, 
         group: 14,
         period: 3,
+        avgMass: 28.085,
     },
     {
         name: "Phosphorus",
@@ -126,6 +133,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 15, 
         group: 15,
         period: 3,
+        avgMass: 30.974,
     },
     {
         name: "Sulphur",
@@ -133,13 +141,14 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 16, 
         group: 16,
         period: 3,
-    },
-    {
+        avgMass: 32.065,
+    },    {
         name: "Chlorine",
         shortform: "Cl",
         aanConst: 17, 
         group: 17,
         period: 3,
+        avgMass: 35.453,
     },
     {
         name: "Argon",
@@ -147,6 +156,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 18, 
         group: 18,
         period: 3,
+        avgMass: 39.948,
     },
     {
         name: "Potassium",
@@ -154,6 +164,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 19, 
         group: 1,
         period: 4,
+        avgMass: 39.098,
     },
     {
         name: "Calcium",
@@ -161,6 +172,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 20, 
         group: 2,
         period: 4,
+        avgMass: 40.078,
     },
     {
         name: "Scandium",
@@ -168,6 +180,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 21, 
         group: 3,
         period: 4,
+        avgMass: 44.956,
     },
     {
         name: "Titanium",
@@ -175,6 +188,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 22, 
         group: 4,
         period: 4,
+        avgMass: 47.867,
     },
     {
         name: "Vanadium",
@@ -182,6 +196,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 23, 
         group: 5,
         period: 4,
+        avgMass: 50.942,
     },
     {
         name: "Chromium",
@@ -189,6 +204,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 24, 
         group: 6,
         period: 4,
+        avgMass: 51.996,
     },
     {
         name: "Manganese",
@@ -196,13 +212,15 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 25, 
         group: 7,
         period: 4,
-    },
+        avgMass: 54.938,
+    },    
     {
         name: "Iron",
         shortform: "Fe",
         aanConst: 26, 
         group: 8,
         period: 4,
+        avgMass: 55.845,
     },
     {
         name: "Cobalt",
@@ -210,6 +228,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 27, 
         group: 9,
         period: 4,
+        avgMass: 58.933,
     },
     {
         name: "Nickel",
@@ -217,6 +236,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 28, 
         group: 10,
         period: 4,
+        avgMass: 58.693,
     },
     {
         name: "Copper",
@@ -224,6 +244,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 29, 
         group: 11,
         period: 4,
+        avgMass: 63.546,
     },
     {
         name: "Zinc",
@@ -231,6 +252,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 30, 
         group: 12,
         period: 4,
+        avgMass: 65.38,
     },
     {
         name: "Gallium",
@@ -238,6 +260,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 31, 
         group: 13,
         period: 4,
+        avgMass: 69.723,
     },
     {
         name: "Germanium",
@@ -245,6 +268,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 32, 
         group: 14,
         period: 4,
+        avgMass: 72.63,
     },
     {
         name: "Arsenic",
@@ -252,6 +276,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 33, 
         group: 15,
         period: 4,
+        avgMass: 74.922,
     },
     {
         name: "Selenium",
@@ -259,6 +284,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 34, 
         group: 16,
         period: 4,
+        avgMass: 78.971,
     },
     {
         name: "Bromine",
@@ -266,6 +292,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 35, 
         group: 17,
         period: 4,
+        avgMass: 79.904,
     },
     {
         name: "Krypton",
@@ -273,13 +300,15 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 36, 
         group: 18,
         period: 4,
+        avgMass: 83.798,
     },
     {
-        name: "Rubidium,",
+        name: "Rubidium",
         shortform: "Rb",
         aanConst: 37, 
         group: 1,
         period: 5,
+        avgMass: 85.468,
     },
     {
         name: "Strontium",
@@ -287,6 +316,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 38, 
         group: 2,
         period: 5,
+        avgMass: 87.62,
     },
     {
         name: "Yttrium",
@@ -294,6 +324,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 39, 
         group: 3,
         period: 5,
+        avgMass: 88.906,
     },
     {
         name: "Zirconium",
@@ -301,6 +332,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 40, 
         group: 4,
         period: 5,
+        avgMass: 91.224,
     },
     {
         name: "Niobium",
@@ -308,6 +340,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 41, 
         group: 5,
         period: 5,
+        avgMass: 92.906,
     },
     {
         name: "Molybdenum",
@@ -315,6 +348,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 42, 
         group: 6,
         period: 5,
+        avgMass: 95.95,
     },
     {
         name: "Technetium",
@@ -322,6 +356,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 43, 
         group: 7,
         period: 5,
+        avgMass: 98,
     },
     {
         name: "Ruthenium",
@@ -329,6 +364,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 44, 
         group: 8,
         period: 5,
+        avgMass: 101.07,
     },
     {
         name: "Rhodium",
@@ -336,6 +372,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 45, 
         group: 9,
         period: 5,
+        avgMass: 102.91,
     },
     {
         name: "Palladium",
@@ -343,13 +380,15 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 46, 
         group: 10,
         period: 5,
+        avgMass: 106.42,
     },
     {
-        name: "Sliver",
+        name: "Silver",
         shortform: "Ag",
         aanConst: 47, 
         group: 11,
         period: 5,
+        avgMass: 107.87,
     },
     {
         name: "Cadmium",
@@ -357,6 +396,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 48, 
         group: 12,
         period: 5,
+        avgMass: 112.41,
     },
     {
         name: "Indium",
@@ -364,6 +404,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 49, 
         group: 13,
         period: 5,
+        avgMass: 114.82,
     },
     {
         name: "Tin",
@@ -371,6 +412,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 50, 
         group: 14,
         period: 5,
+        avgMass: 118.71,
     },
     {
         name: "Antimony",
@@ -378,6 +420,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 51, 
         group: 15,
         period: 5,
+        avgMass: 121.76,
     },
     {
         name: "Tellurium",
@@ -385,13 +428,15 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 52, 
         group: 16,
         period: 5,
+        avgMass: 127.6,
     },
     {
         name: "Iodine",
         shortform: "I",
         aanConst: 53, 
-        group: 16,
+        group: 17,
         period: 5,
+        avgMass: 126.9,
     },
     {
         name: "Xenon",
@@ -399,6 +444,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 54, 
         group: 18,
         period: 5,
+        avgMass: 131.29,
     },
     {
         name: "Caesium",
@@ -406,6 +452,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 55, 
         group: 1,
         period: 6,
+        avgMass: 132.91,
     },
     {
         name: "Barium",
@@ -413,6 +460,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 56, 
         group: 2,
         period: 6,
+        avgMass: 137.33,
     },
     {
         name: "Lanthanum",
@@ -420,6 +468,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 57, 
         group: "N/A",
         period: 6,
+        avgMass: 138.905,
     },
     {
         name: "Cerium",
@@ -427,6 +476,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 58, 
         group: "N/A",
         period: 6,
+        avgMass: 140.116,
     },
     {
         name: "Praseodymium",
@@ -434,6 +484,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 59, 
         group: "N/A",
         period: 6,
+        avgMass: 140.907,
     },
     {
         name: "Neodymium",
@@ -441,6 +492,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 60, 
         group: "N/A",
         period: 6,
+        avgMass: 144.242,
     },
     {
         name: "Promethium",
@@ -448,6 +500,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 61, 
         group: "N/A",
         period: 6,
+        avgMass: 145,
     },
     {
         name: "Samarium",
@@ -455,6 +508,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 62, 
         group: "N/A",
         period: 6,
+        avgMass: 150.36,
     },
     {
         name: "Europium",
@@ -462,6 +516,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 63, 
         group: "N/A",
         period: 6,
+        avgMass: 151.964,
     },
     {
         name: "Gadolinium",
@@ -469,6 +524,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 64, 
         group: "N/A",
         period: 6,
+        avgMass: 157.25,
     },
     {
         name: "Terbium",
@@ -476,6 +532,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 65, 
         group: "N/A",
         period: 6,
+        avgMass: 158.925,
     },
     {
         name: "Dysprosium",
@@ -483,6 +540,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 66, 
         group: "N/A",
         period: 6,
+        avgMass: 162.5,
     },
     {
         name: "Holmium",
@@ -490,13 +548,15 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 67, 
         group: "N/A",
         period: 6,
+        avgMass: 164.93,
     },
     {
         name: "Erbium",
-        shortform: "Ho",
+        shortform: "Er",
         aanConst: 68, 
         group: "N/A",
         period: 6,
+        avgMass: 167.259,
     },
     {
         name: "Thulium",
@@ -504,13 +564,14 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 69, 
         group: "N/A",
         period: 6,
-    },
-    {
+        avgMass: 168.934,
+    },    {
         name: "Ytterbium",
         shortform: "Yb",
         aanConst: 70, 
         group: "N/A",
         period: 6,
+        avgMass: 173.045,
     },
     {
         name: "Lutetium",
@@ -518,6 +579,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 71, 
         group: 3,
         period: 6,
+        avgMass: 174.966,
     },
     {
         name: "Hafnium",
@@ -525,6 +587,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 72, 
         group: 4,
         period: 6,
+        avgMass: 178.49,
     },
     {
         name: "Tantalum",
@@ -532,6 +595,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 73, 
         group: 5,
         period: 6,
+        avgMass: 180.948,
     },
     {
         name: "Tungsten",
@@ -539,6 +603,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 74, 
         group: 6,
         period: 6,
+        avgMass: 183.84,
     },
     {
         name: "Rhenium",
@@ -546,6 +611,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 75, 
         group: 7,
         period: 6,
+        avgMass: 186.207,
     },
     {
         name: "Osmium",
@@ -553,6 +619,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 76, 
         group: 8,
         period: 6,
+        avgMass: 190.23,
     },
     {
         name: "Iridium",
@@ -560,6 +627,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 77, 
         group: 9,
         period: 6,
+        avgMass: 192.217,
     },
     {
         name: "Platinum",
@@ -567,6 +635,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 78, 
         group: 10,
         period: 6,
+        avgMass: 195.084,
     },
     {
         name: "Gold",
@@ -574,6 +643,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 79, 
         group: 11,
         period: 6,
+        avgMass: 196.967,
     },
     {
         name: "Mercury",
@@ -581,6 +651,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 80, 
         group: 12,
         period: 6,
+        avgMass: 200.592,
     },
     {
         name: "Thallium",
@@ -588,6 +659,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 81, 
         group: 13,
         period: 6,
+        avgMass: 204.38,
     },
     {
         name: "Lead",
@@ -595,13 +667,15 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 82, 
         group: 14,
         period: 6,
-    },
+        avgMass: 207.2,
+    },    
     {
         name: "Bismuth",
         shortform: "Bi",
         aanConst: 83, 
         group: 15,
         period: 6,
+        avgMass: 208.980,
     },
     {
         name: "Polonium",
@@ -609,6 +683,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 84, 
         group: 16,
         period: 6,
+        avgMass: 209,
     },
     {
         name: "Astatine",
@@ -616,6 +691,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 85, 
         group: 17,
         period: 6,
+        avgMass: 210,
     },
     {
         name: "Radon",
@@ -623,6 +699,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 86, 
         group: 18,
         period: 6,
+        avgMass: 222,
     },
     {
         name: "Francium",
@@ -630,6 +707,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 87, 
         group: 1,
         period: 7,
+        avgMass: 223,
     },
     {
         name: "Radium",
@@ -637,6 +715,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 88, 
         group: 2,
         period: 7,
+        avgMass: 226,
     },
     {
         name: "Actinium",
@@ -644,6 +723,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 89, 
         group: "N/A",
         period: 7,
+        avgMass: 227,
     },
     {
         name: "Thorium",
@@ -651,6 +731,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 90, 
         group: "N/A",
         period: 7,
+        avgMass: 232.038,
     },
     {
         name: "Protactinium",
@@ -658,6 +739,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 91, 
         group: "N/A",
         period: 7,
+        avgMass: 231.036,
     },
     {
         name: "Uranium",
@@ -665,6 +747,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 92, 
         group: "N/A",
         period: 7,
+        avgMass: 238.029,
     },
     {
         name: "Neptunium",
@@ -672,6 +755,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 93, 
         group: "N/A",
         period: 7,
+        avgMass: 237,
     },
     {
         name: "Plutonium",
@@ -679,6 +763,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 94, 
         group: "N/A",
         period: 7,
+        avgMass: 244,
     },
     {
         name: "Americium",
@@ -686,6 +771,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 95, 
         group: "N/A",
         period: 7,
+        avgMass: 243,
     },
     {
         name: "Curium",
@@ -693,6 +779,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 96, 
         group: "N/A",
         period: 7,
+        avgMass: 247,
     },
     {
         name: "Berkelium",
@@ -700,6 +787,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 97, 
         group: "N/A",
         period: 7,
+        avgMass: 247,
     },
     {
         name: "Californium",
@@ -707,13 +795,14 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 98, 
         group: "N/A",
         period: 7,
-    },
-    {
+        avgMass: 251,
+    },    {
         name: "Einsteinium",
         shortform: "Es",
         aanConst: 99, 
         group: "N/A",
         period: 7,
+        avgMass: 252,
     },
     {
         name: "Fermium",
@@ -721,6 +810,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 100, 
         group: "N/A",
         period: 7,
+        avgMass: 257,
     },
     {
         name: "Mendelevium",
@@ -728,6 +818,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 101, 
         group: "N/A",
         period: 7,
+        avgMass: 258,
     },
     {
         name: "Nobelium",
@@ -735,6 +826,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 102, 
         group: "N/A",
         period: 7,
+        avgMass: 259,
     },
     {
         name: "Lawrencium",
@@ -742,6 +834,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 103, 
         group: 3,
         period: 7,
+        avgMass: 266,
     },
     {
         name: "Rutherfordium",
@@ -749,6 +842,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 104, 
         group: 4,
         period: 7,
+        avgMass: 267,
     },
     {
         name: "Dubnium",
@@ -756,6 +850,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 105, 
         group: 5,
         period: 7,
+        avgMass: 268,
     },
     {
         name: "Seaborgium",
@@ -763,6 +858,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 106, 
         group: 6,
         period: 7,
+        avgMass: 269,
     },
     {
         name: "Bohrium",
@@ -770,6 +866,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 107, 
         group: 7,
         period: 7,
+        avgMass: 270,
     },
     {
         name: "Hassium",
@@ -777,6 +874,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 108, 
         group: 8,
         period: 7,
+        avgMass: 277,
     },
     {
         name: "Meitnerium",
@@ -784,6 +882,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 109, 
         group: 9,
         period: 7,
+        avgMass: 278,
     },
     {
         name: "Darmstadtium",
@@ -791,6 +890,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 110, 
         group: 10,
         period: 7,
+        avgMass: 281,
     },
     {
         name: "Roentgenium",
@@ -798,6 +898,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 111, 
         group: 11,
         period: 7,
+        avgMass: 282,
     },
     {
         name: "Copernicium",
@@ -805,6 +906,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 112, 
         group: 12,
         period: 7,
+        avgMass: 285,
     },
     {
         name: "Nihonium",
@@ -812,6 +914,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 113, 
         group: 13,
         period: 7,
+        avgMass: 286,
     },
     {
         name: "Flerovium",
@@ -819,6 +922,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 114, 
         group: 14,
         period: 7,
+        avgMass: 289,
     },
     {
         name: "Moscovium",
@@ -826,6 +930,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 115, 
         group: 15,
         period: 7,
+        avgMass: 290,
     },
     {
         name: "Livermorium",
@@ -833,6 +938,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 116, 
         group: 16,
         period: 7,
+        avgMass: 293,
     },
     {
         name: "Tennessine",
@@ -840,6 +946,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 117, 
         group: 17,
         period: 7,
+        avgMass: 294,
     },
     {
         name: "Oganesson",
@@ -847,6 +954,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 118, 
         group: 18,
         period: 7,
+        avgMass: 294,
     },
 ];
 
