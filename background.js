@@ -14,6 +14,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 0, 
         group: -1,
         period: -1,
+        avgMass: -1,
     },
     {
         name: "Hydrogen",
@@ -21,6 +22,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 1, //Atomic number. Used aanConst so that it wouldn't get confused with var aan
         group: 1,
         period: 1,
+        avgMass: 1.0078,
     },
     {
         name: "Helium",
@@ -28,6 +30,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 2, 
         group: 18,
         period: 1,
+        avgMass: 4.0026,
     },
     {
         name: "Lithium",
@@ -35,6 +38,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 3, 
         group: 1,
         period: 2,
+        avgMass: 6.9410,
     },
     {
         name: "Beryllium",
@@ -42,6 +46,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 4, 
         group: 2,
         period: 2,
+        avgMass: 4.0026,
     },
     {
         name: "Boron",
@@ -49,6 +54,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 5, 
         group: 13,
         period: 2,
+        avgMass: 10.811,
     },
     {
         name: "Carbon",
@@ -56,6 +62,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         aanConst: 6, 
         group: 14,
         period: 2,
+        avgMass: 12.011,
     },
     {
         name: "Nitrogen",
