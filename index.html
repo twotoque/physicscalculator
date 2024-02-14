@@ -13,7 +13,7 @@
 <body>
 <div class="container mt-3" style="width: 100%;">
     <div class="d-flex flex-column">
-        <h1><img class="img-logo p-2" src="CalcLogo.svg"> <b>Radioactive Decay Calculator</b></h1>
+        <h1><img class="img-logo p-2" src="CalcLogo.svg"> <b>Atomic Search & Decay Calculator</b></h1>
         
    
     </div>
@@ -46,6 +46,8 @@
                         <div class="d-flex justify-content-between">
                         <p class="mb-auto">Period:</p> <input type="text" class="form-control1 textboxp shortheight" placeholder="Period" id="AtomicSearchGroupPeriodIN" aria-label="Alpha-AtomicMassIN" aria-describedby="basic-addon2">
                         </div>
+                        <hr>
+                        <h8>If element has <i>no</i> group, enter "N/A"</h8>
                     </div>
                 </div>
             </div>
@@ -76,11 +78,18 @@
                         <h6 id="AtomicSearchGroupPeriodOUT"></h6>
                     </div>
                     <div class="d-flex flex-row">
+                        <h6 class="IUPAC"><b>Block: </b></h6>
+                        <h6 class="IUPAC" id="AtomicBlockOUT"></h6>
+                    </div>
+                    <div class="d-flex flex-row">
+                        <h6 class="IUPAClower"><i><b>Azimuthal quantum number: </b></i></h8>
+                        <h6 class="IUPAClower" id="AtomicBlockOUTalt"><i></i></h8>
+                    </div>
+                    <div class="d-flex flex-row">
                         <h6><b>Mass: </b></h6>
                         <h6 id="AtomSearchAtomicMassOUT"></h6>
                     </div>
-                    <hr>
-                    <h8>If element has <i>no</i> group, enter "N/A"</h8>
+                    <button type="button" id= "resetbtn" class="btn btn-danger">Reset</button>
                 </div>
             </div>
 

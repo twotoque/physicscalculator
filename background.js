@@ -12,8 +12,8 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         name: "N/A",
         shortform: "N/A",
         aanConst: 0, 
-        group: 0,
-        period: 0,
+        group: -1,
+        period: -1,
     },
     {
         name: "Hydrogen",
@@ -841,13 +841,6 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
         group: 18,
         period: 7,
     },
-    {
-        name: "N/A",
-        shortform: "N/A",
-        aanConst: 119, 
-        group: 0,
-        period: 0,
-    }
 ];
 
 // Initaize inputs
@@ -1002,8 +995,12 @@ document.getElementById('ElectronCapturebtn').addEventListener('click', function
     ElectronCapture.style.display = 'block';
     AtomSearch.style.display = 'none'
 });
-// Calculations
 
+document.getElementById('resetbtn').addEventListener('click', function() {
+    AtomSearchReset();
+});
+
+// Calculations
 function atomicSearch(AtomicSymbol, value, searchVal, value2) {
     // Function to search through const AtomicSymbol. Use = aanFinder(AtomicSymbol, value, searchVal). AtomicSymbol = an array (const); value = the atomic element to search (str or int); searchVal = what to search (str); value2 = secondary value (int or str) . In older versions this function was "aanFinder"
     if (searchVal === "shortform") { //Search using Atomic letters
@@ -1024,6 +1021,9 @@ function atomicSearch(AtomicSymbol, value, searchVal, value2) {
         return -1; // Return -1 if no matching element is found
     }  
     if (searchVal === "atomSearch") { // Search using Atomic number
+        if (parseInt(value) === 0){ // Converts elements with group 0 to 18. AtomicSymbol uses 18 instead of 0.
+            value = 18
+        }
         for (var i = 0; i < AtomicSymbol.length; i++) { // Search for item matching value at "i". If "i" == value, get its index, else add 1 to i.
             if (AtomicSymbol[i].group === parseInt(value)  && AtomicSymbol[i].period === parseInt(value2)) { // Variable "value" represents group assignment, variable "value2" represents period.
                 return i; // Return the index of the found element
@@ -1045,11 +1045,17 @@ function atomicSearch(AtomicSymbol, value, searchVal, value2) {
 }
 
 
+function blockSearch(group, period) {
+    var block
+    if (group > 1 && group < 2 || group == 0 && period == 1){
+        block = "s, "
+    }
+}
 function groupSearch(group) {
      // Function to assign group names given the group namer. Use = groupSearch(group). group = the group number (int).
      // To reference, call result[0] for groupName, and result[1] for IUPACname, assuming that var result = groupSearch(group)
     var groupName, IUPACname
-    if (group === 0) {
+    if (group === 18) {
         groupName = "0 or 18, noble gases"
         IUPACname = "helium or neon group"
         return [groupName, IUPACname];
@@ -1059,6 +1065,88 @@ function groupSearch(group) {
         IUPACname = "lith­ium group"
         return [groupName, IUPACname];
     }
+    else if (group === 2) {
+        groupName = "1, alkaline earth metals"
+        IUPACname = "beryl­lium group"
+        return [groupName, IUPACname];
+    }
+    else if (group === 3) {
+        groupName = "3"
+        IUPACname = "scan­dium group"
+        return [groupName, IUPACname];
+    }
+    else if (group === 4) {
+        groupName = "4"
+        IUPACname = "titan­ium group"
+        return [groupName, IUPACname];
+    }
+    else if (group === 5) {
+        groupName = "5"
+        IUPACname = "vana­dium group"
+        return [groupName, IUPACname];
+    }
+    else if (group === 6) {
+        groupName = "6"
+        IUPACname = "chro­mium group"
+        return [groupName, IUPACname];
+    }
+    else if (group === 7) {
+        groupName = "7"
+        IUPACname = "man­ga­nese group"
+        return [groupName, IUPACname];
+    }
+    else if (group === 8) {
+        groupName = "8"
+        IUPACname = "iron group"
+        return [groupName, IUPACname];
+    }
+    else if (group === 9) {
+        groupName = "9"
+        IUPACname = "co­balt group"
+        return [groupName, IUPACname];
+    }
+    else if (group === 10) {
+        groupName = "10"
+        IUPACname = "nickel group"
+        return [groupName, IUPACname];
+    }
+    else if (group === 11) {
+        groupName = "11"
+        IUPACname = "copper group"
+        return [groupName, IUPACname];
+    }
+    else if (group === 12) {
+        groupName = "12"
+        IUPACname = "zinc group"
+        return [groupName, IUPACname];
+    }
+    else if (group === 13) {
+        groupName = "13, triels"
+        IUPACname = "boron group"
+        return [groupName, IUPACname];
+    }
+    else if (group === 14) {
+        groupName = "14, tetrels"
+        IUPACname = "car­bon group"
+        return [groupName, IUPACname];
+    }
+
+    else if (group === 15) {
+        groupName = "15, pnicto­gens"
+        IUPACname = "nitro­gen group"
+        return [groupName, IUPACname];
+    }
+    else if (group === 16) {
+        groupName = "16, chal­co­gens"
+        IUPACname = "oxy­gen group"
+        return [groupName, IUPACname];
+    }
+    else if (group === 17) {
+        groupName = "17, halo­gens"
+        IUPACname = "fluor­ine group"
+        return [groupName, IUPACname];
+    }
+
 
 }
 // Alpha decay series of functions
@@ -1174,6 +1262,25 @@ function AlphaAtomicMassRev (value){
 function AtomSearchAtomicMass (value){
     // Function to print mass of an Atom. Input = AtomSearchAtomicMassIN 
     document.getElementById("AtomSearchAtomicMassOUT").innerHTML = value;
+}
+
+function AtomSearchReset(){
+    // Function to reset values in AtomSearch. Input = none
+    document.getElementById("AtomSearchAtomicMassIN").value = null;
+    document.getElementById("AtomSearchAtomicNumberIN").value = null;
+    document.getElementById("AtomSearchAtomicSymbolIN").value = null;
+    document.getElementById("AtomSearchAtomicNameIN").value = null;
+    document.getElementById("AtomicSearchGroupNameIN").value = null;
+    document.getElementById("AtomicSearchGroupPeriodIN").value = null;
+
+    document.getElementById("AtomSearchAtomicSymbolOUT").innerHTML = null;
+    document.getElementById("AtomSearchAtomicNumberOUT").innerHTML = null;
+    document.getElementById("AtomSearchAtomicNameOUT").innerHTML = null;
+    document.getElementById("AtomicSearchGroupNameOUT").innerHTML = null;
+    document.getElementById("AtomicSearchGroupNameOUTalt").innerHTML = null;
+    document.getElementById("AtomicSearchGroupPeriodOUT").innerHTML = null;
+    document.getElementById("AtomSearchAtomicMassOUT").innerHTML = null;
+
 }
 
 function AtomicSearchGroupName (value, value2){
