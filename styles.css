@@ -31,6 +31,10 @@ h8{
     width: 80px !important;
 }
 
+.smallpadding{
+    margin-top: 15px;
+}
+
 .item-label{
     padding-right: 3.5px;
 }

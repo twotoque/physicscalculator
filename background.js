@@ -65,7 +65,7 @@ document.getElementById("AtomSearchAtomicNumberIN").addEventListener("input", fu
 });
 document.getElementById("AtomSearchAtomicSymbolIN").addEventListener("input", function() {
     AtomicSearchAtomShort(this.value);
-});
+}); 
 // Buttons & element controller
 window.onload = (event) => {
     BetaPositive.style.display = 'none';
@@ -172,6 +172,10 @@ document.getElementById('ElectronCapturebtn').addEventListener('click', function
 
 document.getElementById('resetbtn').addEventListener('click', function() {
     AtomSearchReset();
+}); 
+
+document.getElementById('copybtn').addEventListener('click', function() {
+    AtomSearchCopy();
 });
 
 // Calculations
@@ -587,7 +591,27 @@ function AtomicSearchAtomShort (value){
         document.getElementById("AtomicBlockOUTalt").innerHTML = blockName[1];
     }
 }
+function AtomSearchCopy (){
+    var atomicSymbol = document.getElementById("AtomSearchAtomicSymbolOUT").innerHTML 
+    var atomicNumber = document.getElementById("AtomSearchAtomicNumberOUT").innerHTML 
+    var atomicName = document.getElementById("AtomSearchAtomicNameOUT").innerHTML 
+    var atomicGroup = document.getElementById("AtomicSearchGroupNameOUT").innerHTML 
+    var atomicGroupAlt = document.getElementById("AtomicSearchGroupNameOUTalt").innerHTML 
+    var atomicPeriod = document.getElementById("AtomicSearchGroupPeriodOUT").innerHTML 
+    var atomicMass = document.getElementById("AtomSearchAtomicMassOUT").innerHTML
+    var atomicBlock = document.getElementById("AtomicBlockOUT").innerHTML 
+    var atomicBlockAlt = document.getElementById("AtomicBlockOUTalt").innerHTML 
+
+    const textCopy = document.createElement('textarea');
+    textCopy.value = atomicName + "\nShort form: " + atomicSymbol + "\nAtomic number: " + atomicNumber + "\nGroup: " + atomicGroup + "\nIUPAC group name: " + atomicGroupAlt +"\nPeriod: " + atomicPeriod + "\nBlock: " + atomicBlock + "\nAzimuthal quantum number: " + atomicBlockAlt + "\nAverage mass: " + atomicMass
+
+    document.body.appendChild(textCopy);
+    textCopy.select();
+    navigator.clipboard.writeText(textCopy.value)
+    document.body.removeChild(textCopy);
+}
 // Beta positive
+
 
 function BetaPosAtomicNumber (value){
     // Function to calculate Beta Postive decay, given the input Atomic number of an element. Input = BetaPosAtomicNumberIN (int)

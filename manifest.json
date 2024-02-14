@@ -8,7 +8,9 @@
       "default_popup": "index.html",
       "default_title": "Physics Radioactive Decay Calculator"
   },
-  "permissions": ["contextMenus"],
+  "permissions": [
+    "contextMenus", "clipboardWrite"
+  ],
   "icons": {
       "16": "icon-tiny.png",
       "48": "icon-small.png",
