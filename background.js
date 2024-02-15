@@ -31,16 +31,19 @@ document.getElementById("BetaPosAtomicNumberIN").addEventListener("input", funct
     BetaPosAtomicNumber(this.value);
 });
 document.getElementById("BetaPosAtomicSymbolIN").addEventListener("input", function() {
-    BetaPosAtomicNumber(this.value);
+    BetaPosAtomicSymbol(this.value);
 });
 document.getElementById("BetaPosAtomicMassIN").addEventListener("input", function() {
     BetaPosAtomicMass(this.value);
 });
 document.getElementById("BetaPosAtomicNumberOUT").addEventListener("input", function() {
-    BetaPosAtomicSymbolRev(this.value);
+    BetaPosAtomicNumberRev(this.value);
 });
 document.getElementById("BetaPosAtomicMassOUT").addEventListener("input", function() {
     BetaPosAtomicMassRev(this.value);
+});
+document.getElementById("BetaPosShortFormOUT").addEventListener("input", function() {
+    BetaPosAtomicSymbolRev(this.value);
 });
 document.getElementById("AtomSearchAtomicMassIN").addEventListener("input", function() {
     AtomSearchAtomicMass(this.value);
@@ -65,7 +68,44 @@ document.getElementById("AtomSearchAtomicNumberIN").addEventListener("input", fu
 });
 document.getElementById("AtomSearchAtomicSymbolIN").addEventListener("input", function() {
     AtomicSearchAtomShort(this.value);
+});    
+document.getElementById("BetaNegAtomicNumberIN").addEventListener("input", function() {
+    BetaNegAtomicNumber(this.value);
+});   
+document.getElementById("BetaNegAtomicSymbolIN").addEventListener("input", function() {
+    BetaNegAtomicSymbol(this.value);
 }); 
+document.getElementById("BetaNegShortFormOUT").addEventListener("input", function() {
+    BetaNegAtomicSymbolRev(this.value);
+}); 
+document.getElementById("BetaNegAtomicNumberOUT").addEventListener("input", function() {
+    BetaNegAtomicNumberRev(this.value);
+}); 
+document.getElementById("BetaNegAtomicMassIN").addEventListener("input", function() {
+    BetaNegAtomicMass(this.value);
+});
+document.getElementById("BetaNegAtomicMassOUT").addEventListener("input", function() {
+    BetaNegAtomicMassRev(this.value);
+}); 
+document.getElementById("ElectronAtomicNumberIN").addEventListener("input", function() {
+    ElectronAtomicNumber(this.value);
+}); 
+document.getElementById("ElectronAtomicNumberOUT").addEventListener("input", function() {
+    ElectronAtomicNumberRev(this.value);
+}); 
+document.getElementById("ElectronAtomicSymbolIN").addEventListener("input", function() {
+    ElectronAtomicSymbol(this.value);
+}); 
+document.getElementById("ElectronShortFormOUT").addEventListener("input", function() {
+    ElectronAtomicSymbolRev(this.value);
+}); 
+document.getElementById("ElectronAtomicMassIN").addEventListener("input", function() {
+    ElectronAtomicMass(this.value);
+}); 
+document.getElementById("ElectronAtomicMassOUT").addEventListener("input", function() {
+    ElectronAtomicMassRev(this.value);
+}); 
+
 // Buttons & element controller
 window.onload = (event) => {
     BetaPositive.style.display = 'none';
@@ -176,7 +216,19 @@ document.getElementById('resetbtn').addEventListener('click', function() {
 
 document.getElementById('copybtn').addEventListener('click', function() {
     AtomSearchCopy();
+}); 
+
+document.getElementById('copybtnAlpha').addEventListener('click', function() {
+    var value = "alpha"
+    DecayCopy(value);
 });
+
+document.getElementById('copybtnBetaPos').addEventListener('click', function() {
+    var value = "betapos"
+    DecayCopy(value);
+});
+
+
 
 // Calculations
 function atomicSearch(AtomicSymbol, value, searchVal, value2) {
@@ -465,6 +517,35 @@ function AlphaAtomicMassRev (value){
 }
 
 
+function DecayCopy (value){
+    const textCopy = document.createElement('textarea');
+
+    if (value == "alpha") {
+        var parentName = document.getElementById("AtomicNameParent").innerHTML 
+        var parentMass = document.getElementById("AtomicMassNumParent").innerHTML
+    
+        var daughterName = document.getElementById("AtomicNameDaughter").innerHTML
+        var daughterMass = document.getElementById("AtomicMassNumDaughter").innerHTML 
+
+        var type = " alpha decays to "
+        var other = " and Helium 4" 
+    } else if (value == "betapos") {
+        var parentName = document.getElementById("BetaPosAtomicNameParent").innerHTML 
+        var parentMass = document.getElementById("BetaPosAtomicMassNumParent").innerHTML
+    
+        var daughterName = document.getElementById("BetaPosAtomicNameDaughter").innerHTML
+        var daughterMass = document.getElementById("BetaPosAtomicMassNumDaughter").innerHTML 
+
+        var type = " beta positive decays to "
+        var other = " and a positive charged electron" 
+    }
+    textCopy.value = parentName + " " + parentMass + type + daughterName + " " + daughterMass + other
+
+    document.body.appendChild(textCopy);
+    textCopy.select();
+    navigator.clipboard.writeText(textCopy.value)
+    document.body.removeChild(textCopy);
+}
 // Atom search
 
 function AtomSearchAtomicMass (value){
@@ -610,7 +691,10 @@ function AtomSearchCopy (){
     navigator.clipboard.writeText(textCopy.value)
     document.body.removeChild(textCopy);
 }
-// Beta positive
+
+
+
+// Beta positive functions 
 
 
 function BetaPosAtomicNumber (value){
@@ -641,10 +725,10 @@ function BetaPosAtomicSymbol(value){
     var position = atomicSearch(AtomicSymbol, value, "shortform"); // Pass both arguments to aanFinder
     if (position !== -1) {
         var originalValuePosition = AtomicSymbol[position]; // Find position of the item
-        var resultant = AtomicSymbol[position12] // Search AtomicSymbol for an item subtracted by 1 (i.e. the effects of beta positive decay)
+        var resultant = AtomicSymbol[position-1] // Search AtomicSymbol for an item subtracted by 1 (i.e. the effects of beta positive decay)
 
         // Output; a more concise version compared to the previous version
-        document.getElementById("BetaPosAtomicNumberIN").innerHTML = originalValuePosition.aanConst;
+        document.getElementById("BetaPosAtomicNumberIN").value = originalValuePosition.aanConst;
         document.getElementById("BetaPosAtomicNameParent").innerHTML = originalValuePosition.name;
         document.getElementById("BetaPosAtomicGroupNumParent").innerHTML = originalValuePosition.group;
         document.getElementById("BetaPosAtomicPeriodNumParent").innerHTML = originalValuePosition.period;
@@ -658,9 +742,32 @@ function BetaPosAtomicSymbol(value){
     }
 }
 
+
 function BetaPosAtomicSymbolRev(value){
+    // Function to calculate Beta positive decay, given the input Atomic symbol of an element. Input = BetaPosAtomicSymbolIN (str)
+    var position = atomicSearch(AtomicSymbol, value, "shortform"); // Pass both arguments to aanFinder
+    if (position !== -1) {
+        var originalValuePosition = AtomicSymbol[position]; // Find position of the item
+        var resultant = AtomicSymbol[position+1] // Search AtomicSymbol for an item subtracted by 1 (i.e. the effects of beta positive decay)
+
+        // Output; a more concise version compared to the previous version
+        document.getElementById("BetaPosAtomicNumberOUT").value = originalValuePosition.aanConst;
+        document.getElementById("BetaPosAtomicNameDaughter").innerHTML = originalValuePosition.name;
+        document.getElementById("BetaPosAtomicGroupNumParent").innerHTML = originalValuePosition.group;
+        document.getElementById("BetaPosAtomicGroupNum").innerHTML = originalValuePosition.period;
+        
+        document.getElementById("BetaPosAtomicSymbolIN").value = resultant.shortform;
+        document.getElementById("BetaPosAtomicNumberIN").value = resultant.aanConst;
+        document.getElementById("BetaPosAtomicNameParent").innerHTML = resultant.name;
+        document.getElementById("BetaPosAtomicGroupNumParent").innerHTML = resultant.group;
+        document.getElementById("BetaPosAtomicPeriodNumParent").innerHTML = resultant.period;
+        
+    }
+}
+
+function BetaPosAtomicNumberRev (value){
     // Function to calculate inverse beta positive decay, given the ouptut Atomic number of an element. Input = BetaPosAtomicNumberOUT (int)
-    var position = atomicSearch(AtomicSymbol, value, "atomSearch"); // Pass both arguments to aanFinder
+    var position = atomicSearch(AtomicSymbol, value, "aanConst"); // Pass both arguments to aanFinder
     if (position !== -1) {
         var originalValuePosition = AtomicSymbol[position]; // Find position of the item
         var resultant = AtomicSymbol[position+1] // Search AtomicSymbol for an item added by 1 (i.e. the inv. effects of Beta Positive decay)
@@ -679,6 +786,7 @@ function BetaPosAtomicSymbolRev(value){
     }
 
 }
+
 function BetaPosAtomicMass(value){
     // Function to calculate mass after beta positive decay, given the input Atomic mass of an element. Input = BetaPosAtomicMassIN (int)
     document.getElementById("BetaPosAtomicMassNumParent").innerHTML = value;
@@ -686,12 +794,233 @@ function BetaPosAtomicMass(value){
     document.getElementById("BetaPosAtomicMassOUT").value = value;
     document.getElementById("BetaPosAtomicMassNumDaughter").innerHTML = value;
 }
+
 function BetaPosAtomicMassRev(value){
     // Function to calculate inverse mass after beta positive decay, given the output Atomic mass of an element. Input = BetaPosAtomicMassIN (int)
     document.getElementById("BetaPosAtomicMassNumDaughter").innerHTML = value;
 
     document.getElementById("BetaPosAtomicMassIN").value = value;
     document.getElementById("BetaPosAtomicMassNumParent").innerHTML = value;
+}
+
+
+// Beta negative
+
+
+function BetaNegAtomicNumber (value){
+    // Function to calculate Beta Postive decay, given the input Atomic number of an element. Input = BetaNegAtomicNumberIN (int)
+    var position = atomicSearch(AtomicSymbol, value, "aanConst"); // Pass both arguments to aanFinder
+    if (position !== -1) {
+        var originalValuePosition = AtomicSymbol[position]; // Find position of the item
+        var resultant = AtomicSymbol[position+1] // Search AtomicSymbol for an item subtracted by 1 (i.e. the effects of beta positive decay)
+
+        // Output; a more concise version compared to the previous version
+        document.getElementById("BetaNegAtomicSymbolIN").value = originalValuePosition.shortform;
+        document.getElementById("BetaNegAtomicNameParent").innerHTML = originalValuePosition.name;
+        document.getElementById("BetaNegAtomicGroupNumParent").innerHTML = originalValuePosition.group;
+        document.getElementById("BetaNegAtomicPeriodNumParent").innerHTML = originalValuePosition.period;
+        
+        document.getElementById("BetaNegShortFormOUT").value = resultant.shortform;
+        document.getElementById("BetaNegAtomicNumberOUT").value = resultant.aanConst;
+        document.getElementById("BetaNegAtomicNameDaughter").innerHTML = resultant.name;
+        document.getElementById("BetaNegAtomicGroupNum").innerHTML = resultant.group;
+        document.getElementById("BetaNegAtomicPeriodNum").innerHTML = resultant.period;
+        
+    }
+
+}
+
+function BetaNegAtomicSymbol(value){
+    // Function to calculate Beta positive decay, given the input Atomic symbol of an element. Input = BetaNegAtomicSymbolIN (str)
+    var position = atomicSearch(AtomicSymbol, value, "shortform"); // Pass both arguments to aanFinder
+    if (position !== -1) {
+        var originalValuePosition = AtomicSymbol[position]; // Find position of the item
+        var resultant = AtomicSymbol[position+1] // Search AtomicSymbol for an item subtracted by 1 (i.e. the effects of beta positive decay)
+
+        // Output; a more concise version compared to the previous version
+        document.getElementById("BetaNegAtomicNumberIN").value = originalValuePosition.aanConst;
+        document.getElementById("BetaNegAtomicNameParent").innerHTML = originalValuePosition.name;
+        document.getElementById("BetaNegAtomicGroupNumParent").innerHTML = originalValuePosition.group;
+        document.getElementById("BetaNegAtomicPeriodNumParent").innerHTML = originalValuePosition.period;
+        
+        document.getElementById("BetaNegShortFormOUT").value = resultant.shortform;
+        document.getElementById("BetaNegAtomicNumberOUT").value = resultant.aanConst;
+        document.getElementById("BetaNegAtomicNameDaughter").innerHTML = resultant.name;
+        document.getElementById("BetaNegAtomicGroupNum").innerHTML = resultant.group;
+        document.getElementById("BetaNegAtomicPeriodNum").innerHTML = resultant.period;
+        
+    }
+}
+
+
+function BetaNegAtomicSymbolRev(value){
+    // Function to calculate Beta positive decay, given the input Atomic symbol of an element. Input = BetaNegShortFormOUT (str)
+    var position = atomicSearch(AtomicSymbol, value, "shortform"); // Pass both arguments to aanFinder
+    if (position !== -1) {
+        var originalValuePosition = AtomicSymbol[position]; // Find position of the item
+        var resultant = AtomicSymbol[position-1] // Search AtomicSymbol for an item subtracted by 1 (i.e. the effects of beta positive decay)
+
+        // Output; a more concise version compared to the previous version
+        document.getElementById("BetaNegAtomicNumberOUT").value = originalValuePosition.aanConst;
+        document.getElementById("BetaNegAtomicNameDaughter").innerHTML = originalValuePosition.name;
+        document.getElementById("BetaNegAtomicGroupNumParent").innerHTML = originalValuePosition.group;
+        document.getElementById("BetaNegAtomicGroupNum").innerHTML = originalValuePosition.period;
+        
+        document.getElementById("BetaNegAtomicSymbolIN").value = resultant.shortform;
+        document.getElementById("BetaNegAtomicNumberIN").value = resultant.aanConst;
+        document.getElementById("BetaNegAtomicNameParent").innerHTML = resultant.name;
+        document.getElementById("BetaNegAtomicGroupNumParent").innerHTML = resultant.group;
+        document.getElementById("BetaNegAtomicPeriodNumParent").innerHTML = resultant.period;
+        
+    }
+}
+
+function BetaNegAtomicNumberRev (value){
+    // Function to calculate inverse beta positive decay, given the ouptut Atomic number of an element. Input = BetaNegAtomicNumberOUT (int)
+    var position = atomicSearch(AtomicSymbol, value, "aanConst"); // Pass both arguments to aanFinder
+    if (position !== -1) {
+        var originalValuePosition = AtomicSymbol[position]; // Find position of the item
+        var resultant = AtomicSymbol[position-1] // Search AtomicSymbol for an item added by 1 (i.e. the inv. effects of Beta Positive decay)
+
+        // Output; a more concise version compared to the previous version
+        document.getElementById("BetaNegShortFormOUT").value = originalValuePosition.shortform;
+        document.getElementById("BetaNegAtomicNameDaughter").innerHTML = originalValuePosition.name;
+        document.getElementById("BetaNegAtomicGroupNumParent").innerHTML = originalValuePosition.group;
+        document.getElementById("BetaNegAtomicGroupNum").innerHTML = originalValuePosition.period;
+        
+        document.getElementById("BetaNegAtomicSymbolIN").value = resultant.shortform;
+        document.getElementById("BetaNegAtomicNumberIN").value = resultant.aanConst;
+        document.getElementById("BetaNegAtomicNameParent").innerHTML = resultant.name;
+        document.getElementById("BetaNegAtomicGroupNumParent").innerHTML = resultant.group;
+        document.getElementById("BetaNegAtomicPeriodNumParent").innerHTML = resultant.period;
+    }
+
+}
+
+function BetaNegAtomicMass(value){
+    // Function to calculate mass after beta positive decay, given the input Atomic mass of an element. Input = BetaPosAtomicMassIN (int)
+    document.getElementById("BetaNegAtomicMassNumParent").innerHTML = value;
+
+    document.getElementById("BetaNegAtomicMassOUT").value = value;
+    document.getElementById("BetaNegAtomicMassNumDaughter").innerHTML = value;
+}
+
+function BetaNegAtomicMassRev(value){
+    // Function to calculate inverse mass after beta positive decay, given the output Atomic mass of an element. Input = BetaPosAtomicMassIN (int)
+    document.getElementById("BetaNegAtomicMassNumDaughter").innerHTML = value;
+
+    document.getElementById("BetaNegAtomicMassIN").value = value;
+    document.getElementById("BetaNegAtomicMassNumParent").innerHTML = value;
+}
+
+
+// Electron capture
+
+
+function ElectronAtomicNumber (value){
+    // Function to calculate Beta Postive decay, given the input Atomic number of an element. Input = ElectronAtomicNumberIN (int)
+    var position = atomicSearch(AtomicSymbol, value, "aanConst"); // Pass both arguments to aanFinder
+    if (position !== -1) {
+        var originalValuePosition = AtomicSymbol[position]; // Find position of the item
+        var resultant = AtomicSymbol[position-1] // Search AtomicSymbol for an item subtracted by 1 (i.e. the effects of beta positive decay)
+
+        // Output; a more concise version compared to the previous version
+        document.getElementById("ElectronAtomicSymbolIN").value = originalValuePosition.shortform;
+        document.getElementById("ElectronAtomicNameParent").innerHTML = originalValuePosition.name;
+        document.getElementById("ElectronAtomicGroupNumParent").innerHTML = originalValuePosition.group;
+        document.getElementById("ElectronAtomicPeriodNumParent").innerHTML = originalValuePosition.period;
+        
+        document.getElementById("ElectronShortFormOUT").value = resultant.shortform;
+        document.getElementById("ElectronAtomicNumberOUT").value = resultant.aanConst;
+        document.getElementById("ElectronAtomicNameDaughter").innerHTML = resultant.name;
+        document.getElementById("ElectronAtomicGroupNum").innerHTML = resultant.group;
+        document.getElementById("ElectronAtomicPeriodNum").innerHTML = resultant.period;
+        
+    }
+
+}
+
+function ElectronAtomicSymbol(value){
+    // Function to calculate Beta positive decay, given the input Atomic symbol of an element. Input = ElectronAtomicSymbolIN (str)
+    var position = atomicSearch(AtomicSymbol, value, "shortform"); // Pass both arguments to aanFinder
+    if (position !== -1) {
+        var originalValuePosition = AtomicSymbol[position]; // Find position of the item
+        var resultant = AtomicSymbol[position-1] // Search AtomicSymbol for an item subtracted by 1 (i.e. the effects of beta positive decay)
+
+        // Output; a more concise version compared to the previous version
+        document.getElementById("ElectronAtomicNumberIN").value = originalValuePosition.aanConst;
+        document.getElementById("ElectronAtomicNameParent").innerHTML = originalValuePosition.name;
+        document.getElementById("ElectronAtomicGroupNumParent").innerHTML = originalValuePosition.group;
+        document.getElementById("ElectronAtomicPeriodNumParent").innerHTML = originalValuePosition.period;
+        
+        document.getElementById("ElectronShortFormOUT").value = resultant.shortform;
+        document.getElementById("ElectronAtomicNumberOUT").value = resultant.aanConst;
+        document.getElementById("ElectronAtomicNameDaughter").innerHTML = resultant.name;
+        document.getElementById("ElectronAtomicGroupNum").innerHTML = resultant.group;
+        document.getElementById("ElectronAtomicPeriodNum").innerHTML = resultant.period;
+        
+    }
+}
+
+
+function ElectronAtomicSymbolRev(value){
+    // Function to calculate Beta positive decay, given the input Atomic symbol of an element. Input = ElectronShortFormOUT (str)
+    var position = atomicSearch(AtomicSymbol, value, "shortform"); // Pass both arguments to aanFinder
+    if (position !== -1) {
+        var originalValuePosition = AtomicSymbol[position]; // Find position of the item
+        var resultant = AtomicSymbol[position+1] // Search AtomicSymbol for an item subtracted by 1 (i.e. the effects of beta positive decay)
+
+        // Output; a more concise version compared to the previous version
+        document.getElementById("ElectronAtomicNumberOUT").value = originalValuePosition.aanConst;
+        document.getElementById("ElectronAtomicNameDaughter").innerHTML = originalValuePosition.name;
+        document.getElementById("ElectronAtomicGroupNumParent").innerHTML = originalValuePosition.group;
+        document.getElementById("ElectronAtomicGroupNum").innerHTML = originalValuePosition.period;
+        
+        document.getElementById("ElectronAtomicSymbolIN").value = resultant.shortform;
+        document.getElementById("ElectronAtomicNumberIN").value = resultant.aanConst;
+        document.getElementById("ElectronAtomicNameParent").innerHTML = resultant.name;
+        document.getElementById("ElectronAtomicGroupNumParent").innerHTML = resultant.group;
+        document.getElementById("ElectronAtomicPeriodNumParent").innerHTML = resultant.period;
+        
+    }
+}
+
+function ElectronAtomicNumberRev (value){
+    // Function to calculate inverse beta positive decay, given the ouptut Atomic number of an element. Input = ElectrontomicNumberOUT (int)
+    var position = atomicSearch(AtomicSymbol, value, "aanConst"); // Pass both arguments to aanFinder
+    if (position !== -1) {
+        var originalValuePosition = AtomicSymbol[position]; // Find position of the item
+        var resultant = AtomicSymbol[position+1] // Search AtomicSymbol for an item added by 1 (i.e. the inv. effects of Beta Positive decay)
+
+        // Output; a more concise version compared to the previous version
+        document.getElementById("ElectronShortFormOUT").value = originalValuePosition.shortform;
+        document.getElementById("ElectronAtomicNameDaughter").innerHTML = originalValuePosition.name;
+        document.getElementById("ElectronAtomicGroupNumParent").innerHTML = originalValuePosition.group;
+        document.getElementById("ElectronAtomicGroupNum").innerHTML = originalValuePosition.period;
+        
+        document.getElementById("ElectronAtomicSymbolIN").value = resultant.shortform;
+        document.getElementById("ElectronAtomicNumberIN").value = resultant.aanConst;
+        document.getElementById("ElectronAtomicNameParent").innerHTML = resultant.name;
+        document.getElementById("ElectronAtomicGroupNumParent").innerHTML = resultant.group;
+        document.getElementById("ElectronAtomicPeriodNumParent").innerHTML = resultant.period;
+    }
+
+}
+
+function ElectronAtomicMass(value){
+    // Function to calculate mass after beta positive decay, given the input Atomic mass of an element. Input = BetaPosAtomicMassIN (int)
+    document.getElementById("ElectronAtomicMassNumParent").innerHTML = value;
+
+    document.getElementById("ElectronAtomicMassOUT").value = value;
+    document.getElementById("ElectronAtomicMassNumDaughter").innerHTML = value;
+}
+
+function ElectronAtomicMassRev(value){
+    // Function to calculate inverse mass after beta positive decay, given the output Atomic mass of an element. Input = BetaPosAtomicMassIN (int)
+    document.getElementById("ElectronAtomicMassNumDaughter").innerHTML = value;
+
+    document.getElementById("ElectronAtomicMassIN").value = value;
+    document.getElementById("ElectronAtomicMassNumParent").innerHTML = value;
 }
 
 // Misc. links
@@ -708,148 +1037,3 @@ document.getElementById('Commit').addEventListener('click', function() {
     chrome.tabs.update({ url: 'https://github.com/twotoque/physicscalculator/commits' });
 });
 
-
-
-
-
-
-
-// OLD CALCULATIONS - TO BE REWRITTEN
-
-
-
-function BetaNegAtomicMass(value){
-    var BPaam, BPaamB, BPaamC;
-    BPaamB = +value - 1 + 1;
-    let BetaNegAtomicMassNumParent =  BPaamB;
-    document.getElementById("BetaNegAtomicMassNumParent").innerHTML = BetaNegAtomicMassNumParent; 
-    document.getElementById ("BetaNegAtomicMassNumParent").value = BPaamB;
-    let BetaNegAtomicMassNumDaughter =  BPaamB;
-    document.getElementById("BetaNegAtomicMassNumDaughter").innerHTML = BetaNegAtomicMassNumDaughter; 
-    document.getElementById ("BetaNegAtomicMassOUT").value = BPaamB;
-    console.log("AAMOUTD");
-}
-function ElectronAtomicMass(value){
-    var BPaam, EaamB, BPaamC;
-    EaamB = +value - 1 + 1;
-    let ElectronAtomicMassNumParent =  EaamB;
-    document.getElementById("ElectronAtomicMassNumParent").innerHTML = ElectronAtomicMassNumParent; 
-    document.getElementById ("ElectronAtomicMassNumParent").value = EaamB;
-    let ElectronAtomicMassNumDaughter =  EaamB;
-    document.getElementById("ElectronAtomicMassNumDaughter").innerHTML = ElectronAtomicMassNumDaughter; 
-    document.getElementById ("ElectronAtomicMassOUT").value = EaamB;
-    console.log("AAMOUTD");
-}
-
-
-
-function BetaNegAtomicMassRev(value){
-    var BPaam;
-    BPaam =  +value + 1 - 1;
-    let BetaNegAtomicMassIN =  BPaam;
-    document.getElementById("BetaNegAtomicMassIN").innerHTML = BetaNegAtomicMassIN; 
-}
-
-
-
-function BetaNegAtomicNumber(value){
-    var BPaanB, BPaan;
-    BPaanB = +value + 1 - 1;
-    document.getElementById ("BetaNegAtomicSymbolIN").value = BPaanB;
-    function aanFinderB (AtomicSymbol) {
-        return AtomicSymbol.aanConst === BPaanB;
-    }
-    document.getElementById ("BetaNegAtomicSymbolIN").value = AtomicSymbol.find(aanFinderB).shortform; 
-    let AtomicNameParent = AtomicSymbol.find(aanFinderB).name
-    document.getElementById("BetaNegAtomicNameParent").innerHTML = AtomicNameParent; 
-    let AtomicGroupNumParent = AtomicSymbol.find(aanFinderB).group
-    document.getElementById("BetaNegAtomicGroupNumParent").innerHTML = AtomicGroupNumParent; 
-    let AtomicPeriodNumParent = AtomicSymbol.find(aanFinderB).period
-    document.getElementById("BetaNegAtomicPeriodNumParent").innerHTML = AtomicPeriodNumParent;  
-    aan =  +value + 1;
-    console.log(aan);
-    document.getElementById ("BetaNegAtomicNumberOUT").value = aan;
-    function aanFinder (AtomicSymbol) {
-        return AtomicSymbol.aanConst === aan;
-    } // Compare var aan to aanConst in const AtomicSymbol and select the one that matches 
-    console.log(AlphaAtomicNumber);
-    document.getElementById ("BetaNegShortFormOUT").value = AtomicSymbol.find(aanFinder).shortform; // Find element shortform at AtomicSymbol that was selected in function aanFinder, and print in id AlphaShortFormOUT
-    let BetaNegAtomicNameDaughter = AtomicSymbol.find(aanFinder).name
-    document.getElementById("BetaNegAtomicNameDaughter").innerHTML = BetaNegAtomicNameDaughter; 
-    let BetaNegAtomicGroupNum = AtomicSymbol.find(aanFinder).group
-    document.getElementById("BetaNegAtomicGroupNum").innerHTML = BetaNegAtomicGroupNum; 
-    let BetaNegAtomicPeriodNum = AtomicSymbol.find(aanFinder).period
-    document.getElementById("BetaNegAtomicPeriodNum").innerHTML = BetaNegAtomicPeriodNum; 
-    console.log("AANOUTRD");
-}
-
-function ElectronAtomicNumber(value){
-    var EaanB, BPaan;
-    EaanB = +value + 1 - 1;
-    document.getElementById ("ElectronAtomicSymbolIN").value = EaanB;
-    function aanFinderB (AtomicSymbol) {
-        return AtomicSymbol.aanConst === EaanB;
-    }
-    document.getElementById ("ElectronAtomicSymbolIN").value = AtomicSymbol.find(aanFinderB).shortform; 
-    let ElectronAtomicNameParent = AtomicSymbol.find(aanFinderB).name
-    document.getElementById("ElectronAtomicNameParent").innerHTML = ElectronAtomicNameParent; 
-    let ElectronAtomicGroupNumParent = AtomicSymbol.find(aanFinderB).group
-    document.getElementById("ElectronAtomicGroupNumParent").innerHTML = ElectronAtomicGroupNumParent; 
-    let ElectronAtomicPeriodNumParent = AtomicSymbol.find(aanFinderB).period
-    document.getElementById("ElectronAtomicPeriodNumParent").innerHTML = ElectronAtomicPeriodNumParent;  
-    aan =  +value - 1;
-    console.log(aan);
-    document.getElementById ("ElectronAtomicNumberOUT").value = aan;
-    function aanFinder (AtomicSymbol) {
-        return AtomicSymbol.aanConst === aan;
-    } // Compare var aan to aanConst in const AtomicSymbol and select the one that matches 
-    console.log(AlphaAtomicNumber);
-    document.getElementById ("ElectronShortFormOUT").value = AtomicSymbol.find(aanFinder).shortform; // Find element shortform at AtomicSymbol that was selected in function aanFinder, and print in id AlphaShortFormOUT
-    let ElectronAtomicNameDaughter = AtomicSymbol.find(aanFinder).name
-    document.getElementById("ElectronAtomicNameDaughter").innerHTML = ElectronAtomicNameDaughter; 
-    let ElectronAtomicGroupNum = AtomicSymbol.find(aanFinder).group
-    document.getElementById("ElectronAtomicGroupNum").innerHTML = ElectronAtomicGroupNum; 
-    let ElectronAtomicPeriodNum = AtomicSymbol.find(aanFinder).period
-    document.getElementById("ElectronAtomicPeriodNum").innerHTML = ElectronAtomicPeriodNum; 
-    console.log("AANOUTRD");
-}
-
-function AlphaAtomicNumberRev(value){
-    var aanB, aan;
-    aanB = +value + 1 - 1;
-    console.log(aanB);
-    document.getElementById ("AlphaAtomicNumberOUT").value = aanB;
-    function aanFinderB (AtomicSymbol) {
-        return AtomicSymbol.aanConst === aanB;
-    }
-    document.getElementById ("AlphaShortFormOUT").value = AtomicSymbol.find(aanFinderB).shortform; 
-    let AtomicNameDaughter = AtomicSymbol.find(aanFinderB).name
-    document.getElementById("AtomicNameDaughter").innerHTML = AtomicNameDaughter; 
-    let AtomicGroupNum = AtomicSymbol.find(aanFinderB).group
-    document.getElementById("AtomicGroupNum").innerHTML = AtomicGroupNum; 
-    let AtomicPeriodNum = AtomicSymbol.find(aanFinderB).period
-    document.getElementById("AtomicPeriodNum").innerHTML = AtomicPeriodNum;  
-    aan =  +aanB + 2;
-    function aanFinder (AtomicSymbol) {
-        return AtomicSymbol.aanConst === aan;
-    } // Compare var aan to aanConst in const AtomicSymbol and select the one that matches 
-    console.log(AlphaAtomicNumber);
-    document.getElementById ("Alpha-AtomicSymbolIN").value = AtomicSymbol.find(aanFinder).shortform; // Find element shortform at AtomicSymbol that was selected in function aanFinder, and print in id AlphaShortFormOUT
-    let AtomicNameParent = AtomicSymbol.find(aanFinder).name
-    document.getElementById("AtomicNameParent").innerHTML = AtomicNameParent; 
-    let AtomicGroupNumParent = AtomicSymbol.find(aanFinder).group
-    document.getElementById("AtomicGroupNumParent").innerHTML = AtomicGroupNumParent; 
-    let AtomicPeriodNumParent = AtomicSymbol.find(aanFinder).period
-    document.getElementById("AtomicPeriodNumParent").innerHTML = AtomicPeriodNumParent; 
-    let AlphaAtomicNumberIN = AtomicSymbol.find(aanFinder).aanConst
-    document.getElementById("AlphaAtomicNumberIN").innerHTML = AlphaAtomicNumberIN; 
-    console.log("AANOUTRD");
-}
-
-
-function BetaPosAtomicMassRev(value){
-    var BPPaam;
-    BPPaam =  +value + 1 - 1;
-    let BetaPosAtomicMassIN =  BPPaam;
-    document.getElementById("BetaPosAtomicMassIN").innerHTML = BetaPosAtomicMassIN; 
-}

@@ -16,11 +16,10 @@
       "48": "icon-small.png",
       "128": "icon-large.png"
   },
-  "background": {
-      "service_worker": "background.js"
-  }, 
   "web_accessible_resources": [
-    "background.js",
-    "atomicData.js"
+    {
+      "resources": ["background.js", "atomicData.js"],
+      "matches": ["<all_urls>"]
+    }
   ]
 }

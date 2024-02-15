@@ -178,7 +178,7 @@
         </div>
         <div class="d-flex flex-row justify-content-between smallpadding">
             <h4>Alpha Decay</h4>
-            <button type="button" id= "copybtn" class="btn btn-secondary">Copy</button>
+            <button type="button" id= "copybtnAlpha" class="btn btn-secondary">Copy</button>
         </div>
         <img class="float-left" src="AlphaDecayTutorial.svg"></img>
     </div>
@@ -257,8 +257,11 @@
             </div>
         </div>
         <div class="p-2"></div>
-        <h4>Beta-Positive Decay</h4>
-        <img class="float-left" src="BetaPositiveDecay.svg"></img>
+        <div class="d-flex flex-row justify-content-between">
+            <h4>Beta Positive Decay</h4>
+            <button type="button" id= "copybtnBetaPos" class="btn btn-secondary">Copy</button>
+        </div>
+        <img class="float-left smallpadding" src="BetaPositiveDecay.svg"></img>
     </div>
 
 
@@ -269,11 +272,11 @@
             <div class="container container-parent-bp p-2">
                 <div class="d-flex flex-row justify-content-center">
                     <div class="d-flex flex-column">
-                        <input type="text" class="form-control1 textboxp" id="BetaNegAtomicMassIN" aria-label="BetaNegAtomicMassIN"  onkeyup="BetaNegAtomicMass(this.value);" aria-describedby="basic-addon2">
+                        <input type="text" class="form-control1 textboxp" id="BetaNegAtomicMassIN" aria-label="BetaNegAtomicMassIN"  aria-describedby="basic-addon2">
                         <div class="padding"></div>
-                        <input type="text" class="form-control1"id="BetaNegAtomicNumberIN" onkeyup="BetaNegAtomicNumber(this.value);" aria-describedby="BetaNegAtomicNumberIN">
+                        <input type="text" class="form-control1"id="BetaNegAtomicNumberIN" aria-describedby="BetaNegAtomicNumberIN">
                     </div>
-                    <input type="text" class="form-control1"id="BetaNegAtomicSymbolIN" onkeyup="BetaNegaAtomicSymbol(this.value);" aria-describedby="AlphaAtomicSymbolIN">
+                    <input type="text" class="form-control1"id="BetaNegAtomicSymbolIN"  aria-describedby="AlphaAtomicSymbolIN">
                 </div>
                 <div class="p-2"></div>
                 <div class="container text-center">
@@ -296,9 +299,9 @@
             <div class="container container-daughter p-2">
                 <div class="d-flex flex-row justify-content-center">
                     <div class="d-flex flex-column">
-                        <input type="text" id = "BetaNegAtomicMassOUT" class="form-control1 textboxp" onkeyup="BetaNegAtomicMassRev(this.value);"></input>
+                        <input type="text" id = "BetaNegAtomicMassOUT" class="form-control1 textboxp" ></input>
                         <div class="padding"></div>
-                        <input type="text" id = "BetaNegAtomicNumberOUT" class="form-control1 textboxp" onkeyup="BetaNegAtomicNumberRev(this.value);" aria-label="Isotope number" aria-describedby="basic-addon2"></input>
+                        <input type="text" id = "BetaNegAtomicNumberOUT" class="form-control1 textboxp" aria-label="Isotope number" aria-describedby="basic-addon2"></input>
                     </div>
                     <input type="text" id="BetaNegShortFormOUT" class="form-control1" aria-label="Isotope number" aria-describedby="basic-addon2">
                 </div>
@@ -345,11 +348,11 @@
             <div class="container container-parent-bp p-2">
                 <div class="d-flex flex-row justify-content-center">
                     <div class="d-flex flex-column">
-                        <input type="text" class="form-control1 textboxp" id="ElectronAtomicMassIN" aria-label="BetaNegAtomicMassIN"  onkeyup="ElectronAtomicMass(this.value);" aria-describedby="basic-addon2">
+                        <input type="text" class="form-control1 textboxp" id="ElectronAtomicMassIN" aria-label="BetaNegAtomicMassIN" aria-describedby="basic-addon2">
                         <div class="padding"></div>
-                        <input type="text" class="form-control1"id="ElectronAtomicNumberIN" onkeyup="ElectronAtomicNumber(this.value);" aria-describedby="BetaNegAtomicNumberIN">
+                        <input type="text" class="form-control1"id="ElectronAtomicNumberIN" aria-describedby="BetaNegAtomicNumberIN">
                     </div>
-                    <input type="text" class="form-control1"id="ElectronAtomicSymbolIN" onkeyup="ElectronAtomicSymbol(this.value);" aria-describedby="AlphaAtomicSymbolIN">
+                    <input type="text" class="form-control1"id="ElectronAtomicSymbolIN" aria-describedby="AlphaAtomicSymbolIN">
                 </div>
                 <div class="p-2"></div>
                 <div class="container text-center">

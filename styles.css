@@ -55,17 +55,17 @@ h8{
 }
 .container-parent-bp{
     padding-left: 0 !important;
-    background-color: rgba(226,76,76,0.7);
+    background-color: rgba(226,76,76,0.4);
     border-radius: 5px;
 }
 .container-parent{
     padding-left: 0 !important;
-    background-color: rgba(226,76,76,0.7);
+    background-color: rgba(226,76,76,0.4);
     border-radius: 5px;
 }
 .container-daughter{
     padding-left: 0 !important;
-    background-color:rgba(178,76,226,0.7);
+    background-color:rgba(178,76,226,0.4);
     border-radius: 5px;
     
 }
