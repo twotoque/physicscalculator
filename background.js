@@ -330,7 +330,7 @@ function groupSearch(group) {
         return [groupName, IUPACname];
     }
     else if (group === 2) {
-        groupName = "1, alkaline earth metals"
+        groupName = "2, alkaline earth metals"
         IUPACname = "beryl­lium group"
         return [groupName, IUPACname];
     }

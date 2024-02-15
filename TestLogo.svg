@@ -8,29 +8,28 @@
 	.st2{fill:#67CE7B;stroke:#FFFFFF;stroke-width:6.64;stroke-miterlimit:10;}
 	.st3{fill:#7C7C7C;stroke:#FFFFFF;stroke-width:6.64;stroke-miterlimit:10;}
 	.st4{fill:none;stroke:#7C7C7C;stroke-width:66;stroke-miterlimit:10;}
-	.st5{fill:#CC6969;stroke:#FFFFFF;stroke-width:16;stroke-miterlimit:10;}
+	.st5{fill:#CC6969;stroke:#FFFFFF;stroke-width:15.9998;stroke-miterlimit:9.9999;}
 </style>
-<path class="st0" d="M-92.4,481.4c62.7-40.5,130.4-97.3,195.1-166.2c170-181.1,254.9-377.6,189.6-438.8
+<path class="st0" d="M-93.2,486.5c62.7-40.5,130.4-97.3,195.1-166.2c170-181.1,254.9-377.6,189.6-438.8
 	c-65.2-61.2-255.9,35.9-425.9,217c-94.7,100.9-163,206.6-193.6,291.1"/>
-<polygon class="st1" points="228.6,96.2 285.1,152.7 176.3,312.2 59.2,276.9 -24.1,125.5 95.7,45.4 161.7,55.3 "/>
+<polygon class="st1" points="234.2,112.2 290.7,168.7 181.9,328.2 64.8,292.9 -18.5,141.5 101.2,61.4 167.2,71.3 "/>
 <g>
-	<circle class="st2" cx="103.9" cy="172.3" r="52.4"/>
-	<circle class="st3" cx="128.2" cy="112.3" r="52.4"/>
-	<circle class="st2" cx="175" cy="165.9" r="52.4"/>
-	<circle class="st3" cx="141.7" cy="227.1" r="52.4"/>
+	<circle class="st2" cx="105.5" cy="178.8" r="55.1"/>
+	<circle class="st3" cx="131" cy="115.7" r="55.1"/>
+	<circle class="st2" cx="180.2" cy="172.1" r="55.1"/>
+	<circle class="st3" cx="145.2" cy="236.4" r="55.1"/>
 </g>
-<path class="st0" d="M-271.9,102.8c53.9,51.6,124.7,104.4,206.7,151.5C150.2,378,361,415.3,405.5,337.7
-	C450.1,260.1,311.6,97,96.2-26.7C-23.9-95.6-142.5-137.7-231.7-148"/>
+<path class="st0" d="M-266.3,118.8c53.9,51.6,124.7,104.4,206.7,151.5c215.4,123.7,426.2,161,470.7,83.4
+	c44.6-77.6-93.9-240.7-309.3-364.4C-18.3-79.6-136.9-121.7-226.1-132"/>
 <g>
 	<g>
-		<circle class="st4" cx="400" cy="337.9" r="177.1"/>
-		<line class="st4" x1="280.6" y1="468.7" x2="33.4" y2="835.6"/>
+		<circle class="st4" cx="405.5" cy="353.9" r="177.1"/>
+		<line class="st4" x1="286.2" y1="484.7" x2="39" y2="851.6"/>
 	</g>
-	
-		<ellipse transform="matrix(0.7071 -0.7071 0.7071 0.7071 -121.8186 381.7916)" class="st5" cx="400" cy="337.9" rx="97.4" ry="97.4"/>
+	<ellipse class="st5" cx="405.5" cy="353.9" rx="97.4" ry="97.4"/>
 </g>
-<image style="overflow:visible;" width="303" height="310" xlink:href="FA50256.jpg"  transform="matrix(0.5024 0 0 0.5024 1091.7941 160.1446)">
+<image style="overflow:visible;enable-background:new    ;" width="303" height="309" xlink:href="FA50256.jpg"  transform="matrix(0.5032 0 0 0.5032 1091.6683 160.2676)">
 </image>
-<image style="overflow:visible;" width="229" height="233" xlink:href="FA5025A.jpg"  transform="matrix(0.3339 0 0 0.3339 964.3235 757.831)">
+<image style="overflow:visible;enable-background:new    ;" width="231" height="234" xlink:href="FA5025A.jpg"  transform="matrix(0.3318 0 0 0.3318 964.2377 757.9155)">
 </image>
 </svg>
