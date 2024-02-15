@@ -1,7 +1,7 @@
 {
   "name": "Atomic Search & Decay Calculator",
   "version": "1.0.0",
-  "description": "Searches perodic table for elements and calculates alpha, beta postive, beta negative, and electron capture decays",
+  "description": "Searches periodic table for elements and calculates alpha, beta positive, beta negative, and electron capture decays",
   "manifest_version": 3,
   "author": "Derek Song",
   "action": {
