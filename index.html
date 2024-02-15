@@ -180,7 +180,7 @@
             <h4>Alpha Decay</h4>
             <button type="button" id= "copybtnAlpha" class="btn btn-secondary">Copy</button>
         </div>
-        <img class="float-left" src="AlphaDecayTutorial.svg"></img>
+        <img class="justify-content-center" src="AlphaDecayTutorial.svg"></img>
     </div>
 
 
@@ -261,7 +261,7 @@
             <h4>Beta Positive Decay</h4>
             <button type="button" id= "copybtnBetaPos" class="btn btn-secondary">Copy</button>
         </div>
-        <img class="float-left smallpadding" src="BetaPositiveDecay.svg"></img>
+        <img class="justify-content-center smallpadding" src="BetaPositiveDecay.svg"></img>
     </div>
 
 
@@ -337,8 +337,11 @@
             </div>
         </div>
         <div class="p-2"></div>
-        <h4>Beta-Negative Decay</h4>
-        <img class="float-left" src="BetaDecay.svg"></img>
+        <div class="d-flex flex-row justify-content-between">
+            <h4>Beta Negative Decay</h4>
+            <button type="button" id= "copybtnBetaNeg" class="btn btn-secondary">Copy</button>
+        </div>
+        <img class="justify-content-center smallpadding" src="BetaDecay.svg"></img>
     </div>
 
 
@@ -391,9 +394,9 @@
             <div class="container container-daughter p-2">
                 <div class="d-flex flex-row justify-content-center">
                     <div class="d-flex flex-column">
-                        <input type="text" id = "ElectronAtomicMassOUT" class="form-control1 textboxp" onkeyup="ElectronAtomicMassRev(this.value);"></input>
+                        <input type="text" id = "ElectronAtomicMassOUT" class="form-control1 textboxp"></input>
                         <div class="padding"></div>
-                        <input type="text" id = "ElectronAtomicNumberOUT" class="form-control1 textboxp" onkeyup="ElectronAtomicNumberRev(this.value);" aria-label="Isotope number" aria-describedby="basic-addon2"></input>
+                        <input type="text" id = "ElectronAtomicNumberOUT" class="form-control1 textboxp" aria-label="Isotope number" aria-describedby="basic-addon2"></input>
                     </div>
                     <input type="text" id="ElectronShortFormOUT" class="form-control1" aria-label="Isotope number" aria-describedby="basic-addon2">
                 </div>
@@ -413,8 +416,11 @@
             </div> 
         </div>
         <div class="p-2"></div>
-        <h4>Electron Capture</h4>
-        <img class="float-left" src="Electron.svg"></img>
+        <div class="d-flex flex-row justify-content-between">
+            <h4>Electron Capture</h4>
+            <button type="button" id= "copybtnElectron" class="btn btn-secondary">Copy</button>
+        </div>
+        <img class="justify-content-center smallpadding" src="Electron.svg"></img>
     </div>
 
 
@@ -423,7 +429,7 @@
         <div class="d-flex flex-row">
             <div class="credits">
                 <p>Created by <a href="#" id="Derek">Derek Song</a></p>
-                <h8>Last updated: February 12, 2024. Check commit history <a href="#" id="Commit">here</a>.</h8>
+                <h8>Last updated: February 15, 2024. Check commit history <a href="#" id="Commit">here</a>.</h8>
             </div>
         </p>
         <a type="button" class="btn btn-secondary" href="#" id="GitHub">GitHub Repository</a>

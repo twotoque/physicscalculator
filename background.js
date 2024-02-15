@@ -226,8 +226,17 @@ document.getElementById('copybtnAlpha').addEventListener('click', function() {
 document.getElementById('copybtnBetaPos').addEventListener('click', function() {
     var value = "betapos"
     DecayCopy(value);
-});
+}); 
 
+document.getElementById('copybtnBetaNeg').addEventListener('click', function() {
+    var value = "betaneg"
+    DecayCopy(value);
+});  
+
+document.getElementById('copybtnElectron').addEventListener('click', function() {
+    var value = "electron"
+    DecayCopy(value);
+}); 
 
 
 // Calculations
@@ -529,6 +538,7 @@ function DecayCopy (value){
 
         var type = " alpha decays to "
         var other = " and Helium 4" 
+        textCopy.value = parentName + " " + parentMass + type + daughterName + " " + daughterMass + other
     } else if (value == "betapos") {
         var parentName = document.getElementById("BetaPosAtomicNameParent").innerHTML 
         var parentMass = document.getElementById("BetaPosAtomicMassNumParent").innerHTML
@@ -538,8 +548,26 @@ function DecayCopy (value){
 
         var type = " beta positive decays to "
         var other = " and a positive charged electron" 
+        textCopy.value = parentName + " " + parentMass + type + daughterName + " " + daughterMass + other
+    } else if (value == "betaneg") {
+        var parentName = document.getElementById("BetaNegAtomicNameParent").innerHTML 
+        var parentMass = document.getElementById("BetaNegAtomicMassNumParent").innerHTML
+    
+        var daughterName = document.getElementById("BetaNegAtomicNameDaughter").innerHTML
+        var daughterMass = document.getElementById("BetaNegAtomicMassNumDaughter").innerHTML 
+
+        var type = " beta negative decays to "
+        var other = " and a negative charged electron" 
+        textCopy.value = parentName + " " + parentMass + type + daughterName + " " + daughterMass + other
+    }  else if (value == "electron") {
+        var parentName = document.getElementById("ElectronAtomicNameParent").innerHTML 
+        var parentMass = document.getElementById("ElectronAtomicMassNumParent").innerHTML
+    
+        var daughterName = document.getElementById("ElectronAtomicNameDaughter").innerHTML
+        var daughterMass = document.getElementById("ElectronAtomicMassNumDaughter").innerHTML 
+
+        textCopy.value = parentName + " " + parentMass + " and an negatively charged electron results in " + daughterName + " " + daughterMass 
     }
-    textCopy.value = parentName + " " + parentMass + type + daughterName + " " + daughterMass + other
 
     document.body.appendChild(textCopy);
     textCopy.select();
