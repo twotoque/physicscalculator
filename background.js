@@ -1,13 +1,3 @@
-
-console.log("ready");
-var aan = 0;
-var aanB = 0;
-var aanNum = 0;
-var aanNumB = 0;
-var aamB = 0;
-var aamC = 0;
-var aamD = 0;
-
 // Initaize inputs
 document.getElementById("AlphaAtomicMassIN").addEventListener("input", function() {
     AlphaAtomicMass(this.value);
