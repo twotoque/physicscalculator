@@ -863,8 +863,8 @@ function BetaNegAtomicSymbolRev(value){
         // Output; a more concise version compared to the previous version
         document.getElementById("BetaNegAtomicNumberOUT").value = originalValuePosition.aanConst;
         document.getElementById("BetaNegAtomicNameDaughter").innerHTML = originalValuePosition.name;
-        document.getElementById("BetaNegAtomicGroupNumParent").innerHTML = originalValuePosition.group;
-        document.getElementById("BetaNegAtomicGroupNum").innerHTML = originalValuePosition.period;
+        document.getElementById("BetaNegAtomicGroupNum").innerHTML = originalValuePosition.group;
+        document.getElementById("BetaNegAtomicPeriodNum").innerHTML = originalValuePosition.period;
         
         document.getElementById("BetaNegAtomicSymbolIN").value = resultant.shortform;
         document.getElementById("BetaNegAtomicNumberIN").value = resultant.aanConst;
@@ -885,8 +885,8 @@ function BetaNegAtomicNumberRev (value){
         // Output; a more concise version compared to the previous version
         document.getElementById("BetaNegShortFormOUT").value = originalValuePosition.shortform;
         document.getElementById("BetaNegAtomicNameDaughter").innerHTML = originalValuePosition.name;
-        document.getElementById("BetaNegAtomicGroupNumParent").innerHTML = originalValuePosition.group;
-        document.getElementById("BetaNegAtomicGroupNum").innerHTML = originalValuePosition.period;
+        document.getElementById("BetaNegAtomicGroupNum").innerHTML = originalValuePosition.group;
+        document.getElementById("BetaNegAtomicPeriodNum").innerHTML = originalValuePosition.period;
         
         document.getElementById("BetaNegAtomicSymbolIN").value = resultant.shortform;
         document.getElementById("BetaNegAtomicNumberIN").value = resultant.aanConst;
@@ -973,8 +973,8 @@ function ElectronAtomicSymbolRev(value){
         // Output; a more concise version compared to the previous version
         document.getElementById("ElectronAtomicNumberOUT").value = originalValuePosition.aanConst;
         document.getElementById("ElectronAtomicNameDaughter").innerHTML = originalValuePosition.name;
-        document.getElementById("ElectronAtomicGroupNumParent").innerHTML = originalValuePosition.group;
-        document.getElementById("ElectronAtomicGroupNum").innerHTML = originalValuePosition.period;
+        document.getElementById("ElectronAtomicGroupNum").innerHTML = originalValuePosition.group;
+        document.getElementById("ElectronAtomicPeriodNum").innerHTML = originalValuePosition.period;
         
         document.getElementById("ElectronAtomicSymbolIN").value = resultant.shortform;
         document.getElementById("ElectronAtomicNumberIN").value = resultant.aanConst;
@@ -995,8 +995,8 @@ function ElectronAtomicNumberRev (value){
         // Output; a more concise version compared to the previous version
         document.getElementById("ElectronShortFormOUT").value = originalValuePosition.shortform;
         document.getElementById("ElectronAtomicNameDaughter").innerHTML = originalValuePosition.name;
-        document.getElementById("ElectronAtomicGroupNumParent").innerHTML = originalValuePosition.group;
-        document.getElementById("ElectronAtomicGroupNum").innerHTML = originalValuePosition.period;
+        document.getElementById("ElectronAtomicGroupNum").innerHTML = originalValuePosition.group;
+        document.getElementById("ElectronAtomicPeriodNum").innerHTML = originalValuePosition.period;
         
         document.getElementById("ElectronAtomicSymbolIN").value = resultant.shortform;
         document.getElementById("ElectronAtomicNumberIN").value = resultant.aanConst;
