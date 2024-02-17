@@ -7,6 +7,11 @@
 
 This project was originally a site created for GryphHacks 2022 (University of Guelph's Hackathon). In 2024, I completely rewrote the code, clearing out most of the bugs, making it compatible with the Content Security Policy (CSP), and making it more cleaner and readable. Moreover, I added features like atom search and copy button.</p>
 
+<h4>Contacting me</h4>
+To let me know if there are any issues, feel free to use the issues tab on this GitHub repo or emailing me at dereksong28@gmail.com.
+
+<h4>Licensing</h4>
+
 <h2>What it uses</h2>
 
 * Javascript for logic and calculations
@@ -222,5 +227,3 @@ This tool uses Bootstrap, which has default button functionality. While normally
 });</pre>
 
 This code listens to if an HTML id named <code>GitHub</code> is clicked. If it is, then Chrome is instructed to update the tab to go to the corresponding link, in this case <code>https://github.com/twotoque/physicscalculator/</code>.
-<h2>Contacting me</h2>
-Thank you so much for using this extension! To let me know if there are any issues, feel free to use the issues tab on this GitHub repo or emailing me at dereksong28@gmail.com.
