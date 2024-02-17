@@ -85,7 +85,7 @@ Other functions may also have a <code>resultant</code> variable, which calculate
 The values are then outputted by calling the ID of all of the appropriate elements and assigning it as
 
 * the appropriate value in either <code>originalValuePosition</code> or <code>resultant</code>
-* the n-th element in an array (e.g. <code>blockName[0]</code)) if the output of the function is an array. Refer to specific function documentation for which array to use
+* the n-th element in an array (e.g. <code>blockName[0]</code>)) if the output of the function is an array. Refer to specific function documentation for which array to use
 
 <h4>.innerHTML vs .value</h4>
 Recall that some of the IDs call for the <code>.innerHTML</code> and others call for the <code>.value</code>. In general,
