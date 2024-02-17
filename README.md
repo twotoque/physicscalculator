@@ -179,3 +179,45 @@ For <code>DecayCopy</code> an if statement is used, comparing the type of elemen
     
 Next, <code>textCopy</code> is appended to the node of the document (<code>document.body.appendChild(textCopy);</code>). It is then selected (<code>textCopy.select();</code>), and the clipboard is instructed to copy the value (<code>navigator.clipboard.writeText(textCopy.value)</code>). After that is done, the node is cleared (<code>document.body.removeChild(textCopy);</code>).  
 <h3>Showing/hiding elements</h3>
+
+Similar to the "identifying" functions, these functions tell the webpage what to hide or load. For example, the function below listens if <code>AtomSearchbtn</code> is clicked or not, and if so, defines each element as its own variable, then shows <code>AtomSearch</code> and hides the others.
+<pre>document.getElementById('AtomSearchbtn').addEventListener('click', function() {
+    // Funciton to show AtomSearch and hide other elements upon clicking AtomSearchbtn. Inputs = none
+    // Variables for elements
+    var BetaPositive = document.getElementById('BetaPositive');
+    var Alpha = document.getElementById('Alpha');
+    var BetaNegative = document.getElementById('BetaNegative');
+    var ElectronCapture = document.getElementById('ElectronCapture');
+    var AtomSearch = document.getElementById('AtomSearch');
+    
+    // Hides/show approprate elements
+    BetaPositive.style.display = 'none';
+    Alpha.style.display = 'none';
+    BetaNegative.style.display = 'none';
+    ElectronCapture.style.display = 'none';
+    AtomSearch.style.display = 'block'
+});
+</pre>
+In general, these HTML ids correspond to:
+
+* <code>Alpha</code> - alpha decay element (button to show: <code>Alphabtn</code>)
+* <code>AtomSearch</code> - atom search element (button to show: <code>AtomSearchbtn</code>)
+* <code>BetaPositive</code> - beta positive decay element (button to show: <code>BetaPositivebtn</code>)
+* <code>BetaNegative</code> - beta negative decay element (button to show: <code>BetaNegativebtn</code>)
+* <code>ElectronCapture</code> - electron capture (button to show: <code>ElectronCapturebtn</code>)
+
+To show an element, set the element's <code>.style.display</code> to equal to <code>block</code>. To hide, set as <code>none</code>.
+
+<h4>On load</h4>
+When the extension is first opened, it defaults to opening atom search and hiding the other elements.
+<h3>Button links</h3>
+This tool uses Bootstrap, which has default button functionality. While normally you will put an <code>href</code> into an <href>a</href> tag to link it to another page, this isn't supported in a Google Chrome extension. Hencewhy this piece of code exists
+
+<pre>document.getElementById('GitHub').addEventListener('click', function() {
+    // Link to github repo
+    chrome.tabs.update({ url: 'https://github.com/twotoque/physicscalculator/' });
+});</pre>
+
+This code listens to if an HTML id named <code>GitHub</code> is clicked. If it is, then Chrome is instructed to update the tab to go to the corresponding link, in this case <code>https://github.com/twotoque/physicscalculator/</code>.
+<h2>Contacting me</h2>
+Thank you so much for using this extension! To let me know if there are any issues, feel free to use the issues tab on this GitHub repo or emailing me at dereksong28@gmail.com.
