@@ -11,7 +11,7 @@ This project was originally a site created for GryphHacks 2022 (University of Gu
 To let me know if there are any issues, feel free to use the issues tab on this GitHub repo or emailing me at dereksong28@gmail.com.
 
 <h4>Licensing</h4>
-Licensed under the MIT License, available through the <code>license.md</code>. 
+Licensed under the MIT License, available through the <code>license.md</code> file. 
 
 Extension created by Derek Song, 2024. 
 
