@@ -127,7 +127,8 @@ For <code>searchVal</code> === <code>atomSearch</code>, where 2 values are given
 
 If AtomicSymbol's group at position i equals <code>value</code>, <b>and</b> the AtomicSymbol's period at position i equals to <code>value2</code> is also true, return i. Additionally, if <code>value</code> is a string (only happens if "N/A is inputted), it omits the <code>parseInt(value)</code> <i>only</i> for <code>value</code>, which converts the str to int.
 
-<b3>Functions blockName and groupName</b3>
+<h3>Functions blockName and groupName</h3>
+
 Both functions are similar as they compare one/multiple values, and return a set of variables in an array. 
 
 * blockName takes in <code>group</code> and <code>period</code> and assigns the appropriate block and azimuthal quantum number. Reference <code>result[0]</code> for block, and <code>result[1]</code> for azNum, assuming that <code>var result = blockSearch(group, period)</code>
