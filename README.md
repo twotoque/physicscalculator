@@ -171,7 +171,11 @@ This tool has a feature to easily copy decays and elements. This is done through
 * <code>DecayCopy</code> copies alpha, beta +/-, and electron capture decays. It takes in one value which indicates the type of decay. (str)
 * <code>AtomSearchCopy</code> copies atomic search. It takes no value.
 
-The functions first call the HTML elements in the selected decay type. It creates a const named <code>textCopy</code>, which is a text area in the document. It then assembles the sentence, usually with a statement like <code>textCopy.value = atomicName + "\nShort form: " + atomicSymbol + "\nAtomic number: " + atomicNumber + "\nGroup: " + atomicGroup + "\nIUPAC group name: " + atomicGroupAlt +"\nPeriod: " + atomicPeriod + "\nBlock: " + atomicBlock + "\nAzimuthal quantum number: " + atomicBlockAlt + "\nAverage mass: " + atomicMass</code>. For <code>DecayCopy</code> an if statement is used, comparing the type of element. It then assembles the sentence according to the decay. 
+The functions first call the HTML elements in the selected decay type. It creates a const named <code>textCopy</code>, which is a text area in the document. It then assembles the sentence, usually with a statement like 
+
+<pre>textCopy.value = atomicName + "\nShort form: " + atomicSymbol + "\nAtomic number: " + atomicNumber + "\nGroup: " + atomicGroup + "\nIUPAC group name: " + atomicGroupAlt +"\nPeriod: " + atomicPeriod + "\nBlock: " + atomicBlock + "\nAzimuthal quantum number: " + atomicBlockAlt + "\nAverage mass: " + atomicMass</pre>
+
+For <code>DecayCopy</code> an if statement is used, comparing the type of element. It then assembles the sentence according to the decay. 
 
 Next, <code>textCopy</code> is appended to the node of the document. It is then selected, and the clipboard is instructed to copy the value. After that is done, the node is cleared. 
 
