@@ -1,3 +1,4 @@
+<img src="icon128.png" align="center">
 <h2 align="center"> Atomic Search & Decay Calculator</h2>
 <p align="center"><i>Formerly Radioactive Decay Calculator</i></p>
 
@@ -31,7 +32,7 @@ Moreover, additional tools used were:
 <h3>Identification and calling functions</h3>
 In <code>index.html</code>, each element contains an id, which the function callers use to know which function to call. For example, 
 
-<code>input type="text" id="BetaPosShortFormOUT" class="form-control1" aria-label="Isotope number" aria-describedby="basic-addon2"</code>
+<pre>input type="text" id="BetaPosShortFormOUT" class="form-control1" aria-label="Isotope number" aria-describedby="basic-addon2"</pre>
 
 ...is an input with the id "BetaPosShortFormOUT". This is read in <code>background.js</code> with 
 
