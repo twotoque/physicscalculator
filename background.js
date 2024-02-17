@@ -106,9 +106,7 @@ window.onload = (event) => {
 };
 
 document.getElementById('AtomSearchbtn').addEventListener('click', function() {
-    // Button variable 
-    var AtomSearchbtn = document.getElementById('AtomSearchbtn');
-
+    // Funciton to show AtomSearch and hide other elements upon clicking AtomSearchbtn. Inputs = none
     // Variables for elements
     var BetaPositive = document.getElementById('BetaPositive');
     var Alpha = document.getElementById('Alpha');
@@ -125,9 +123,7 @@ document.getElementById('AtomSearchbtn').addEventListener('click', function() {
 });
 
 document.getElementById('Alphabtn').addEventListener('click', function() {
-    // Button variable 
-    var Alphabtn = document.getElementById('Alphabtn');
-
+    // Funciton to show Alpha and hide other elements upon clicking Alphabtn. Inputs = none
     // Variables for elements
     var BetaPositive = document.getElementById('BetaPositive');
     var Alpha = document.getElementById('Alpha');
@@ -144,8 +140,7 @@ document.getElementById('Alphabtn').addEventListener('click', function() {
 },
 
 document.getElementById('BetaPositivebtn').addEventListener('click', function() {
-    // Button variable 
-    var BetaPositivebtn = document.getElementById('BetaPositivebtn');
+    // Funciton to show BetaPositive and hide other elements upon clicking BetaPositivebtn. Inputs = none
 
     // Variables for elements
     var BetaPositive = document.getElementById('BetaPositive');
@@ -163,9 +158,7 @@ document.getElementById('BetaPositivebtn').addEventListener('click', function() 
 }));
 
 document.getElementById('BetaNegativebtn').addEventListener('click', function() {
-    // Button variable 
-    var BetaNegativebtn = document.getElementById('BetaNegativebtn');
-
+    // Funciton to show BetaNegative and hide other elements upon clicking BetaNegativebtn. Inputs = none
     // Variables for elements
     var BetaPositive = document.getElementById('BetaPositive');
     var Alpha = document.getElementById('Alpha');
@@ -182,8 +175,7 @@ document.getElementById('BetaNegativebtn').addEventListener('click', function() 
 });
 
 document.getElementById('ElectronCapturebtn').addEventListener('click', function() {
-    // Button variable 
-    var ElectronCapturebtn = document.getElementById('ElectronCapturebtn');
+    // Funciton to show ElectronCapture and hide other elements upon clicking ElectronCapturebtn. Inputs = none
 
     // Variables for elements
     var BetaPositive = document.getElementById('BetaPositive');
@@ -517,6 +509,7 @@ function AlphaAtomicMassRev (value){
 
 
 function DecayCopy (value){
+    // Copies Decay calculation depending on type of decay. Inputs = value - the type of decay. (str)
     const textCopy = document.createElement('textarea');
 
     if (value == "alpha") {
@@ -564,6 +557,7 @@ function DecayCopy (value){
     navigator.clipboard.writeText(textCopy.value)
     document.body.removeChild(textCopy);
 }
+
 // Atom search
 
 function AtomSearchAtomicMass (value){
@@ -609,7 +603,7 @@ function AtomSearchReset(){
 }
 
 function AtomicSearchGroupName (value, value2){
-    // Function to print mass of an Atom. Input = AtomSearchAtomicMassIN  
+    // Function to calculate group of an Atom. Input = AtomSearchAtomicMassIN  
     var position = atomicSearch(AtomicSymbol, value, "atomSearch", value2); // Pass both arguments to aanFinder
     if (position !== -1) {
         var originalValuePosition = AtomicSymbol[position]; // Find position of the item
