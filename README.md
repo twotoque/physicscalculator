@@ -112,3 +112,7 @@ Then, a for loop is used.
         }
         return -1; // Return -1 if no matching element is found
 </pre>
+
+The for loop defines a value <code>i</code> and sets it as zero. This tells it to start at position zero, and go up to the length of <code>AtomicSymbol</code>. If the shortform of AtomicSymbol at position <code>i</code> holds true, then return the value of <code>i</code>. Else, add 1 to <code>i</code> and continue.
+
+If <code>i < AtomicSymbol.length</code> is reached, then return -1. The other functions will interpret a value of -1 as a missing or invaild element.
