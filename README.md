@@ -9,6 +9,7 @@
 * Javascript for logic and calculations
 * HTML for front end
 * CSS for styles
+* Bootstrap, for more consistent and faster styling 
 * JSON for Chrome extension identification
 
 Moreover, additional tools used were:
@@ -93,8 +94,10 @@ Recall that some of the IDs call for the <code>.innerHTML</code> and others call
 * <code>.innerHTML</code> is used for any HTML element whose output is in a <code>span</code> element
 * <code>.values</code> is used for any HTML element whose output is in a <code>input</code> element. Generally used in elements like atomic number, short form, or mass. 
 
+<h3>Function atomicSearch</h3>
+<p>atomicSearch is an important function as it searches through array <code>atomicSymbol</code> and finds the requested element. Parameters are: </p>
 
-
-
-
-
+* <code>AtomicSymbol</code>, which is the array that houses all of the elements (const)
+* <code>value</code>, which is the value to search for (str or int)
+* <code>searchVal</code>, which defines what to search for. Only use <code>aanConst</code>, <code>atomSearch</code>, <code>name</code>, <code>mass</code>
+* <code>value2</code>, another value to search for. Only used if searchVal = <code>atomSearch</code>
