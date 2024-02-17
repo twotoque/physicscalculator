@@ -164,3 +164,14 @@ Both functions are similar as they compare one/multiple values, and return a set
 
 * blockName takes in <code>group</code> and <code>period</code> and assigns the appropriate block and azimuthal quantum number. Reference <code>result[0]</code> for block, and <code>result[1]</code> for azNum, assuming that <code>var result = blockSearch(group, period)</code>
 * groupName takes in <code>group</code> and assigns appropriate group and IUPAC name. To reference, call <code>result[0]</code> for groupName, and <code>result[1]</code> for IUPACname, assuming that <code>var result = groupSearch(group)</code>
+
+<h3>Functions DecayCopy and AtomSearchCopy</h3>
+This tool has a feature to easily copy decays and elements. This is done through these two functions, where
+
+* <code>DecayCopy</code> copies alpha, beta +/-, and electron capture decays. It takes in one value which indicates the type of decay. (str)
+* <code>AtomSearchCopy</code> copies atomic search. It takes no value.
+
+The functions first call the HTML elements in the selected decay type. It creates a const named <code>textCopy</code>, which is a text area in the document. It then assembles the sentence, usually with a statement like <code>textCopy.value = atomicName + "\nShort form: " + atomicSymbol + "\nAtomic number: " + atomicNumber + "\nGroup: " + atomicGroup + "\nIUPAC group name: " + atomicGroupAlt +"\nPeriod: " + atomicPeriod + "\nBlock: " + atomicBlock + "\nAzimuthal quantum number: " + atomicBlockAlt + "\nAverage mass: " + atomicMass</code>. For <code>DecayCopy</code> an if statement is used, comparing the type of element. It then assembles the sentence according to the decay. 
+
+Next, <code>textCopy</code> is appended to the node of the document. It is then selected, and the clipboard is instructed to copy the value. After that is done, the node is cleared. 
+
