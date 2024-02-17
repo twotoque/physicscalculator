@@ -178,4 +178,4 @@ The functions first call the HTML elements in the selected decay type. It create
 For <code>DecayCopy</code> an if statement is used, comparing the type of element. It then assembles the sentence according to the decay. 
     
 Next, <code>textCopy</code> is appended to the node of the document (<code>document.body.appendChild(textCopy);</code>). It is then selected (<code>textCopy.select();</code>), and the clipboard is instructed to copy the value (<code>navigator.clipboard.writeText(textCopy.value)</code>). After that is done, the node is cleared (<code>document.body.removeChild(textCopy);</code>).  
-
+<h3>Showing/hiding elements</h3>
