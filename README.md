@@ -125,4 +125,4 @@ For <code>searchVal</code> === <code>atomSearch</code>, where 2 values are given
         return i; // Return the index of the found element
     } </pre>
 
-If AtomicSymbol's group at position i equals <code>value</code, <b>and</b> the AtomicSymbol's period at position i equals to <code>value2</code> is also true, return i. Additionally, if <code>value</code> is a string (only happens if "N/A is inputted), it omits the <code>parseInt(value)</code> <i>only<i> for <code>value</code>, which converts the str to int.
+If AtomicSymbol's group at position i equals <code>value</code>, <b>and</b> the AtomicSymbol's period at position i equals to <code>value2</code> is also true, return i. Additionally, if <code>value</code> is a string (only happens if "N/A is inputted), it omits the <code>parseInt(value)</code> <i>only<i> for <code>value</code>, which converts the str to int.
