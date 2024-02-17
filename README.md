@@ -1,4 +1,4 @@
-<img src="icon128.png" align="center">
+<div align="center"><img src="icon128.png"></div>
 <h2 align="center"> Atomic Search & Decay Calculator</h2>
 <p align="center"><i>Formerly Radioactive Decay Calculator</i></p>
 
