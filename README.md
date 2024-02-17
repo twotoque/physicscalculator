@@ -115,4 +115,14 @@ Then, a for loop is used.
 
 The for loop defines a value <code>i</code> and sets it as zero. This tells it to start at position zero, and go up to the length of <code>AtomicSymbol</code>. If the shortform of AtomicSymbol at position <code>i</code> holds true, then return the value of <code>i</code>. Else, add 1 to <code>i</code> and continue.
 
-If <code>i < AtomicSymbol.length</code> is reached, then return -1. The other functions will interpret a value of -1 as a missing or invaild element.
+If <code>i < AtomicSymbol.length</code> is reached, then return -1. The other functions will interpret a value of -1 as a missing or invalid element.
+
+For <code>searchVal</code> === <code>atomSearch</code>, where 2 values are given, a slightly different if structure is used. 
+
+<pre>if (AtomicSymbol[i].group === parseInt(value)  && AtomicSymbol[i].period === parseInt(value2)) { // Variable "value" represents group assignment, variable "value2" represents period.
+        return i; // Return the index of the found element
+    } else if (AtomicSymbol[i].group === value && AtomicSymbol[i].period === parseInt(value2)) { // Special coniditon if "N/A" is inputted. Does not convert value into int. 
+        return i; // Return the index of the found element
+    } </pre>
+
+If AtomicSymbol's group at position i equals <code>value</code, <b>and</b> the AtomicSymbol's period at position i equals to <code>value2</code> is also true, return i. Additionally, if <code>value</code> is a string (only happens if "N/A is inputted), it omits the <code>parseInt(value)</code> <i>only<i> for <code>value</code>, which converts the str to int.
