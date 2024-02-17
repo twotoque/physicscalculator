@@ -99,5 +99,16 @@ Recall that some of the IDs call for the <code>.innerHTML</code> and others call
 
 * <code>AtomicSymbol</code>, which is the array that houses all of the elements (const)
 * <code>value</code>, which is the value to search for (str or int)
-* <code>searchVal</code>, which defines what to search for. Only use <code>aanConst</code>, <code>atomSearch</code>, <code>name</code>, <code>mass</code>
-* <code>value2</code>, another value to search for. Only used if searchVal = <code>atomSearch</code>
+* <code>searchVal</code>, which defines what to search for. Only use <code>aanConst</code>, <code>atomSearch</code>, <code>name</code>, <code>mass</code> (str)
+* <code>value2</code>, another value to search for. Only used if searchVal = <code>atomSearch</code> (str or int)
+
+For any string inputs, there is usually a snippet of code after the if structure which looks like <code>value = value.charAt(0).toUpperCase() + value.slice(1).toLowerCase();</code>. This turns the first letter of the string into uppercase, and all of the others to lowercase, which is the style used in the array <code>AtomicSymbol</code>. (e.g. <code>hEliuM</code> turns to <code>Helium</code>). 
+
+Then, a for loop is used. 
+<pre>   for (var i = 0; i < AtomicSymbol.length; i++) { // Search for item matching value at "i". If "i" == value, get its index, else add 1 to i.
+            if (AtomicSymbol[i].shortform === value) {
+                return i; // Return the index of the found element
+            }
+        }
+        return -1; // Return -1 if no matching element is found
+</pre>
