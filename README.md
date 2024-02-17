@@ -127,7 +127,7 @@ For <code>searchVal</code> === <code>atomSearch</code>, where 2 values are given
 
 If AtomicSymbol's group at position i equals <code>value</code>, <b>and</b> the AtomicSymbol's period at position i equals to <code>value2</code> is also true, return i. Additionally, if <code>value</code> is a string (only happens if "N/A is inputted), it omits the <code>parseInt(value)</code> <i>only</i> for <code>value</code>, which converts the str to int.
 
-<h3>Cont AtomicSymbol</h3>
+<h3>Const AtomicSymbol</h3>
 AtomicSymbol is an array and is the only thing inside <code>atomicData.js</code>. It looks roughly like this:
 <pre>const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<element>]. name: Name of element (str); shortform: Element intials (str); aanConst: Atomic number (int) ; group: Group on periodic table (int) ; period: Period on periodic table (int) ; avgMass: the average mass of an element (float)
     {
@@ -149,12 +149,14 @@ AtomicSymbol is an array and is the only thing inside <code>atomicData.js</code>
     ...(etc)
 </pre>
 
-* <code>name</code> is the full name of the element (str). Capitalize the first letter and make sure the other letters are lowercase <i><code>N/A</code> is the <b>only</b> special exception to this rule.</i>. The functions are programmed to automatically convert string inputs to this format. (e.g. "Hydrogen")
-* <code>shortform</code> is the abbreviation of the element (str). Capitalize the first letter and make sure the other letters are lowercase <i><code>N/A</code> is the <b>only</b> special exception to this rule.</i>. The functions are programmed to automatically convert string inputs to this format. (e.g. "He")
+* <code>name</code> is the full name of the element (str). Capitalize the first letter and make sure the other letters are lowercase (<i><code>N/A</code> is the <b>only</b> special exception to this rule.</i>) The functions are programmed to automatically convert string inputs to this format. (e.g. "Hydrogen")
+* <code>shortform</code> is the abbreviation of the element (str). Capitalize the first letter and make sure the other letters are lowercase (<i><code>N/A</code> is the <b>only</b> special exception to this rule.</i>) The functions are programmed to automatically convert string inputs to this format. (e.g. "He")
 * <code>aanConst</code> is the atomic number of the element (int).
 * <code>group</code> is the group of the element (int).
 * <code>period</code> is the period of the element (int).
 * <code>avgMass</code> is the average mass of the element (float).
+
+To reference, use <code>AtomicSymbol[i].element</code>, where <code>i</code> is the position of the element in the list (technically the atomic number), and <code>.element</code> is the element you want to search for. 
 
 <h3>Functions blockName and groupName</h3>
 
