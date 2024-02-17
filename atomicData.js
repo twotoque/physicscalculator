@@ -1,4 +1,4 @@
-const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<element>]. name: Name of element (str); shortform: Element intials (str); aanConst: Atomic number (int) ; group: Group on periodic table (int) ; period: Period on periodic table (int) 
+const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<element>]. name: Name of element (str); shortform: Element intials (str); aanConst: Atomic number (int) ; group: Group on periodic table (int) ; period: Period on periodic table (int) ; avgMass: Average mass of an element (float)
     {
         name: "N/A",
         shortform: "N/A",
@@ -10,7 +10,7 @@ const AtomicSymbol = [ // An array of Atomic elements. Use = AtomicSymbol[<eleme
     {
         name: "Hydrogen",
         shortform: "H",
-        aanConst: 1, //Atomic number. Used aanConst so that it wouldn't get confused with var aan
+        aanConst: 1,
         group: 1,
         period: 1,
         avgMass: 1.0078,
