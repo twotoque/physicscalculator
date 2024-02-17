@@ -3,7 +3,9 @@
 <p align="center"><i>Formerly Radioactive Decay Calculator</i></p>
 
 <h2>Description</h2>
-<p>Searches periodic table for elements and calculates alpha, beta positive, beta negative, and electron capture decays.</p>
+<p>Don't have the time to reference your periodic table while you do your mountain of questions assigned by your Physics teacher? This Google Chrome extension allows you to quickly search for elements and calculates alpha, beta+/- & electron capture decays.
+
+This project was originally a site created for GryphHacks 2022 (University of Guelph's Hackathon). In 2024, I completely rewrote the code, clearing out most of the bugs, making it compatible with the Content Security Policy (CSP), and making it more cleaner and readable. Moreover, I added features like atom search and copy button.</p>
 
 <h2>What it uses</h2>
 
@@ -150,8 +152,8 @@ AtomicSymbol is an array and is the only thing inside <code>atomicData.js</code>
     ...(etc)
 </pre>
 
-* <code>name</code> is the full name of the element (str). Capitalize the first letter and make sure the other letters are lowercase (<i><code>N/A</code> is the <b>only</b> special exception to this rule.</i>) The functions are programmed to automatically convert string inputs to this format. (e.g. "Hydrogen")
-* <code>shortform</code> is the abbreviation of the element (str). Capitalize the first letter and make sure the other letters are lowercase (<i><code>N/A</code> is the <b>only</b> special exception to this rule.</i>) The functions are programmed to automatically convert string inputs to this format. (e.g. "He")
+* <code>name</code> is the full name of the element. Capitalize the first letter and make sure the other letters are lowercase (<i><code>N/A</code> is the <b>only</b> special exception to this rule.</i>) The functions are programmed to automatically convert string inputs to this format. (e.g. "Hydrogen") (str)
+* <code>shortform</code> is the abbreviation of the element. Capitalize the first letter and make sure the other letters are lowercase (<i><code>N/A</code> is the <b>only</b> special exception to this rule.</i>) The functions are programmed to automatically convert string inputs to this format. (e.g. "He") (str)
 * <code>aanConst</code> is the atomic number of the element (int).
 * <code>group</code> is the group of the element (int).
 * <code>period</code> is the period of the element (int).
