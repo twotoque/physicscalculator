@@ -29,6 +29,8 @@ Moreover, additional tools used were:
 * Adobe Illustrator - for vector graphics
 * Adobe After Effects - for marketing videos
 
+<h3>Google Chrome permissions</h3>
+This extension requires the use of one of the special permissions, specifically <code>clipboardWrite</code>. This permission is only used for the functions <code>DecayCopy</code> and <code>AtomicSearchCopy</code>, where decays / elements are copied to your keyboard from the click of your button.
 <h2>What each file does</h2>
 
 * <code>index.html</code> is the front end; where the user interacts with the project
