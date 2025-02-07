@@ -1074,4 +1074,9 @@ document.getElementById('Commit').addEventListener('click', function() {
     // Link to github commits
     chrome.tabs.update({ url: 'https://github.com/twotoque/physicscalculator/commits' });
 });
-
+const svgDoc = document.getElementById("PeriodicTable").contentDocument;
+console.log(svgDoc.querySelector("g"));
+console.log(svgDoc);
+const group = svgDoc.getElementById("2-2");  
+group.style.visibility = "display";
+console.log("test");
