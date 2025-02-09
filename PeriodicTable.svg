@@ -12,7 +12,7 @@
     }
   </style>
   <g id="Default">
-    <g id="1" data-name="id_ 1">
+    <g id="1" data-name="id_ 1" visibility="hidden">
       <rect x="18" y="18" width="36" height="36" rx="5.5" ry="5.5" fill="#878787"/>
       <text transform="translate(27.36 43.67)" fill="#323232" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">H</tspan></text>
     </g>
@@ -486,7 +486,7 @@
     </g>
   </g>
   <g id="Shown">
-    <g id="1-2" data-name="id_ 1">
+    <g id="1-2" data-name="id_ 1" visibility="hidden">
       <rect x="18" y="18" width="36" height="36" rx="5.5" ry="5.5" fill="#e2eeff"/>
       <text transform="translate(27.36 43.67)" fill="#0e51a0" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">H</tspan></text>
     </g>
