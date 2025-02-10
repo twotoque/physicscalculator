@@ -12,7 +12,7 @@
     }
   </style> 
   <g id="Default">
-    <g id="1" data-name="id_ 1" visibility="hidden">
+    <g id="1" data-name="id_ 1" >
       <rect x="18" y="18" width="36" height="36" rx="5.5" ry="5.5" fill="#878787"/>
       <text transform="translate(27.36 43.67)" fill="#323232" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">H</tspan></text>
     </g>
@@ -41,7 +41,7 @@
       <text transform="translate(24.71 313.67)" fill="#323232" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Fr</tspan></text>
     </g>
     <g id="4" data-name="id_ 4">
-      <path d="M68.5,99h25c3.04,0,5.5-2.46,5.5-5.5v-25c0-3.04,3.04-5.5,0-5.5h-30.5c-3.04,0-5.5,2.46-5.5,5.5v25c0,3.04,2.46,5.5,5.5,5.5Z" fill="#878787"/>
+      <rect x="63" y="63" width="36" height="36" rx="5.5" ry="5.5" fill="#878787"/>
       <text transform="translate(66.74 88.67)" fill="#323232" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Be</tspan></text>
     </g>
     <g id="12" data-name="id_ 12">
@@ -490,331 +490,332 @@
       <rect x="18" y="18" width="36" height="36" rx="5.5" ry="5.5" fill="#e2eeff"/>
       <text transform="translate(27.36 43.67)" fill="#0e51a0" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">H</tspan></text>
     </g>
-    <g id="3-2" data-name="id_ 3">
+    <g id="3-2" data-name="id_ 3" visibility="hidden">
       <rect x="18" y="63" width="36" height="36" rx="5.5" ry="5.5" fill="#d8f8ff"/>
       <text transform="translate(26.62 88.67)" fill="#39828e" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Li</tspan></text>
     </g>
-    <g id="11-2" data-name="id_ 11">
+    <g id="11-2" data-name="id_ 11" visibility="hidden">
       <rect x="18" y="108" width="36" height="36" rx="5.5" ry="5.5" fill="#d8f8ff"/>
       <text transform="translate(20.95 133.67)" fill="#39828e" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Na</tspan></text>
     </g>
-    <g id="19-2" data-name="id_ 19">
+    <g id="19-2" data-name="id_ 19" visibility="hidden">
       <rect x="18" y="153" width="36" height="36" rx="5.5" ry="5.5" fill="#d8f8ff"/>
       <text transform="translate(28.28 178.67)" fill="#39828e" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">K</tspan></text>
     </g>
-    <g id="37-2" data-name="id_ 37">
+    <g id="37-2" data-name="id_ 37" visibility="hidden">
       <rect x="18" y="198" width="36" height="36" rx="5.5" ry="5.5" fill="#d8f8ff"/>
       <text transform="translate(21.35 223.67)" fill="#39828e" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Rb</tspan></text>
     </g>
-    <g id="55-2" data-name="id_ 55">
+    <g id="55-2" data-name="id_ 55" visibility="hidden">
       <rect x="18" y="243" width="36" height="36" rx="5.5" ry="5.5" fill="#d8f8ff"/>
       <text transform="translate(22.35 268.67)" fill="#39828e" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Cs</tspan></text>
     </g>
-    <g id="87-2" data-name="id_ 87">
+    <g id="87-2" data-name="id_ 87" visibility="hidden">
       <rect x="18" y="288" width="36" height="36" rx="5.5" ry="5.5" fill="#d8f8ff"/>
       <text transform="translate(24.71 313.67)" fill="#39828e" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Fr</tspan></text>
     </g>
-    <g id="4-2" data-name="id_ 4">
-      <path d="M68.5,99h25c3.04,0,5.5-2.46,5.5-5.5v-25c0-3.04,3.04-5.5,0-5.5h-30.5c-3.04,0-5.5,2.46-5.5,5.5v25c0,3.04,2.46,5.5,5.5,5.5Z" fill="#ffe7e7"/>
+    <g id="4-2" data-name="id_ 4" visibility="hidden">
+    
+      <rect x="63" y="63" width="36" height="36" rx="5.5" ry="5.5" fill="#ffe7e7"/>
       <text transform="translate(66.74 88.67)" fill="#9b3d3d" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Be</tspan></text>
     </g>
-    <g id="12-2" data-name="id_ 12">
+    <g id="12-2" data-name="id_ 12" visibility="hidden">
       <rect x="63" y="108" width="36" height="36" rx="5.5" ry="5.5" fill="#ffe7e7"/>
       <text transform="translate(63.81 133.67)" fill="#9b3d3d" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Mg</tspan></text>
     </g>
-    <g id="20-2" data-name="id_ 20">
+    <g id="20-2" data-name="id_ 20" visibility="hidden">
       <rect x="63" y="153" width="36" height="36" rx="5.5" ry="5.5" fill="#ffe7e7"/>
-      <text transform="translate(66.56 178.67)" fill="#9b3d3d" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Ca</tspan></text>
+      <text transform="translate(66.56 178.67)" fill="#9b3d3d" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800" visibility="hidden"><tspan x="0" y="0">Ca</tspan></text>
     </g>
-    <g id="38-2" data-name="id_ 38">
+    <g id="38-2" data-name="id_ 38" visibility="hidden">
       <rect x="63" y="198" width="36" height="36" rx="5.5" ry="5.5" fill="#ffe7e7"/>
       <text transform="translate(69.47 223.67)" fill="#9b3d3d" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Sr</tspan></text>
     </g>
-    <g id="56-2" data-name="id_ 56">
+    <g id="56-2" data-name="id_ 56" visibility="hidden">
       <rect x="63" y="243" width="36" height="36" rx="5.5" ry="5.5" fill="#ffe7e7"/>
       <text transform="translate(66.56 268.67)" fill="#9b3d3d" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Ba</tspan></text>
     </g>
-    <g id="88-2" data-name="id_ 88">
+    <g id="88-2" data-name="id_ 88" visibility="hidden">
       <rect x="63" y="288" width="36" height="36" rx="5.5" ry="5.5" fill="#ffe7e7"/>
       <text transform="translate(67 313.67)" fill="#9b3d3d" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Ra</tspan></text>
     </g>
-    <g id="21-2" data-name="id_ 21">
+    <g id="21-2" data-name="id_ 21" visibility="hidden">
       <rect x="108" y="153" width="36" height="36" rx="5.5" ry="5.5" fill="#f3e8fd"/>
       <text transform="translate(113.18 178.67)" fill="#653a93" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Sc</tspan></text>
     </g>
-    <g id="39-2" data-name="id_ 39">
+    <g id="39-2" data-name="id_ 39" visibility="hidden">
       <rect x="108" y="198" width="36" height="36" rx="5.5" ry="5.5" fill="#f3e8fd"/>
       <text transform="translate(118.36 223.67)" fill="#653a93" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Y</tspan></text>
     </g>
-    <g id="57-2" data-name="id_ 57">
+    <g id="57-2" data-name="id_ 57" visibility="hidden">
       <rect x="108" y="243" width="36" height="36" rx="5.5" ry="5.5" fill="#8fd6f2"/>
       <text transform="translate(113.41 268.67)" fill="#1d617c" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">La</tspan></text>
     </g>
-    <g id="89-2" data-name="id_ 89">
+    <g id="89-2" data-name="id_ 89" visibility="hidden">
       <rect x="108" y="288" width="36" height="36" rx="5.5" ry="5.5" fill="#ffe6d4"/>
       <text transform="translate(112.06 313.67)" fill="#a35b2b" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Ac</tspan></text>
     </g>
-    <g id="22-2" data-name="id_ 22">
+    <g id="22-2" data-name="id_ 22" visibility="hidden">
       <rect x="180" y="153" width="36" height="36" rx="5.5" ry="5.5" fill="#f3e8fd"/>
       <text transform="translate(187.94 178.67)" fill="#653a93" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Ti</tspan></text>
     </g>
-    <g id="40-2" data-name="id_ 40">
+    <g id="40-2" data-name="id_ 40" visibility="hidden">
       <rect x="180" y="198" width="36" height="36" rx="5.5" ry="5.5" fill="#f3e8fd"/>
       <text transform="translate(186.62 223.67)" fill="#653a93" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Zr</tspan></text>
     </g>
-    <g id="72-2" data-name="id_ 72">
+    <g id="72-2" data-name="id_ 72" visibility="hidden">
       <rect x="180" y="243" width="36" height="36" rx="5.5" ry="5.5" fill="#f3e8fd"/>
       <text transform="translate(185.1 268.67)" fill="#653a93" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Hf</tspan></text>
     </g>
-    <g id="104-2" data-name="id_ 104">
+    <g id="104-2" data-name="id_ 104" visibility="hidden">
       <rect x="180" y="288" width="36" height="36" rx="5.5" ry="5.5" fill="#f3e8fd"/>
       <text transform="translate(185.94 313.67)" fill="#653a93" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Rf</tspan></text>
     </g>
-    <g id="23-2" data-name="id_ 23">
+    <g id="23-2" data-name="id_ 23" visibility="hidden">
       <rect x="225" y="153" width="36" height="36" rx="5.5" ry="5.5" fill="#f3e8fd"/>
       <text transform="translate(234.83 178.67)" fill="#653a93" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">V</tspan></text>
     </g>
-    <g id="41-2" data-name="id_ 41">
+    <g id="41-2" data-name="id_ 41" visibility="hidden">
       <rect x="225" y="198" width="36" height="36" rx="5.5" ry="5.5" fill="#f3e8fd"/>
       <text transform="translate(227.52 223.67)" fill="#653a93" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Nb</tspan></text>
     </g>
-    <g id="73-2" data-name="id_ 73">
+    <g id="73-2" data-name="id_ 73" visibility="hidden">
       <rect x="225" y="243" width="36" height="36" rx="5.5" ry="5.5" fill="#f3e8fd"/>
       <text transform="translate(230.42 268.67)" fill="#653a93" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Ta</tspan></text>
     </g>
-    <g id="105-2" data-name="id_ 105">
+    <g id="105-2" data-name="id_ 105" visibility="hidden">
       <rect x="225" y="288" width="36" height="36" rx="5.5" ry="5.5" fill="#f3e8fd"/>
       <text transform="translate(227.68 313.67)" fill="#653a93" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Db</tspan></text>
     </g>
-    <g id="24-2" data-name="id_ 24">
+    <g id="24-2" data-name="id_ 24" visibility="hidden">
       <rect x="270" y="153" width="36" height="36" rx="5.5" ry="5.5" fill="#f3e8fd"/>
       <text transform="translate(275.5 178.67)" fill="#653a93" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Cr</tspan></text>
     </g>
-    <g id="42-2" data-name="id_ 42">
+    <g id="42-2" data-name="id_ 42" visibility="hidden">
       <rect x="270" y="198" width="36" height="36" rx="5.5" ry="5.5" fill="#f3e8fd"/>
       <text transform="translate(271.01 223.67)" fill="#653a93" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Mo</tspan></text>
     </g>
-    <g id="id_74-2" data-name="id_74">
+    <g id="id_74-2" data-name="id_74" visibility="hidden">
       <rect x="270" y="243" width="36" height="36" rx="5.5" ry="5.5" fill="#f3e8fd"/>
       <text transform="translate(277.03 268.67)" fill="#653a93" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">W</tspan></text>
     </g>
-    <g id="106-2" data-name="id_ 106">
+    <g id="106-2" data-name="id_ 106" visibility="hidden">
       <rect x="270" y="288" width="36" height="36" rx="5.5" ry="5.5" fill="#f3e8fd"/>
       <text transform="translate(274.11 313.67)" fill="#653a93" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Sg</tspan></text>
     </g>
-    <g id="25-2" data-name="id_ 25">
+    <g id="25-2" data-name="id_ 25" visibility="hidden">
       <rect x="315" y="153" width="36" height="36" rx="5.5" ry="5.5" fill="#f3e8fd"/>
       <text transform="translate(315.67 178.67)" fill="#653a93" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Mn</tspan></text>
     </g>
-    <g id="43-2" data-name="id_ 43">
+    <g id="43-2" data-name="id_ 43" visibility="hidden">
       <rect x="315" y="198" width="36" height="36" rx="5.5" ry="5.5" fill="#f3e8fd"/>
       <text transform="translate(321.3 223.67)" fill="#653a93" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Tc</tspan></text>
     </g>
-    <g id="75-2" data-name="id_ 75">
+    <g id="75-2" data-name="id_ 75" visibility="hidden">
       <rect x="315" y="243" width="36" height="36" rx="5.5" ry="5.5" fill="#f3e8fd"/>
       <text transform="translate(319.3 268.67)" fill="#653a93" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Re</tspan></text>
     </g>
-    <g id="107-2" data-name="id_ 107">
+    <g id="107-2" data-name="id_ 107" visibility="hidden">
       <rect x="315" y="288" width="36" height="36" rx="5.5" ry="5.5" fill="#f3e8fd"/>
       <text transform="translate(317.99 313.67)" fill="#653a93" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Bh</tspan></text>
     </g>
-    <g id="26-2" data-name="id_ 26">
+    <g id="26-2" data-name="id_ 26" visibility="hidden">
       <rect x="360" y="153" width="36" height="36" rx="5.5" ry="5.5" fill="#f3e8fd"/>
       <text transform="translate(364.95 178.67)" fill="#653a93" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Fe</tspan></text>
     </g>
-    <g id="44-2" data-name="id_ 44">
+    <g id="44-2" data-name="id_ 44" visibility="hidden">
       <rect x="360" y="198" width="36" height="36" rx="5.5" ry="5.5" fill="#f3e8fd"/>
       <text transform="translate(363.23 223.67)" fill="#653a93" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Ru</tspan></text>
     </g>
-    <g id="76-2" data-name="id_ 76">
+    <g id="76-2" data-name="id_ 76" visibility="hidden">
       <rect x="360" y="243" width="36" height="36" rx="5.5" ry="5.5" fill="#f3e8fd"/>
       <text transform="translate(363.56 268.67)" fill="#653a93" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Os</tspan></text>
     </g>
-    <g id="108-2" data-name="id_ 108">
+    <g id="108-2" data-name="id_ 108" visibility="hidden">
       <rect x="360" y="288" width="36" height="36" rx="5.5" ry="5.5" fill="#f3e8fd"/>
       <text transform="translate(363.73 313.67)" fill="#653a93" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Hs</tspan></text>
     </g>
-    <g id="27-2" data-name="id_ 27">
+    <g id="27-2" data-name="id_ 27" visibility="hidden">
       <rect x="405" y="153" width="36" height="36" rx="5.5" ry="5.5" fill="#f3e8fd"/>
       <text transform="translate(408.35 178.67)" fill="#653a93" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Co</tspan></text>
     </g>
-    <g id="45-2" data-name="id_ 45">
+    <g id="45-2" data-name="id_ 45" visibility="hidden">
       <rect x="405" y="198" width="36" height="36" rx="5.5" ry="5.5" fill="#f3e8fd"/>
       <text transform="translate(408.21 223.67)" fill="#653a93" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Rh</tspan></text>
     </g>
-    <g id="77-2" data-name="id_ 77">
+    <g id="77-2" data-name="id_ 77" visibility="hidden">
       <rect x="405" y="243" width="36" height="36" rx="5.5" ry="5.5" fill="#f3e8fd"/>
       <text transform="translate(414.95 268.67)" fill="#653a93" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Ir</tspan></text>
     </g>
-    <g id="109-2" data-name="id_ 109">
+    <g id="109-2" data-name="id_ 109" visibility="hidden">
       <rect x="405" y="288" width="36" height="36" rx="5.5" ry="5.5" fill="#e7e7ea"/>
       <text transform="translate(408.26 313.67)" fill="#565656" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Mt</tspan></text>
     </g>
-    <g id="28-2" data-name="id_ 28">
+    <g id="28-2" data-name="id_ 28" visibility="hidden">
       <rect x="450" y="153" width="36" height="36" rx="5.5" ry="5.5" fill="#f3e8fd"/>
       <text transform="translate(456.16 178.67)" fill="#653a93" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Ni</tspan></text>
     </g>
-    <g id="46-2" data-name="id_ 46">
+    <g id="46-2" data-name="id_ 46" visibility="hidden">
       <rect x="450" y="198" width="36" height="36" rx="5.5" ry="5.5" fill="#f3e8fd"/>
       <text transform="translate(453.76 223.67)" fill="#653a93" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Pd</tspan></text>
     </g>
-    <g id="78-2" data-name="id_ 78">
+    <g id="78-2" data-name="id_ 78" visibility="hidden">
       <rect x="450" y="243" width="36" height="36" rx="5.5" ry="5.5" fill="#f3e8fd"/>
       <text transform="translate(455.99 268.67)" fill="#653a93" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Pt</tspan></text>
     </g>
-    <g id="110-2" data-name="id_ 110">
+    <g id="110-2" data-name="id_ 110" visibility="hidden">
       <rect x="450" y="288" width="36" height="36" rx="5.5" ry="5.5" fill="#e7e7ea"/>
       <text transform="translate(453.9 313.67)" fill="#565656" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Ds</tspan></text>
     </g>
-    <g id="29-2" data-name="id_ 29">
+    <g id="29-2" data-name="id_ 29" visibility="hidden">
       <rect x="495" y="153" width="36" height="36" rx="5.5" ry="5.5" fill="#f3e8fd"/>
       <text transform="translate(498.02 178.67)" fill="#653a93" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Cu</tspan></text>
     </g>
-    <g id="47-2" data-name="id_ 47">
+    <g id="47-2" data-name="id_ 47" visibility="hidden">
       <rect x="495" y="198" width="36" height="36" rx="5.5" ry="5.5" fill="#f3e8fd"/>
       <text transform="translate(497.99 223.67)" fill="#653a93" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Ag</tspan></text>
     </g>
-    <g id="79-2" data-name="id_ 79">
+    <g id="79-2" data-name="id_ 79" visibility="hidden">
       <rect x="495" y="243" width="36" height="36" rx="5.5" ry="5.5" fill="#f3e8fd"/>
       <text transform="translate(498.04 268.67)" fill="#653a93" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Au</tspan></text>
     </g>
-    <g id="111-2" data-name="id_ 111">
+    <g id="111-2" data-name="id_ 111" visibility="hidden">
       <rect x="495" y="288" width="36" height="36" rx="5.5" ry="5.5" fill="#e7e7ea"/>
       <text transform="translate(498.71 313.67)" fill="#565656" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Rg</tspan></text>
     </g>
-    <g id="30-2" data-name="id_ 30">
+    <g id="30-2" data-name="id_ 30" visibility="hidden">
       <rect x="540" y="153" width="36" height="36" rx="5.5" ry="5.5" fill="#f3e8fd"/>
       <text transform="translate(544.12 178.67)" fill="#653a93" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Zn</tspan></text>
     </g>
-    <g id="48-2" data-name="id_ 48">
+    <g id="48-2" data-name="id_ 48" visibility="hidden">
       <rect x="540" y="198" width="36" height="36" rx="5.5" ry="5.5" fill="#f3e8fd"/>
       <text transform="translate(543.13 223.67)" fill="#653a93" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Cd</tspan></text>
     </g>
-    <g id="80-2" data-name="id_ 80">
+    <g id="80-2" data-name="id_ 80" visibility="hidden">
       <rect x="540" y="243" width="36" height="36" rx="5.5" ry="5.5" fill="#f3e8fd"/>
       <text transform="translate(542.51 268.67)" fill="#653a93" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Hd</tspan></text>
     </g>
-    <g id="5-2" data-name="id_ 5">
+    <g id="5-2" data-name="id_ 5" visibility="hidden">
       <rect x="585" y="63" width="36" height="36" rx="5.5" ry="5.5" fill="#fef7e0"/>
       <text transform="translate(594.98 88.67)" fill="#967f3e" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">B</tspan></text>
     </g>
-    <g id="112-2" data-name="id_ 112">
+    <g id="112-2" data-name="id_ 112" visibility="hidden">
       <rect x="540" y="288" width="36" height="36" rx="5.5" ry="5.5" fill="#e7e7ea"/>
       <text transform="translate(543 313.67)" fill="#565656" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Cn</tspan></text>
     </g>
-    <g id="13-2" data-name="id_ 13">
+    <g id="13-2" data-name="id_ 13" visibility="hidden">
       <rect x="585" y="108" width="36" height="36" rx="5.5" ry="5.5" fill="#d6f9e8"/>
       <text transform="translate(591.62 133.67)" fill="#0f8446" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Al</tspan></text>
     </g>
-    <g id="31-2" data-name="id_ 31">
+    <g id="31-2" data-name="id_ 31" visibility="hidden">
       <rect x="585" y="153" width="36" height="36" rx="5.5" ry="5.5" fill="#d6f9e8"/>
       <text transform="translate(588.22 178.67)" fill="#0f8446" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Ga</tspan></text>
     </g>
-    <g id="49-2" data-name="id_ 49">
+    <g id="49-2" data-name="id_ 49" visibility="hidden">
       <rect x="585" y="198" width="36" height="36" rx="5.5" ry="5.5" fill="#d6f9e8"/>
       <text transform="translate(592.45 223.67)" fill="#0f8446" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">In</tspan></text>
     </g>
-    <g id="81-2" data-name="id_ 81">
+    <g id="81-2" data-name="id_ 81" visibility="hidden">
       <rect x="585" y="243" width="36" height="36" rx="5.5" ry="5.5" fill="#d6f9e8"/>
       <text transform="translate(592.94 268.67)" fill="#0f8446" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Tl</tspan></text>
     </g>
-    <g id="113-2" data-name="id_ 113">
+    <g id="113-2" data-name="id_ 113" visibility="hidden">
       <rect x="585" y="288" width="36" height="36" rx="5.5" ry="5.5" fill="#e7e7ea"/>
       <text transform="translate(587.38 313.67)" fill="#565656" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Nh</tspan></text>
     </g>
-    <g id="6-2" data-name="id_ 6">
+    <g id="6-2" data-name="id_ 6" visibility="hidden">
       <rect x="630" y="63" width="36" height="36" rx="5.5" ry="5.5" fill="#e2eeff"/>
       <text transform="translate(639.98 88.67)" fill="#0e51a0" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">C</tspan></text>
     </g>
-    <g id="14-2" data-name="id_ 14">
+    <g id="14-2" data-name="id_ 14" visibility="hidden">
       <rect x="630" y="108" width="36" height="36" rx="5.5" ry="5.5" fill="#fef7e0"/>
       <text transform="translate(637.73 133.67)" fill="#967f3e" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Si</tspan></text>
     </g>
-    <g id="32-2" data-name="id_ 32">
+    <g id="32-2" data-name="id_ 32" visibility="hidden">
       <rect x="630" y="153" width="36" height="36" rx="5.5" ry="5.5" fill="#fef7e0"/>
       <text transform="translate(633.41 178.67)" fill="#967f3e" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Ge</tspan></text>
     </g>
-    <g id="50-2" data-name="id_ 50">
+    <g id="50-2" data-name="id_ 50" visibility="hidden">
       <rect x="630" y="198" width="36" height="36" rx="5.5" ry="5.5" fill="#d6f9e8"/>
       <text transform="translate(633.97 223.67)" fill="#0f8446" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Sn</tspan></text>
     </g>
-    <g id="82-2" data-name="id_ 82">
+    <g id="82-2" data-name="id_ 82" visibility="hidden">
       <rect x="630" y="243" width="36" height="36" rx="5.5" ry="5.5" fill="#d6f9e8"/>
       <text transform="translate(633.53 268.67)" fill="#0f8446" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Pb</tspan></text>
     </g>
-    <g id="114-2" data-name="id_ 114">
+    <g id="114-2" data-name="id_ 114" visibility="hidden">
       <rect x="630" y="288" width="36" height="36" rx="5.5" ry="5.5" fill="#e7e7ea"/>
       <text transform="translate(637.97 313.67)" fill="#565656" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Fl</tspan></text>
     </g>
-    <g id="7-2" data-name="id_ 7">
+    <g id="7-2" data-name="id_ 7" visibility="hidden">
       <rect x="675" y="63" width="36" height="36" rx="5.5" ry="5.5" fill="#e2eeff"/>
       <text transform="translate(684.38 88.67)" fill="#0e51a0" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">N</tspan></text>
     </g>
-    <g id="15-2" data-name="id_ 15">
+    <g id="15-2" data-name="id_ 15" visibility="hidden">
       <rect x="675" y="108" width="36" height="36" rx="5.5" ry="5.5" fill="#e2eeff"/>
       <text transform="translate(685.39 133.67)" fill="#0e51a0" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">P</tspan></text>
     </g>
-    <g id="33-2" data-name="id_ 33">
+    <g id="33-2" data-name="id_ 33" visibility="hidden">
       <rect x="675" y="153" width="36" height="36" rx="5.5" ry="5.5" fill="#fef7e0"/>
       <text transform="translate(679.2 178.67)" fill="#967f3e" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">As</tspan></text>
     </g>
-    <g id="51-2" data-name="id_ 51">
+    <g id="51-2" data-name="id_ 51" visibility="hidden">
       <rect x="675" y="198" width="36" height="36" rx="5.5" ry="5.5" fill="#fef7e0"/>
       <text transform="translate(679.1 223.67)" fill="#967f3e" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Sb</tspan></text>
     </g>
-    <g id="83-2" data-name="id_ 83">
+    <g id="83-2" data-name="id_ 83" visibility="hidden">
       <rect x="675" y="243" width="36" height="36" rx="5.5" ry="5.5" fill="#d6f9e8"/>
       <text transform="translate(681.76 268.67)" fill="#0f8446" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Bi</tspan></text>
     </g>
-    <g id="115-2" data-name="id_ 115">
+    <g id="115-2" data-name="id_ 115" visibility="hidden">
       <rect x="675" y="288" width="36" height="36" rx="5.5" ry="5.5" fill="#e7e7ea"/>
       <text transform="translate(676.88 313.67)" fill="#565656" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Mc</tspan></text>
     </g>
-    <g id="8-2" data-name="id_ 8">
+    <g id="8-2" data-name="id_ 8" visibility="hidden">
       <rect x="720" y="63" width="36" height="36" rx="5.5" ry="5.5" fill="#e2eeff"/>
       <text transform="translate(729.19 88.67)" fill="#0e51a0" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">O</tspan></text>
     </g>
-    <g id="16-2" data-name="id_ 16">
+    <g id="16-2" data-name="id_ 16" visibility="hidden">
       <rect x="720" y="108" width="36" height="36" rx="5.5" ry="5.5" fill="#e2eeff"/>
       <text transform="translate(730.95 133.67)" fill="#0e51a0" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">S</tspan></text>
     </g>
-    <g id="34-2" data-name="id_ 34">
+    <g id="34-2" data-name="id_ 34" visibility="hidden">
       <rect x="720" y="153" width="36" height="36" rx="5.5" ry="5.5" fill="#e2eeff"/>
       <text transform="translate(724.71 178.67)" fill="#0e51a0" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Se</tspan></text>
     </g>
-    <g id="52-2" data-name="id_ 52">
+    <g id="52-2" data-name="id_ 52" visibility="hidden">
       <rect x="720" y="198" width="36" height="36" rx="5.5" ry="5.5" fill="#fef7e0"/>
       <text transform="translate(725.83 223.67)" fill="#967f3e" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Te</tspan></text>
     </g>
-    <g id="84-2" data-name="id_ 84">
+    <g id="84-2" data-name="id_ 84" visibility="hidden">
       <rect x="720" y="243" width="36" height="36" rx="5.5" ry="5.5" fill="#d6f9e8"/>
       <text transform="translate(723.98 268.67)" fill="#0f8446" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Po</tspan></text>
     </g>
-    <g id="116-2" data-name="id_ 116">
+    <g id="116-2" data-name="id_ 116" visibility="hidden">
       <rect x="720" y="288" width="36" height="36" rx="5.5" ry="5.5" fill="#e7e7ea"/>
       <text transform="translate(726.26 313.67)" fill="#565656" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Lv</tspan></text>
     </g>
-    <g id="9-2" data-name="id_ 9">
+    <g id="9-2" data-name="id_ 9" visibility="hidden">
       <rect x="765" y="63" width="36" height="36" rx="5.5" ry="5.5" fill="#e2eeff"/>
       <text transform="translate(776.19 88.67)" fill="#0e51a0" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">F</tspan></text>
     </g>
-    <g id="17-2" data-name="id_ 17">
+    <g id="17-2" data-name="id_ 17" visibility="hidden">
       <rect x="765" y="108" width="36" height="36" rx="5.5" ry="5.5" fill="#e2eeff"/>
       <text transform="translate(771.76 133.67)" fill="#0e51a0" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Cl</tspan></text>
     </g>
-    <g id="35-2" data-name="id_ 35">
+    <g id="35-2" data-name="id_ 35" visibility="hidden">
       <rect x="765" y="153" width="36" height="36" rx="5.5" ry="5.5" fill="#e2eeff"/>
       <text transform="translate(770.5 178.67)" fill="#0e51a0" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Br</tspan></text>
     </g>
-    <g id="53-2" data-name="id_ 53">
+    <g id="53-2" data-name="id_ 53" visibility="hidden">
       <rect x="765" y="198" width="36" height="36" rx="5.5" ry="5.5" fill="#e2eeff"/>
       <text transform="translate(779.43 223.67)" fill="#0e51a0" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">I</tspan></text>
     </g>
-    <g id="85-2" data-name="id_ 85">
+    <g id="85-2" data-name="id_ 85" visibility="hidden">
       <rect x="765" y="243" width="36" height="36" rx="5.5" ry="5.5" fill="#d6f9e8"/>
       <text transform="translate(770.84 268.67)" fill="#0f8446" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">At</tspan></text>
     </g>
-    <g id="117-2" data-name="id_ 117">
+    <g id="117-2" data-name="id_ 117" visibility="hidden">
       <rect x="765" y="288" width="36" height="36" rx="5.5" ry="5.5" fill="#e7e7ea"/>
       <text transform="translate(771.33 313.67)" fill="#565656" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Ts</tspan></text>
     </g>
@@ -822,139 +823,139 @@
       <rect x="810" y="18" width="36" height="36" rx="5.5" ry="5.5" fill="#ffe7e7"/>
       <text transform="translate(813.12 43.67)" fill="#9b3d3d" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">He</tspan></text>
     </g>
-    <g id="10-2" data-name="id_ 10">
+    <g id="10-2" data-name="id_ 10" visibility="hidden">
       <rect x="810" y="63" width="36" height="36" rx="5.5" ry="5.5" fill="#ffe7e7"/>
       <text transform="translate(813.13 88.67)" fill="#9b3d3d" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Ne</tspan></text>
     </g>
-    <g id="18-2" data-name="id_ 18">
+    <g id="18-2" data-name="id_ 18" visibility="hidden">
       <rect x="810" y="108" width="36" height="36" rx="5.5" ry="5.5" fill="#ffe7e7"/>
       <text transform="translate(815.35 133.67)" fill="#9b3d3d" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Ar</tspan></text>
     </g>
-    <g id="36-2" data-name="id_ 36">
+    <g id="36-2" data-name="id_ 36" visibility="hidden">
       <rect x="810" y="153" width="36" height="36" rx="5.5" ry="5.5" fill="#ffe7e7"/>
       <text transform="translate(815.8 178.67)" fill="#9b3d3d" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Kr</tspan></text>
     </g>
-    <g id="54-2" data-name="id_ 54">
+    <g id="54-2" data-name="id_ 54" visibility="hidden">
       <rect x="810" y="198" width="36" height="36" rx="5.5" ry="5.5" fill="#ffe7e7"/>
       <text transform="translate(814.12 223.67)" fill="#9b3d3d" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Xe</tspan></text>
     </g>
-    <g id="86-2" data-name="id_ 86">
+    <g id="86-2" data-name="id_ 86" visibility="hidden">
       <rect x="810" y="243" width="36" height="36" rx="5.5" ry="5.5" fill="#ffe7e7"/>
       <text transform="translate(813.22 268.67)" fill="#9b3d3d" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Rn</tspan></text>
     </g>
-    <g id="118-2" data-name="id_ 118">
+    <g id="118-2" data-name="id_ 118" visibility="hidden">
       <rect x="810" y="288" width="36" height="36" rx="5.5" ry="5.5" fill="#e7e7ea"/>
       <text transform="translate(812.35 313.67)" fill="#565656" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Og</tspan></text>
     </g>
-    <g id="58-2" data-name="id_ 58">
+    <g id="58-2" data-name="id_ 58" visibility="hidden">
       <rect x="180" y="358.67" width="36" height="36" rx="5.5" ry="5.5" fill="#8fd6f2"/>
       <text transform="translate(183.74 384.34)" fill="#1d617c" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Ce</tspan></text>
     </g>
-    <g id="59-2" data-name="id_ 59">
+    <g id="59-2" data-name="id_ 59" visibility="hidden">
       <rect x="225" y="358.67" width="36" height="36" rx="5.5" ry="5.5" fill="#8fd6f2"/>
       <text transform="translate(230.9 384.34)" fill="#1d617c" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Pr</tspan></text>
     </g>
-    <g id="60-2" data-name="id_ 60">
+    <g id="60-2" data-name="id_ 60" visibility="hidden">
       <rect x="270" y="358.67" width="36" height="36" rx="5.5" ry="5.5" fill="#8fd6f2"/>
       <text transform="translate(272.52 384.34)" fill="#1d617c" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Nd</tspan></text>
     </g>
-    <g id="61-2" data-name="id_ 61">
+    <g id="61-2" data-name="id_ 61" visibility="hidden">
       <rect x="315" y="358.67" width="36" height="36" rx="5.5" ry="5.5" fill="#8fd6f2"/>
       <text transform="translate(315.07 384.34)" fill="#1d617c" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Pm</tspan></text>
     </g>
-    <g id="62-2" data-name="id_ 62">
+    <g id="62-2" data-name="id_ 62" visibility="hidden">
       <rect x="360" y="358.67" width="36" height="36" rx="5.5" ry="5.5" fill="#8fd6f2"/>
       <text transform="translate(360.63 384.34)" fill="#1d617c" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Sm</tspan></text>
     </g>
-    <g id="63-2" data-name="id_ 63">
+    <g id="63-2" data-name="id_ 63" visibility="hidden">
       <rect x="405" y="358.67" width="36" height="36" rx="5.5" ry="5.5" fill="#8fd6f2"/>
       <text transform="translate(409.18 384.34)" fill="#1d617c" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Eu</tspan></text>
     </g>
-    <g id="64-2" data-name="id_ 64">
+    <g id="64-2" data-name="id_ 64" visibility="hidden">
       <rect x="450" y="358.67" width="36" height="36" rx="5.5" ry="5.5" fill="#8fd6f2"/>
       <text transform="translate(452.8 384.34)" fill="#1d617c" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Gd</tspan></text>
     </g>
-    <g id="65-2" data-name="id_ 65">
+    <g id="65-2" data-name="id_ 65" visibility="hidden">
       <rect x="495" y="358.67" width="36" height="36" rx="5.5" ry="5.5" fill="#8fd6f2"/>
       <text transform="translate(499.3 384.34)" fill="#1d617c" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Tb</tspan></text>
     </g>
-    <g id="66-2" data-name="id_ 66">
+    <g id="66-2" data-name="id_ 66" visibility="hidden">
       <rect x="540" y="358.67" width="36" height="36" rx="5.5" ry="5.5" fill="#8fd6f2"/>
       <text transform="translate(543.38 384.34)" fill="#1d617c" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Dy</tspan></text>
     </g>
-    <g id="67-2" data-name="id_ 67">
+    <g id="67-2" data-name="id_ 67" visibility="hidden">
       <rect x="585" y="358.67" width="36" height="36" rx="5.5" ry="5.5" fill="#8fd6f2"/>
       <text transform="translate(587.73 384.34)" fill="#1d617c" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Ho</tspan></text>
     </g>
-    <g id="68-2" data-name="id_ 68">
+    <g id="68-2" data-name="id_ 68" visibility="hidden">
       <rect x="630" y="358.67" width="36" height="36" rx="5.5" ry="5.5" fill="#8fd6f2"/>
       <text transform="translate(636.66 384.34)" fill="#1d617c" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Er</tspan></text>
     </g>
-    <g id="69-2" data-name="id_ 69">
+    <g id="69-2" data-name="id_ 69" visibility="hidden">
       <rect x="675" y="358.67" width="36" height="36" rx="5.5" ry="5.5" fill="#8fd6f2"/>
       <text transform="translate(676.42 384.34)" fill="#1d617c" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Tm</tspan></text>
     </g>
-    <g id="70-2" data-name="id_ 70">
+    <g id="70-2" data-name="id_ 70" visibility="hidden">
       <rect x="720" y="358.67" width="36" height="36" rx="5.5" ry="5.5" fill="#8fd6f2"/>
       <text transform="translate(723.51 384.34)" fill="#1d617c" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Yb</tspan></text>
     </g>
-    <g id="71-2" data-name="id_ 71">
+    <g id="71-2" data-name="id_ 71" visibility="hidden">
       <rect x="765" y="358.67" width="36" height="36" rx="5.5" ry="5.5" fill="#8fd6f2"/>
       <text transform="translate(769.87 384.34)" fill="#1d617c" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Lu</tspan></text>
     </g>
-    <g id="90-2" data-name="id_ 90">
+    <g id="90-2" data-name="id_ 90" visibility="hidden">
       <rect x="180" y="405" width="36" height="36" rx="5.5" ry="5.5" fill="#ffe6d4"/>
       <text transform="translate(184.75 430.67)" fill="#a35b2b" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Tn</tspan></text>
     </g>
-    <g id="91-2" data-name="id_ 91">
+    <g id="91-2" data-name="id_ 91" visibility="hidden">
       <rect x="225" y="405" width="36" height="36" rx="5.5" ry="5.5" fill="#ffe6d4"/>
       <text transform="translate(229.19 430.67)" fill="#a35b2b" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Pa</tspan></text>
     </g>
-    <g id="92-2" data-name="id_ 92">
+    <g id="92-2" data-name="id_ 92" visibility="hidden">
       <rect x="270" y="405" width="36" height="36" rx="5.5" ry="5.5" fill="#ffe6d4"/>
       <text transform="translate(279.39 430.67)" fill="#a35b2b" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">U</tspan></text>
     </g>
-    <g id="93-2" data-name="id_ 93">
+    <g id="93-2" data-name="id_ 93" visibility="hidden">
       <rect x="315" y="405" width="36" height="36" rx="5.5" ry="5.5" fill="#ffe6d4"/>
       <text transform="translate(317.53 430.67)" fill="#a35b2b" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Np</tspan></text>
     </g>
-    <g id="94-2" data-name="id_ 94">
+    <g id="94-2" data-name="id_ 94" visibility="hidden">
       <rect x="360" y="405" width="36" height="36" rx="5.5" ry="5.5" fill="#ffe6d4"/>
       <text transform="translate(363.42 430.67)" fill="#a35b2b" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Pu</tspan></text>
     </g>
-    <g id="95-2" data-name="id_ 95">
+    <g id="95-2" data-name="id_ 95" visibility="hidden">
       <rect x="405" y="405" width="36" height="36" rx="5.5" ry="5.5" fill="#ffe6d4"/>
       <text transform="translate(405.32 430.01)" fill="#a35b2b" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="22" font-weight="800"><tspan x="0" y="0">Am</tspan></text>
     </g>
-    <g id="96-2" data-name="id_ 96">
+    <g id="96-2" data-name="id_ 96" visibility="hidden">
       <rect x="450" y="405" width="36" height="36" rx="5.5" ry="5.5" fill="#ffe6d4"/>
       <text transform="translate(450.47 430.01)" fill="#a35b2b" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="22" font-weight="800"><tspan x="0" y="0">Cm</tspan></text>
     </g>
-    <g id="97-2" data-name="id_ 97">
+    <g id="97-2" data-name="id_ 97" visibility="hidden">
       <rect x="495" y="405" width="36" height="36" rx="5.5" ry="5.5" fill="#ffe6d4"/>
       <text transform="translate(498.58 430.67)" fill="#a35b2b" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Bk</tspan></text>
     </g>
-    <g id="98-2" data-name="id_ 98">
+    <g id="98-2" data-name="id_ 98" visibility="hidden">
       <rect x="540" y="405" width="36" height="36" rx="5.5" ry="5.5" fill="#ffe6d4"/>
       <text transform="translate(545.72 430.67)" fill="#a35b2b" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Cf</tspan></text>
     </g>
-    <g id="99-2" data-name="id_ 99">
+    <g id="99-2" data-name="id_ 99" visibility="hidden">
       <rect x="585" y="405" width="36" height="36" rx="5.5" ry="5.5" fill="#ffe6d4"/>
       <text transform="translate(590.51 430.67)" fill="#a35b2b" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Es</tspan></text>
     </g>
-    <g id="100-2" data-name="id_ 100">
+    <g id="100-2" data-name="id_ 100" visibility="hidden">
       <rect x="630" y="405" width="36" height="36" rx="5.5" ry="5.5" fill="#ffe6d4"/>
       <text transform="translate(630.88 430.67)" fill="#a35b2b" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Fm</tspan></text>
     </g>
-    <g id="101-2" data-name="id_ 101">
+    <g id="101-2" data-name="id_ 101" visibility="hidden">
       <rect x="675" y="405" width="36" height="36" rx="5.5" ry="5.5" fill="#ffe6d4"/>
       <text transform="translate(675.8 430.67)" fill="#a35b2b" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Md</tspan></text>
     </g>
-    <g id="102-2" data-name="id_ 102">
+    <g id="102-2" data-name="id_ 102" visibility="hidden">
       <rect x="720" y="405" width="36" height="36" rx="5.5" ry="5.5" fill="#ffe6d4"/>
       <text transform="translate(722.74 430.67)" fill="#a35b2b" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">No</tspan></text>
     </g>
-    <g id="103-2" data-name="id_ 103">
+    <g id="103-2" data-name="id_ 103" visibility="hidden">
       <rect x="765" y="405" width="36" height="36" rx="5.5" ry="5.5" fill="#ffe6d4"/>
       <text transform="translate(772.35 430.67)" fill="#a35b2b" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Lr</tspan></text>
     </g>

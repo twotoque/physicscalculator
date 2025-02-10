@@ -255,6 +255,7 @@ function atomicSearch(AtomicSymbol, value, searchVal, value2) {
         value = value.charAt(0).toUpperCase() + value.slice(1).toLowerCase(); // Make first letter uppercase, others lowercase. Follows naming method in const AtomicSymbol
         for (var i = 0; i < AtomicSymbol.length; i++) { // Search for item matching value at "i". If "i" == value, get its index, else add 1 to i.
             if (AtomicSymbol[i].shortform === value) {
+                periodicTableVisualizer(i);
                 return i; // Return the index of the found element
             }
         }
@@ -263,6 +264,7 @@ function atomicSearch(AtomicSymbol, value, searchVal, value2) {
     else if (searchVal === "aanConst") { // Search using Atomic number
         for (var i = 0; i < AtomicSymbol.length; i++) { // Search for item matching value at "i". If "i" == value, get its index, else add 1 to i.
             if (AtomicSymbol[i].aanConst === parseInt(value)) { // Converts str value to int
+                periodicTableVisualizer(i);
                 return i; // Return the index of the found element
             }
         }
@@ -271,8 +273,10 @@ function atomicSearch(AtomicSymbol, value, searchVal, value2) {
     else if (searchVal === "atomSearch") { // AtomSearch special feature
         for (var i = 0; i < AtomicSymbol.length; i++) { // Search for item matching value at "i". If "i" == value, get its index, else add 1 to i.
             if (AtomicSymbol[i].group === parseInt(value)  && AtomicSymbol[i].period === parseInt(value2)) { // Variable "value" represents group assignment, variable "value2" represents period.
+                periodicTableVisualizer(i);
                 return i; // Return the index of the found element
-            } else if (AtomicSymbol[i].group === value && AtomicSymbol[i].period === parseInt(value2)) { // Special coniditon if "N/A" is inputted. Does not convert value into int. 
+            } else if (AtomicSymbol[i].group === value && AtomicSymbol[i].period === parseInt(value2)) { // Special coniditon if "N/A" is inputted. Does not convert value into int.
+                periodicTableVisualizer(i);
                 return i; // Return the index of the found element
             } 
         }
@@ -282,6 +286,7 @@ function atomicSearch(AtomicSymbol, value, searchVal, value2) {
         value = value.charAt(0).toUpperCase() + value.slice(1).toLowerCase(); // Make first letter uppercase, others lowercase. Follows naming method in const AtomicSymbol
         for (var i = 0; i < AtomicSymbol.length; i++) { // Search for item matching value at "i". If "i" == value, get its index, else add 1 to i.
             if (AtomicSymbol[i].name === value) { // Converts str value to int
+                periodicTableVisualizer(i);
                 return i; // Return the index of the found element
             }
         }
@@ -290,11 +295,27 @@ function atomicSearch(AtomicSymbol, value, searchVal, value2) {
     else if (searchVal === "mass") { // Search using Atomic mass
         for (var i = 0; i < AtomicSymbol.length; i++) { // Search for item matching value at "i". If "i" == value, get its index, else add 1 to i.
             if (AtomicSymbol[i].avgMass === parseInt(value)) { // Converts str value to int
+                periodicTableVisualizer(i);
                 return i; // Return the index of the found element
             }
         }
         return -1; // Return -1 if no matching element is found
     }  
+}
+
+function periodicTableVisualizer(number){
+    // Helper function to assign periodic table to SVG
+    const periodicNum = parseInt(number) +"-2";
+    const shownGroup = document.getElementById("Shown");
+    for (let elementGroup of shownGroup.children) {
+        const elementGroupStyle = window.getComputedStyle(elementGroup);
+
+        if (elementGroupStyle.visibility !== "hidden") {
+            elementGroup.style.visibility = "hidden";
+        }
+    }
+    const group = document.getElementById(periodicNum);
+    group.style.visibility = "visible";
 }
 
 function blockSearch(group, period) {
@@ -1089,10 +1110,4 @@ fetch('./PeriodicTable.svg')
     const group = svgElement.getElementById("1-2");
     group.style.visibility = "hidden";
   })
-document.addEventListener("DOMContentLoaded", function () {
-    const defaultGroup = document.getElementById("Default");
-    const group = document.getElementById("1-2");
-    group.style.visibility = "visible";
-  });
-
 */
