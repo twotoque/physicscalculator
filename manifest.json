@@ -19,7 +19,7 @@
   },
   "web_accessible_resources": [
     {
-      "resources": ["background.js", "atomicData.js"],
+      "resources": ["background.js", "atomicData.js", "PeriodicTable.svg"],
       "matches": ["<all_urls>"]
     }
   ]

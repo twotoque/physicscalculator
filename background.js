@@ -1,3 +1,18 @@
+// Ondocument load, visualize empty periodic table
+document.addEventListener("DOMContentLoaded", function() {
+
+    fetch('./PeriodicTable.svg') 
+    .then(response => response.text())
+    .then(svgText => {
+        const parser = new DOMParser();
+        const svgDocument = parser.parseFromString(svgText, "image/svg+xml");
+
+        const svgContainer = document.getElementById("PeriodicTable");
+        svgContainer.innerHTML = " ";  
+        svgContainer.appendChild(svgDocument.documentElement);  
+    })
+});
+
 // Initaize inputs
 document.getElementById("AlphaAtomicMassIN").addEventListener("input", function() {
     AlphaAtomicMass(this.value);
@@ -305,17 +320,26 @@ function atomicSearch(AtomicSymbol, value, searchVal, value2) {
 
 function periodicTableVisualizer(number){
     // Helper function to assign periodic table to SVG
-    const periodicNum = parseInt(number) +"-2";
-    const shownGroup = document.getElementById("Shown");
-    for (let elementGroup of shownGroup.children) {
-        const elementGroupStyle = window.getComputedStyle(elementGroup);
+        fetch('./PeriodicTable.svg') 
+        .then(response => response.text())
+        .then(svgText => {
+            const parser = new DOMParser();
+            const svgDocument = parser.parseFromString(svgText, "image/svg+xml");
+            const periodicNum = parseInt(number) +"-2";
+            const shownGroup = svgDocument.getElementById("Shown");
 
-        if (elementGroupStyle.visibility !== "hidden") {
-            elementGroup.style.visibility = "hidden";
+            for (let elementGroup of shownGroup.children) {
+                elementGroup.style.visibility = "hidden";
+            }
+
+            const group = svgDocument.getElementById(periodicNum);
+            group.style.visibility = "visible";
+
+            const svgContainer = document.getElementById("PeriodicTable");
+            svgContainer.innerHTML = " ";  
+            svgContainer.appendChild(svgDocument.documentElement);  
         }
-    }
-    const group = document.getElementById(periodicNum);
-    group.style.visibility = "visible";
+    )
 }
 
 function blockSearch(group, period) {
