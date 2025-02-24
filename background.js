@@ -330,10 +330,12 @@ function periodicTableVisualizer(number){
 
             for (let elementGroup of shownGroup.children) {
                 elementGroup.style.visibility = "hidden";
+                elementGroup.querySelector("rect").classList.remove("pulsing");
             }
 
             const group = svgDocument.getElementById(periodicNum);
             group.style.visibility = "visible";
+            group.querySelector("rect").classList.add("pulsing");
 
             const svgContainer = document.getElementById("PeriodicTable");
             svgContainer.innerHTML = " ";  
@@ -1121,10 +1123,29 @@ document.getElementById('Commit').addEventListener('click', function() {
     chrome.tabs.update({ url: 'https://github.com/twotoque/physicscalculator/commits' });
 });
 
-
-
-
 /*
+
+document.getElementById('PeriodicTable').addEventListener('click', function() {
+    fetch('./PeriodicTable.svg')
+    .then(response => response.text())
+    .then(svgText => {
+        const parser = new DOMParser();
+        const svgDocument = parser.parseFromString(svgText, "image/svg+xml");
+        const defaultGroup = svgDocument.getElementById("Default");
+        const elements = defaultGroup.querySelectorAll("g"); 
+
+        elements.forEach(element => {
+            element.addEventListener("click", (event) => {
+            const clickedElementId = event.target.id; 
+            const clickedElementData = event.target.dataset.info || "No data available"; 
+            console.log(`Element clicked: ${clickedElementId}`);
+            console.log(`Additional Information: ${clickedElementData}`);
+            });
+        });
+        });
+    }
+)
+
 fetch('./PeriodicTable.svg') 
   .then(response => response.text())
   .then(svgText => {

@@ -119,3 +119,28 @@ h8{
     border-radius: .25rem !important;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out !important;
 }
+
+
+@keyframes pulse {
+    0% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.1); }
+    100% { opacity: 1; transform: scale(1); }
+  }
+@keyframes pulseShadow {
+    0% {
+        filter: drop-shadow(0 0 0px rgba(0, 0, 0, 0.5));
+    }
+    50% {
+        filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+    }
+    100% {
+        filter: drop-shadow(0 0 0px rgba(0, 0, 0, 0.5));
+    }
+}
+  
+.pulsing {
+    animation: pulse 1s infinite;
+    animation: pulseShadow 1s infinite;
+    transform-box: fill-box;
+    transform-origin: 50% 50%;
+}
