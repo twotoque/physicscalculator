@@ -262,6 +262,10 @@ document.getElementById('copybtnElectron').addEventListener('click', function() 
     DecayCopy(value);
 }); 
 
+document.getElementById("PeriodicTable").addEventListener("click", function (element) {
+    const selectedElement = element.target.closest("[id]");
+    AtomicSearchAtomNumber(selectedElement.id);
+});
 
 // Calculations
 function atomicSearch(AtomicSymbol, value, searchVal, value2) {
@@ -344,6 +348,8 @@ function periodicTableVisualizer(number){
     )
 }
 
+
+
 function blockSearch(group, period) {
     // Function to assign block name and azimuthal quantum number names given the group and period. Use = blockSearch(group, period). group = the group number (int); period = the period number (int).
     // To reference, call result[0] for block, and result[1] for azNum, assuming that var result = blockSearch(group, period) 
@@ -366,6 +372,7 @@ function blockSearch(group, period) {
         return [block, azNum];
     }
 }
+
 
 function groupSearch(group) {
      // Function to assign group names given the group namer. Use = groupSearch(group). group = the group number (int).
@@ -1122,37 +1129,3 @@ document.getElementById('Commit').addEventListener('click', function() {
     // Link to github commits
     chrome.tabs.update({ url: 'https://github.com/twotoque/physicscalculator/commits' });
 });
-
-/*
-
-document.getElementById('PeriodicTable').addEventListener('click', function() {
-    fetch('./PeriodicTable.svg')
-    .then(response => response.text())
-    .then(svgText => {
-        const parser = new DOMParser();
-        const svgDocument = parser.parseFromString(svgText, "image/svg+xml");
-        const defaultGroup = svgDocument.getElementById("Default");
-        const elements = defaultGroup.querySelectorAll("g"); 
-
-        elements.forEach(element => {
-            element.addEventListener("click", (event) => {
-            const clickedElementId = event.target.id; 
-            const clickedElementData = event.target.dataset.info || "No data available"; 
-            console.log(`Element clicked: ${clickedElementId}`);
-            console.log(`Additional Information: ${clickedElementData}`);
-            });
-        });
-        });
-    }
-)
-
-fetch('./PeriodicTable.svg') 
-  .then(response => response.text())
-  .then(svgText => {
-    document.getElementById("PeriodicTable").innerHTML = svgText;
-    const svgElement = document.getElementById("PeriodicTable").querySelector("svg");
-    const defaultGroup = svgElement.getElementById("Default");
-    const group = svgElement.getElementById("1-2");
-    group.style.visibility = "hidden";
-  })
-*/

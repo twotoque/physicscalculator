@@ -120,7 +120,7 @@
       <rect x="270" y="198" width="36" height="36" rx="5.5" ry="5.5" fill="#878787"/>
       <text transform="translate(271.01 223.67)" fill="#323232" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Mo</tspan></text>
     </g>
-    <g id="id_74">
+    <g id="74" data-name="id_ 74">
       <rect x="270" y="243" width="36" height="36" rx="5.5" ry="5.5" fill="#878787"/>
       <text transform="translate(277.03 268.67)" fill="#323232" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">W</tspan></text>
     </g>
@@ -595,7 +595,7 @@
       <rect x="270" y="198" width="36" height="36" rx="5.5" ry="5.5" fill="#f3e8fd"/>
       <text transform="translate(271.01 223.67)" fill="#653a93" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">Mo</tspan></text>
     </g>
-    <g id="id_74-2" data-name="id_74" visibility="hidden">
+    <g id="74-2" data-name="id_74" visibility="hidden">
       <rect x="270" y="243" width="36" height="36" rx="5.5" ry="5.5" fill="#f3e8fd"/>
       <text transform="translate(277.03 268.67)" fill="#653a93" font-family="ProximaNova-Black, &apos;Proxima Nova&apos;" font-size="23" font-weight="800"><tspan x="0" y="0">W</tspan></text>
     </g>
